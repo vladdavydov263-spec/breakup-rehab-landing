@@ -268,37 +268,54 @@ h2{margin-top:12px;font-size:clamp(26px,5vw,32px);color:var(--ink);max-width:480
 .sos-tags{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
 .sos-tags span{padding:6px 12px;border-radius:100px;background:rgba(255,255,255,0.1);font-size:12.5px;color:rgba(243,238,240,0.9);}
 
-/* PRICING */
-.pricing .wrap-wide{max-width:960px;}
-.tariffs{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px;}
-@media(min-width:860px){.tariffs{grid-template-columns:1fr 1fr 1fr;align-items:start;}}
-.tariff{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:26px 24px;display:flex;flex-direction:column;gap:16px;position:relative;}
-.tariff.featured{background:var(--plum);color:var(--cream-ink);border-color:var(--plum);box-shadow:0 24px 44px -20px rgba(70,49,86,0.5);}
-@media(min-width:860px){.tariff.featured{transform:translateY(-10px);}}
-.badge-star{position:absolute;top:-13px;left:24px;background:var(--gold);color:#fff;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:100px;}
-.t-name{font-family:var(--display);font-weight:800;font-size:20px;}
-.tariff.featured .t-name{color:#fff;}
-.t-tagline{font-size:13.5px;line-height:1.5;color:var(--ink-dim);}
-.tariff.featured .t-tagline{color:rgba(243,238,240,0.78);}
-.t-price{margin-top:4px;}
-.t-price .amount{font-family:var(--display);font-weight:800;font-size:30px;}
-.t-price .usd{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-left:6px;}
-.tariff.featured .t-price .usd{color:rgba(243,238,240,0.6);}
-.t-for{font-size:12.5px;line-height:1.5;padding:12px 14px;border-radius:12px;background:var(--coral-tint);color:var(--coral-dark);}
-.tariff.featured .t-for{background:rgba(255,255,255,0.1);color:rgba(243,238,240,0.92);}
-.t-features{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1;}
-.t-features li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--ink-dim);}
-.tariff.featured .t-features li{color:rgba(243,238,240,0.85);}
-.t-features li b{color:var(--ink);font-weight:700;}
-.tariff.featured .t-features li b{color:#fff;}
-.t-features .yes{color:var(--coral-dark);flex:none;}
-.tariff.featured .t-features .yes{color:var(--gold-tint);}
-.t-features .no{color:var(--ink-faint);flex:none;}
-.tariff.featured .t-features .no{color:rgba(243,238,240,0.35);}
-.t-cta{margin-top:6px;text-align:center;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;background:var(--coral);color:#fff;}
-.tariff.featured .t-cta{background:#fff;color:var(--plum);}
-.t-todo{margin-top:8px;font-family:var(--mono);font-size:10.5px;text-align:center;color:var(--ink-faint);}
-.tariff.featured .t-todo{color:rgba(243,238,240,0.5);}
+/* PRICING — накопичувальні рівні, а не паралельні картки */
+.path{position:relative;margin-top:36px;}
+.path::before{
+  content:"";position:absolute;left:23px;top:14px;bottom:14px;width:1.5px;
+  background:linear-gradient(180deg,var(--coral-soft),var(--plum));
+}
+.step{position:relative;padding-left:64px;margin-bottom:8px;}
+.step-dot{
+  position:absolute;left:0;top:2px;width:47px;height:47px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:800;font-size:15px;color:#fff;
+  border:3px solid var(--bg);
+}
+.d1{background:var(--coral-soft);color:var(--coral-dark);}
+.d2{background:var(--coral);}
+.d3{background:var(--plum);}
+.tier{border-radius:var(--radius-lg);padding:26px 26px 24px;border:1.5px solid var(--line);}
+.tier.t1{background:var(--card);}
+.tier.t2{background:var(--coral-tint);border-color:var(--coral-soft);}
+.tier.t3{background:var(--plum);color:var(--cream-ink);border-color:var(--plum);box-shadow:0 22px 40px -20px rgba(70,49,86,0.45);}
+.tier-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;}
+.tier-name{font-family:var(--display);font-weight:800;font-size:19px;}
+.tier-includes{font-family:var(--mono);font-size:11px;color:var(--ink-faint);}
+.tier.t3 .tier-includes{color:rgba(243,238,240,0.55);}
+.tier-tagline{margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--ink-dim);}
+.tier.t3 .tier-tagline{color:rgba(243,238,240,0.78);}
+.tier-price{margin-top:14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;}
+.tier-price .amount{font-family:var(--display);font-weight:800;font-size:27px;white-space:nowrap;}
+.tier-price .usd{font-family:var(--mono);font-size:12px;color:var(--ink-faint);}
+.tier.t3 .tier-price .usd{color:rgba(243,238,240,0.6);}
+.tier-price .delta{font-size:12.5px;color:var(--coral-dark);font-weight:700;}
+.tier.t3 .tier-price .delta{color:var(--gold-tint);}
+.tier-for{margin-top:14px;font-size:12.5px;line-height:1.5;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.5);color:var(--coral-dark);}
+.tier.t1 .tier-for{background:var(--coral-tint);}
+.tier.t3 .tier-for{background:rgba(255,255,255,0.1);color:rgba(243,238,240,0.92);}
+.tier-add{margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);}
+.tier.t3 .tier-add{color:rgba(243,238,240,0.5);}
+.tier-features{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:9px;}
+.tier-features li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--ink-dim);}
+.tier.t3 .tier-features li{color:rgba(243,238,240,0.88);}
+.tier-features li b{color:var(--ink);font-weight:700;}
+.tier.t3 .tier-features li b{color:#fff;}
+.tier-features .yes{color:var(--coral-dark);flex:none;}
+.tier.t3 .tier-features .yes{color:var(--gold-tint);}
+.tier-cta{display:block;margin-top:18px;text-align:center;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;background:var(--coral);color:#fff;}
+.tier.t3 .tier-cta{background:#fff;color:var(--plum);}
+.tier-todo{margin-top:8px;font-family:var(--mono);font-size:10.5px;text-align:center;color:var(--ink-faint);}
+.tier.t3 .tier-todo{color:rgba(243,238,240,0.5);}
 
 /* TRUST STRIP */
 .trust-strip{display:flex;flex-direction:column;gap:12px;margin-top:32px;}
@@ -433,61 +450,67 @@ footer{padding:44px 0 50px;}
 </section>
 
 <section class="pricing" id="tariffs">
-  <div class="wrap-wide">
+  <div class="wrap">
     <div class="eyebrow"><span class="sq"></span>Тарифи</div>
     <h2>Обери рівень підтримки</h2>
-    <p class="lead">Контент програми однаковий для всіх — різниця в тому, скільки живої підтримки ти отримуєш поруч.</p>
+    <p class="lead">Тарифи не конкурують — вони накопичуються. Кожен наступний включає все з попереднього і додає більше живої присутності поруч.</p>
 
-    <div class="tariffs">
+    <div class="path">
 
-      <div class="tariff">
-        <div class="t-name">SOLO</div>
-        <div class="t-tagline">Вся програма — проходиш сам(а), підтримка = ком'юніті</div>
-        <div class="t-price"><span class="amount">7 900 ₴</span><span class="usd">~$175</span></div>
-        <div class="t-for">Кому підходить: «розберусь сам(а)» / обмежений бюджет</div>
-        <ul class="t-features">
-          <li><span class="yes">✓</span><span>Доступ до ком'юніті: <b>3 місяці</b> (тільки чат)</span></li>
-          <li><span class="no">—</span><span>Кола підтримки (групові Zoom)</span></li>
-          <li><span class="no">—</span><span>Гілки по кроках з фідбеком</span></li>
-          <li><span class="no">—</span><span>Саппорт Ірини в чаті</span></li>
-          <li><span class="no">—</span><span>Особисті дзвінки з Іриною</span></li>
-        </ul>
-        <a href="#" class="t-cta">Обрати Solo</a>
-        <div class="t-todo">посилання на оплату — додати</div>
+      <div class="step">
+        <div class="step-dot d1">01</div>
+        <div class="tier t1">
+          <div class="tier-head"><span class="tier-name">SOLO</span><span class="tier-includes">базовий рівень</span></div>
+          <p class="tier-tagline">Вся програма — проходиш сам(а), підтримка = ком'юніті</p>
+          <div class="tier-price"><span class="amount">7 900 ₴</span><span class="usd">~$175</span></div>
+          <div class="tier-for">Кому підходить: «розберусь сам(а)» / обмежений бюджет</div>
+          <ul class="tier-features">
+            <li><span class="yes">✓</span><span>Повна програма — 12 кроків, SOS-блок, матеріали на 12 місяців</span></li>
+            <li><span class="yes">✓</span><span>Спільний чат-ком'юніті з модерацією</span></li>
+            <li><span class="yes">✓</span><span>Доступ до ком'юніті: <b>3 місяці</b></span></li>
+          </ul>
+          <a href="#" class="tier-cta">Обрати Solo</a>
+          <div class="tier-todo">посилання на оплату — додати</div>
+        </div>
       </div>
 
-      <div class="tariff featured">
-        <span class="badge-star">⭐ Рекомендуємо</span>
-        <div class="t-name">SUPPORT</div>
-        <div class="t-tagline">Програма + живий саппорт Ірини та групові Zoom</div>
-        <div class="t-price"><span class="amount">19 900 ₴</span><span class="usd">~$440</span></div>
-        <div class="t-for">Кому підходить: «застряг(ла), не можу відпустити, сам(а) не справляюсь» — основна аудиторія</div>
-        <ul class="t-features">
-          <li><span class="yes">✓</span><span>Доступ до ком'юніті: <b>6 місяців</b> (чат + кола)</span></li>
-          <li><span class="yes">✓</span><span><b>Кола підтримки</b> — групові Zoom-зустрічі учасників одного кроку</span></li>
-          <li><span class="yes">✓</span><span>Гілки по кроках + завдання в чат з фідбеком</span></li>
-          <li><span class="yes">✓</span><span>Саппорт Ірини в чаті (тег → відповідь, 24–48 год)</span></li>
-          <li><span class="yes">✓</span><span>Групові Zoom з Іриною — <b>2 рази на місяць</b>, із записом</span></li>
-          <li><span class="no">—</span><span>Особисті дзвінки з Іриною</span></li>
-        </ul>
-        <a href="#" class="t-cta">Обрати Support</a>
-        <div class="t-todo">посилання на оплату — додати</div>
+      <div class="step">
+        <div class="step-dot d2">02</div>
+        <div class="tier t2">
+          <div class="tier-head"><span class="tier-name">SUPPORT</span><span class="tier-includes">⭐ основний вибір</span></div>
+          <p class="tier-tagline">Програма + живий саппорт Ірини та групові Zoom</p>
+          <div class="tier-price"><span class="amount">19 900 ₴</span><span class="usd">~$440</span><span class="delta">+12 000 ₴ до Solo</span></div>
+          <div class="tier-for">Кому підходить: «застряг(ла), не можу відпустити, сам(а) не справляюсь» — основна аудиторія</div>
+          <div class="tier-add">Усе з Solo, плюс:</div>
+          <ul class="tier-features">
+            <li><span class="yes">✓</span><span><b>Кола підтримки</b> — групові Zoom учасників одного кроку</span></li>
+            <li><span class="yes">✓</span><span>Гілки по кроках + завдання в чат з фідбеком</span></li>
+            <li><span class="yes">✓</span><span>Саппорт Ірини в чаті (тег → відповідь, 24–48 год)</span></li>
+            <li><span class="yes">✓</span><span>Групові Zoom з Іриною — <b>2 рази на місяць</b>, із записом</span></li>
+            <li><span class="yes">✓</span><span>Доступ до ком'юніті продовжується до <b>6 місяців</b></span></li>
+          </ul>
+          <a href="#" class="tier-cta">Обрати Support</a>
+          <div class="tier-todo">посилання на оплату — додати</div>
+        </div>
       </div>
 
-      <div class="tariff">
-        <div class="t-name">VIP</div>
-        <div class="t-tagline">Максимум: усе з Support + особиста робота з Іриною</div>
-        <div class="t-price"><span class="amount">59 900 ₴</span><span class="usd">~$1 330</span></div>
-        <div class="t-for">Кому підходить: гострий стан, розлучення, тривалі стосунки — «не витримую»</div>
-        <ul class="t-features">
-          <li><span class="yes">✓</span><span>Доступ до ком'юніті: <b>12 місяців</b> (чат + кола)</span></li>
-          <li><span class="yes">✓</span><span>Саппорт Ірини в чаті — <b>пріоритетний</b></span></li>
-          <li><span class="yes">✓</span><span>Групові Zoom з Іриною + пріоритет на розборах</span></li>
-          <li><span class="yes">✓</span><span><b>Особисті дзвінки з Іриною</b>: щотижня на гострому етапі (кроки 1–5), далі 1 раз/міс</span></li>
-          <li><span class="yes">✓</span><span>Індивідуальний фідбек голосовими — особисто, поза чатом</span></li>
-        </ul>
-        <a href="#" class="t-cta">Обрати VIP</a>
-        <div class="t-todo">посилання на оплату — додати</div>
+      <div class="step">
+        <div class="step-dot d3">03</div>
+        <div class="tier t3">
+          <div class="tier-head"><span class="tier-name">VIP</span><span class="tier-includes">максимум присутності</span></div>
+          <p class="tier-tagline">Усе з Support + особиста робота з Іриною</p>
+          <div class="tier-price"><span class="amount">59 900 ₴</span><span class="usd">~$1 330</span><span class="delta">+40 000 ₴ до Support</span></div>
+          <div class="tier-for">Кому підходить: гострий стан, розлучення, тривалі стосунки — «не витримую»</div>
+          <div class="tier-add">Усе з Support, плюс:</div>
+          <ul class="tier-features">
+            <li><span class="yes">✓</span><span><b>Особисті дзвінки з Іриною</b>: щотижня на гострому етапі (кроки 1–5), далі 1 раз/міс</span></li>
+            <li><span class="yes">✓</span><span>Індивідуальний фідбек голосовими — особисто, поза чатом</span></li>
+            <li><span class="yes">✓</span><span>Пріоритетний саппорт в чаті та на розборах</span></li>
+            <li><span class="yes">✓</span><span>Доступ до ком'юніті — усі <b>12 місяців</b></span></li>
+          </ul>
+          <a href="#" class="tier-cta">Обрати VIP</a>
+          <div class="tier-todo">посилання на оплату — додати</div>
+        </div>
       </div>
 
     </div>
