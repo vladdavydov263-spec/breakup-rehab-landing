@@ -312,10 +312,40 @@ h2{margin-top:12px;font-size:clamp(26px,5vw,32px);color:var(--ink);max-width:480
 .tier.t3 .tier-features li b{color:#fff;}
 .tier-features .yes{color:var(--coral-dark);flex:none;}
 .tier.t3 .tier-features .yes{color:var(--gold-tint);}
-.tier-cta{display:block;margin-top:18px;text-align:center;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;background:var(--coral);color:#fff;}
+.tier-cta{display:block;width:100%;border:none;margin-top:18px;text-align:center;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;background:var(--coral);color:#fff;transition:transform .15s ease,background .15s ease;}
+.tier-cta:hover{transform:translateY(-2px);background:var(--coral-dark);}
 .tier.t3 .tier-cta{background:#fff;color:var(--plum);}
-.tier-todo{margin-top:8px;font-family:var(--mono);font-size:10.5px;text-align:center;color:var(--ink-faint);}
-.tier.t3 .tier-todo{color:rgba(243,238,240,0.5);}
+.tier.t3 .tier-cta:hover{background:var(--gold-tint);}
+
+/* MODAL */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(42,34,48,0.55);
+  z-index:100;align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal-box{
+  background:var(--bg);border-radius:var(--radius-lg);padding:32px 28px;
+  max-width:400px;width:100%;position:relative;box-shadow:0 30px 60px -20px rgba(0,0,0,0.4);
+  max-height:90vh;overflow-y:auto;
+}
+.modal-close{
+  position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;border-radius:50%;
+  background:var(--card);color:var(--ink-dim);font-size:16px;display:flex;align-items:center;justify-content:center;
+}
+.modal-tariff{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--coral-dark);font-weight:700;}
+.modal-box h3{margin-top:8px;font-family:var(--display);font-weight:800;font-size:21px;color:var(--ink);}
+.modal-price{margin-top:4px;font-size:14px;color:var(--ink-dim);}
+.modal-form{margin-top:22px;display:flex;flex-direction:column;gap:12px;}
+.modal-form input{width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font-size:15px;font-family:var(--sans);color:var(--ink);}
+.modal-form input::placeholder{color:var(--ink-faint);}
+.modal-form input:focus{outline:2px solid var(--coral);outline-offset:1px;}
+.modal-submit{margin-top:4px;border:none;padding:15px;border-radius:100px;background:var(--coral);color:#fff;font-weight:800;font-size:14.5px;}
+.modal-submit:hover{background:var(--coral-dark);}
+.modal-note{margin-top:12px;font-size:12px;color:var(--ink-faint);text-align:center;}
+.modal-thanks{display:none;text-align:center;padding:20px 0;}
+.modal-thanks.open{display:block;}
+.modal-thanks p{font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink);}
+.modal-thanks span{display:block;margin-top:8px;font-size:13.5px;color:var(--ink-dim);font-family:var(--sans);font-weight:400;}
 
 /* TRUST STRIP */
 .trust-strip{display:flex;flex-direction:column;gap:12px;margin-top:32px;}
@@ -469,8 +499,7 @@ footer{padding:44px 0 50px;}
             <li><span class="yes">✓</span><span>Спільний чат-ком'юніті з модерацією</span></li>
             <li><span class="yes">✓</span><span>Доступ до ком'юніті: <b>3 місяці</b></span></li>
           </ul>
-          <a href="#" class="tier-cta">Обрати Solo</a>
-          <div class="tier-todo">посилання на оплату — додати</div>
+          <button type="button" class="tier-cta" data-tariff="Solo" data-price="7 900 ₴">Обрати Solo</button>
         </div>
       </div>
 
@@ -489,8 +518,7 @@ footer{padding:44px 0 50px;}
             <li><span class="yes">✓</span><span>Групові Zoom з Іриною — <b>2 рази на місяць</b>, із записом</span></li>
             <li><span class="yes">✓</span><span>Доступ до ком'юніті продовжується до <b>6 місяців</b></span></li>
           </ul>
-          <a href="#" class="tier-cta">Обрати Support</a>
-          <div class="tier-todo">посилання на оплату — додати</div>
+          <button type="button" class="tier-cta" data-tariff="Support" data-price="19 900 ₴">Обрати Support</button>
         </div>
       </div>
 
@@ -508,8 +536,7 @@ footer{padding:44px 0 50px;}
             <li><span class="yes">✓</span><span>Пріоритетний саппорт в чаті та на розборах</span></li>
             <li><span class="yes">✓</span><span>Доступ до ком'юніті — усі <b>12 місяців</b></span></li>
           </ul>
-          <a href="#" class="tier-cta">Обрати VIP</a>
-          <div class="tier-todo">посилання на оплату — додати</div>
+          <button type="button" class="tier-cta" data-tariff="VIP" data-price="59 900 ₴">Обрати VIP</button>
         </div>
       </div>
 
@@ -604,6 +631,65 @@ footer{padding:44px 0 50px;}
     </div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Закрити">✕</button>
+    <div id="modalFormState">
+      <div class="modal-tariff" id="modalTariffLabel">Тариф SUPPORT</div>
+      <h3>Залиш контакт</h3>
+      <p class="modal-price" id="modalPriceLabel">19 900 ₴</p>
+      <form class="modal-form" id="modalForm">
+        <input type="text" id="modalName" placeholder="Ім'я" required>
+        <input type="text" id="modalContact" placeholder="Telegram або телефон" required>
+        <button type="submit" class="modal-submit">Залишити заявку</button>
+      </form>
+      <p class="modal-note">Ми зв'яжемось для оформлення й оплати. Без спаму.</p>
+    </div>
+    <div class="modal-thanks" id="modalThanks">
+      <p>Дякуємо! 🤍</p>
+      <span>Ми зв'яжемось з тобою найближчим часом, щоб оформити тариф.</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay = document.getElementById('modalOverlay');
+  var closeBtn = document.getElementById('modalClose');
+  var tariffLabel = document.getElementById('modalTariffLabel');
+  var priceLabel = document.getElementById('modalPriceLabel');
+  var formState = document.getElementById('modalFormState');
+  var thanks = document.getElementById('modalThanks');
+  var form = document.getElementById('modalForm');
+
+  function openModal(tariff, price){
+    tariffLabel.textContent = 'Тариф ' + tariff.toUpperCase();
+    priceLabel.textContent = price;
+    formState.style.display = 'block';
+    thanks.classList.remove('open');
+    form.reset();
+    overlay.classList.add('open');
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+  }
+
+  document.querySelectorAll('.tier-cta').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal(btn.dataset.tariff, btn.dataset.price);
+    });
+  });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    formState.style.display = 'none';
+    thanks.classList.add('open');
+  });
+})();
+</script>
 
 </body>
 </html>
