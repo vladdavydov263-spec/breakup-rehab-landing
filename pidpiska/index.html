@@ -444,6 +444,18 @@ footer{padding:44px 0 50px;}
 }
 .foot-row{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-faint);font-family:var(--mono);flex-wrap:wrap;gap:8px;}
 
+.stat-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px;}
+.stat-card{flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;text-align:center;}
+.stat-num{font-family:var(--display);font-weight:800;font-size:28px;color:var(--coral-dark);white-space:nowrap;}
+.stat-label{font-size:13px;color:var(--ink-dim);margin-top:4px;}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px;}
+.trust-num{font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);white-space:nowrap;}
+.trust-label{font-size:12px;color:var(--ink-faint);margin-top:2px;}
+@media(max-width:640px){
+  .stat-row{flex-direction:column;}
+  .stat-card{width:100%;}
+  .trust-row{grid-template-columns:repeat(2,1fr);}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none !important;}}
 </style>
 </head>
@@ -506,18 +518,18 @@ footer{padding:44px 0 50px;}
       <li><span class="check"><svg width="13" height="13" viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>2 ефіри на місяць</b> з психологом Іриною Макаренко — наживо або в записі.</span></li>
     </ul>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:36px;">
-      <div style="flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:28px;color:var(--coral-dark);">12</div>
-        <div style="font-size:13px;color:var(--ink-dim);margin-top:4px;">кроків програми</div>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">12</div>
+        <div class="stat-label">кроків програми</div>
       </div>
-      <div style="flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:28px;color:var(--coral-dark);">5-10 хв</div>
-        <div style="font-size:13px;color:var(--ink-dim);margin-top:4px;">SOS-вправа, коли накрило</div>
+      <div class="stat-card">
+        <div class="stat-num">5&#8209;10&nbsp;хв</div>
+        <div class="stat-label">SOS-вправа, коли накрило</div>
       </div>
-      <div style="flex:1;min-width:140px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:28px;color:var(--coral-dark);">2</div>
-        <div style="font-size:13px;color:var(--ink-dim);margin-top:4px;">ефіри на місяць з психологом</div>
+      <div class="stat-card">
+        <div class="stat-num">2</div>
+        <div class="stat-label">ефіри на місяць з психологом</div>
       </div>
     </div>
   </div>
@@ -613,22 +625,22 @@ footer{padding:44px 0 50px;}
       </div>
     </div>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;">
-      <div style="flex:1;min-width:140px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);">1 млн+</div>
-        <div style="font-size:12px;color:var(--ink-faint);margin-top:2px;">в Instagram</div>
+    <div class="trust-row">
+      <div>
+        <div class="trust-num">1&nbsp;млн+</div>
+        <div class="trust-label">в Instagram</div>
       </div>
-      <div style="flex:1;min-width:140px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);">955K+</div>
-        <div style="font-size:12px;color:var(--ink-faint);margin-top:2px;">у Facebook</div>
+      <div>
+        <div class="trust-num">955K+</div>
+        <div class="trust-label">у Facebook</div>
       </div>
-      <div style="flex:1;min-width:140px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);">615K+</div>
-        <div style="font-size:12px;color:var(--ink-faint);margin-top:2px;">на YouTube</div>
+      <div>
+        <div class="trust-num">615K+</div>
+        <div class="trust-label">на YouTube</div>
       </div>
-      <div style="flex:1;min-width:140px;text-align:center;">
-        <div style="font-family:var(--display);font-weight:800;font-size:24px;color:var(--ink);">тисячі</div>
-        <div style="font-size:12px;color:var(--ink-faint);margin-top:2px;">випускників курсів</div>
+      <div>
+        <div class="trust-num">тисячі</div>
+        <div class="trust-label">випускників курсів</div>
       </div>
     </div>
   </div>
