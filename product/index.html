@@ -685,6 +685,13 @@ footer{padding:44px 0 50px;}
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    var name = document.getElementById('modalName').value;
+    var contact = document.getElementById('modalContact').value;
+    fetch('https://breakup-rehab-platform.vercel.app/api/leads', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name: name, contact: contact, tariff: tariffLabel.textContent, source: 'product', page: location.pathname})
+    }).catch(function(){});
     formState.style.display = 'none';
     thanks.classList.add('open');
   });
