@@ -767,14 +767,7 @@ footer{padding:44px 0 50px;}
     <div class="final-card">
       <div class="blob"></div>
       <h2>Готова почати?</h2>
-      <p class="lead">Залиш контакт — і ми надішлемо посилання на оформлення підписки.</p>
-      <form class="form" id="regForm">
-        <div class="field"><input id="name" type="text" placeholder="Ім'я" required></div>
-        <div class="field"><input id="contact" type="text" placeholder="Telegram або телефон" required></div>
-        <button type="submit" class="btn btn-light">Підписатися</button>
-      </form>
-      <p class="form-note" id="formNote">Без спаму. Надішлемо посилання на оформлення підписки і всі деталі.</p>
-      <p class="thanks" id="thanksMsg">Дякуємо! Зв'яжемось з тобою найближчим часом, щоб оформити підписку 🤍</p>
+      <div id="MoYFcW8I" class="ss-landing" data-target="MoYFcW8I" data-domain="karpachof"></div>
     </div>
   </div>
 </section>
@@ -789,20 +782,6 @@ footer{padding:44px 0 50px;}
   </div>
 </footer>
 
-<script>
-document.getElementById('regForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var name = document.getElementById('name').value;
-  var contact = document.getElementById('contact').value;
-  fetch('https://breakup-rehab-platform.vercel.app/api/leads', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({name: name, contact: contact, source: 'pidpiska', page: location.pathname})
-  }).catch(function(){});
-  this.style.display='none';
-  document.getElementById('formNote').style.display='none';
-  document.getElementById('thanksMsg').style.display='block';
-});
-</script>
+<script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
 </body>
 </html>
