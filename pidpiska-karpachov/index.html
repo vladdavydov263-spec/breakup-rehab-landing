@@ -4,273 +4,308 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Життя після «нас» — підписка на програму відновлення</title>
-<meta name="description" content="12 кроків виходу з емоційної залежності після розставання. Вправи екстреної стабілізації, щоденна практика, закрита спільнота та 2 ефіри на місяць. 899 грн/міс, скасування в один клік.">
+<meta name="description" content="12 кроків виходу з емоційної залежності після розставання. Вправи екстреної стабілізації, закрита спільнота, 2 ефіри на місяць. 899 грн/міс.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,600;1,7..72,300;1,7..72,400&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,600;1,7..72,300&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1C2130;
-  --ink-soft:#4A5266;
-  --ink-mute:#79809A;
-  --shell:#E9E8EE;
-  --paper:#F8F7FA;
-  --line:#D3D1DC;
-  --rose:#A8555F;
-  --rose-deep:#8E434C;
-  --dawn:#E2C39F;
-  --calm:#7E93A8;
-  --measure:640px;
-  --wide:1080px;
-  --r:14px;
+  --ink:#1C2130; --ink-soft:#4A5266; --ink-mute:#79809A;
+  --shell:#E9E8EE; --paper:#F8F7FA; --line:#D3D1DC;
+  --rose:#A8555F; --rose-deep:#8E434C; --dawn:#E2C39F; --calm:#7E93A8;
+  --wide:1180px; --r:12px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--shell);color:var(--ink);
   font-family:"Onest",system-ui,-apple-system,sans-serif;
-  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
-  padding-bottom:76px;
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:74px;
 }
-@media(min-width:860px){body{padding-bottom:0}}
+@media(min-width:900px){body{padding-bottom:0}}
 img{max-width:100%;display:block}
 a{color:inherit}
 
-h1,h2,h3{font-family:"Literata",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.015em;line-height:1.12}
-h1{font-size:clamp(40px,10vw,74px)}
-h2{font-size:clamp(27px,5.4vw,40px)}
-h3{font-size:20px;line-height:1.3}
-p{margin:0 0 1em}
+h1,h2,h3{font-family:"Literata",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.015em;line-height:1.1}
+h1{font-size:clamp(38px,7vw,60px)}
+h2{font-size:clamp(25px,3.4vw,34px)}
+h3{font-size:18px;line-height:1.25}
+p{margin:0 0 .8em}
 strong{font-weight:600}
 
-.eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 18px}
-.lede{font-size:19px;color:var(--ink-soft);line-height:1.55}
-.fine{font-size:13.5px;color:var(--ink-mute);line-height:1.5}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 12px}
+.lede{font-size:17.5px;color:var(--ink-soft);line-height:1.45}
+.fine{font-size:13px;color:var(--ink-mute);line-height:1.45}
+.cap{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:10px}
 
-.wrap{max-width:var(--wide);margin:0 auto;padding:0 22px}
-.col{max-width:var(--measure);margin:0 auto;padding:0 22px}
-section{padding:64px 0}
-@media(min-width:860px){section{padding:96px 0}}
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 20px}
+section{padding:46px 0}
+@media(min-width:900px){section{padding:68px 0}}
 .rule{height:1px;background:var(--line);border:0;margin:0}
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-family:"Onest";font-size:16px;font-weight:500;text-decoration:none;
-  padding:17px 30px;border-radius:100px;border:1px solid transparent;cursor:pointer;
-  transition:transform .18s ease, background .18s ease;
+/* two-column editorial split */
+.split{display:grid;gap:26px}
+@media(min-width:900px){
+  .split{grid-template-columns:290px 1fr;gap:56px;align-items:start}
+  .split-head{position:sticky;top:34px}
 }
-.btn-primary{background:var(--rose);color:#fff;box-shadow:0 6px 22px -8px rgba(168,85,95,.7)}
+.split-head h2{margin-bottom:12px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-size:15.5px;font-weight:500;text-decoration:none;
+  padding:15px 26px;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn-primary{background:var(--rose);color:#fff;box-shadow:0 5px 18px -7px rgba(168,85,95,.7)}
 .btn-primary:hover{background:var(--rose-deep);transform:translateY(-1px)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--ink-mute);background:rgba(255,255,255,.5)}
+.btn-ghost:hover{border-color:var(--ink-mute)}
 .btn-block{width:100%}
 :focus-visible{outline:2.5px solid var(--rose);outline-offset:3px;border-radius:4px}
-.cta-note{margin-top:14px;font-size:13.5px;color:var(--ink-mute)}
 
-/* hero */
-.hero{padding-top:38px;padding-bottom:46px}
-.hero h1{margin:0 0 22px}
-.hero h1 em{color:var(--rose);font-family:"Literata";font-style:italic}
-.hero .lede{max-width:30em}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.authors-hero{display:flex;align-items:center;gap:26px;margin-top:38px}
-.authors-hero img{width:340px;height:auto;border-radius:18px}
-.authors-hero div{font-size:14px;color:var(--ink-soft);line-height:1.4}
-.authors-hero b{display:block;color:var(--ink);font-weight:500}
+/* ---------- hero ---------- */
+.hero{padding-top:30px;padding-bottom:34px}
+.hero-grid{display:grid;gap:32px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1fr 300px;gap:60px}}
+.hero h1{margin:0 0 16px}
+.hero h1 em{color:var(--rose);font-style:italic}
+.hero .lede{max-width:26em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-size:13.5px;color:var(--ink-mute)}
+.hero-meta span{display:flex;align-items:center;gap:7px}
+.hero-meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--rose)}
+.authors-hero{display:flex;align-items:center;gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.authors-hero img{width:88px;border-radius:8px}
+.authors-hero div{font-size:13px;color:var(--ink-mute);line-height:1.35}
+.authors-hero b{display:block;color:var(--ink);font-weight:500;font-size:14px}
 
-/* signature: breathing */
+/* ---------- phone mockup ---------- */
+.phone{
+  width:270px;margin:0 auto;background:#fff;border-radius:26px;
+  border:1px solid var(--line);box-shadow:0 20px 50px -24px rgba(28,33,48,.45);
+  padding:12px 12px 16px;
+}
+.phone-bar{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-mute);padding:2px 6px 10px}
+.scr-head{display:flex;gap:10px;align-items:center;padding:0 4px 10px;border-bottom:1px solid var(--line)}
+.scr-num{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-family:"Literata";font-size:12px;color:var(--rose);flex:0 0 auto}
+.scr-head b{display:block;font-family:"Literata";font-size:14.5px;font-weight:400}
+.scr-head span{font-size:11px;color:var(--ink-mute)}
+.scr-player{display:flex;align-items:center;gap:9px;padding:12px 4px}
+.pbtn{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:10px;flex:0 0 auto}
+.pbar{flex:1;height:3px;background:var(--line);border-radius:2px;position:relative}
+.pbar::after{content:"";position:absolute;left:0;height:3px;width:24%;background:var(--rose);border-radius:2px}
+.scr-player time{font-size:11px;color:var(--ink-mute)}
+.scr-list{list-style:none;margin:0;padding:6px 4px 0;font-size:12.5px;color:var(--ink-soft)}
+.scr-list li{padding:7px 0 7px 20px;position:relative;border-top:1px solid var(--line)}
+.scr-list li::before{content:"";position:absolute;left:0;top:11px;width:11px;height:11px;border-radius:3px;border:1px solid var(--line)}
+.scr-list li.done::before{background:var(--rose);border-color:var(--rose)}
+.scr-list li.done::after{content:"✓";position:absolute;left:2px;top:7px;font-size:8px;color:#fff}
+
+/* ---------- dark stab ---------- */
 .stab{background:var(--ink);color:#EDECF1}
 .stab .eyebrow{color:var(--dawn)}
 .stab h2{color:#fff}
-.breath{margin:38px auto 0;max-width:420px;text-align:center}
-.breath-stage{position:relative;height:260px;display:grid;place-items:center}
+.stab .lede{color:#B9BDCB}
+.stab-grid{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.stab-grid{grid-template-columns:1fr 380px;gap:56px}}
+.breath{text-align:center}
+.breath-stage{position:relative;height:220px;display:grid;place-items:center}
 .breath-orb{
-  width:120px;height:120px;border-radius:50%;
-  background:radial-gradient(circle at 38% 32%, rgba(226,195,159,.95), rgba(168,85,95,.75) 70%);
-  transform:scale(.6);box-shadow:0 0 60px -6px rgba(226,195,159,.45);
-  transition:transform 4s cubic-bezier(.4,0,.5,1);
+  width:104px;height:104px;border-radius:50%;
+  background:radial-gradient(circle at 38% 32%,rgba(226,195,159,.95),rgba(168,85,95,.75) 70%);
+  transform:scale(.6);box-shadow:0 0 55px -6px rgba(226,195,159,.45);transition:transform 4s cubic-bezier(.4,0,.5,1);
 }
-.breath-ring{position:absolute;width:210px;height:210px;border-radius:50%;border:1px solid rgba(226,195,159,.28)}
-.breath-cue{position:absolute;bottom:8px;left:0;right:0;font-family:"Literata";font-size:21px;color:#EDECF1;min-height:1.4em}
-.breath-count{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A3;margin-top:6px;min-height:1.2em}
-.breath-btn{margin-top:22px}
-.stab-locked{margin-top:44px;border-top:1px solid rgba(255,255,255,.13);padding-top:26px}
-.stab-locked ul{list-style:none;margin:0;padding:0}
-.stab-locked li{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:15.5px;color:#B9BDCB}
-.stab-locked li:last-child{border-bottom:0}
-.lock{flex:0 0 auto;width:17px;height:17px;margin-top:3px;opacity:.55}
+.breath-ring{position:absolute;width:186px;height:186px;border-radius:50%;border:1px solid rgba(226,195,159,.26)}
+.breath-cue{position:absolute;bottom:2px;left:0;right:0;font-family:"Literata";font-size:19px;min-height:1.4em}
+.breath-count{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A3;margin:4px 0 0;min-height:1.2em}
+.locked{list-style:none;margin:20px 0 0;padding:16px 0 0;border-top:1px solid rgba(255,255,255,.13)}
+.locked li{display:flex;gap:10px;padding:9px 0;font-size:14.5px;color:#B9BDCB;align-items:flex-start}
+.locked b{color:#EDECF1;font-weight:500}
+.lock{width:15px;height:15px;margin-top:3px;opacity:.5;flex:0 0 auto}
 @media(prefers-reduced-motion:reduce){.breath-orb{transition:none}html{scroll-behavior:auto}}
 
-/* safety */
-.safety{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
-.safety .dot{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--calm);margin-top:8px}
-.safety p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+/* ---------- generic pieces ---------- */
+.safety{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;display:flex;gap:12px}
+.safety .dot{width:7px;height:7px;border-radius:50%;background:var(--calm);margin-top:7px;flex:0 0 auto}
+.safety p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.45}
 
-/* lists */
-.recog{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line)}
-.recog li{padding:18px 0 18px 34px;border-bottom:1px solid var(--line);font-size:17.5px;position:relative}
-.recog li::before{content:"";position:absolute;left:4px;top:27px;width:13px;height:1.5px;background:var(--rose)}
+.recog{list-style:none;margin:0;padding:0;display:grid;gap:0}
+@media(min-width:700px){.recog{grid-template-columns:1fr 1fr;column-gap:36px}}
+.recog li{padding:11px 0 11px 22px;border-bottom:1px solid var(--line);font-size:15.5px;position:relative}
+.recog li::before{content:"";position:absolute;left:0;top:19px;width:11px;height:1.5px;background:var(--rose)}
 
-.quote{font-family:"Literata";font-style:italic;font-weight:300;font-size:clamp(22px,4.4vw,30px);line-height:1.34;border-left:2px solid var(--rose);padding-left:24px;margin:0}
-.quote-src{font-family:"Onest";font-style:normal;font-size:14px;color:var(--ink-mute);margin-top:16px}
+.cards{display:grid;gap:12px}
+@media(min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px}
+.card h3{margin-bottom:7px}
+.card p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.45}
 
-.cards{display:grid;gap:14px;margin-top:34px}
-@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
-.card h3{margin-bottom:10px}
-.card p{margin:0;font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:12px}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--shell);padding:16px 12px;text-align:center}
+.stat b{display:block;font-family:"Literata";font-size:28px;font-weight:400;line-height:1}
+.stat span{display:block;margin-top:5px;font-size:12px;color:var(--ink-mute);line-height:1.3}
 
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:32px}
-@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
-.stat{background:var(--shell);padding:24px 18px;text-align:center}
-.stat b{display:block;font-family:"Literata";font-size:36px;font-weight:400;line-height:1}
-.stat span{display:block;margin-top:8px;font-size:13px;color:var(--ink-mute);line-height:1.4}
+/* ---------- chat mockup ---------- */
+.showcase{display:grid;gap:26px;align-items:start}
+@media(min-width:900px){.showcase{grid-template-columns:1fr 330px;gap:56px}}
+.chat{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:14px;box-shadow:0 16px 40px -26px rgba(28,33,48,.5);
+}
+.chat-top{display:flex;align-items:center;gap:9px;padding-bottom:11px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.chat-av{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:12px;font-family:"Literata"}
+.chat-top b{font-size:13.5px;font-weight:500;display:block}
+.chat-top span{font-size:11px;color:var(--ink-mute)}
+.msg{max-width:88%;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin-bottom:8px;font-size:13.5px;line-height:1.4}
+.msg .who{display:block;font-size:11px;color:var(--rose);margin-bottom:3px}
+.msg.pin{background:#fff;border-color:var(--ink);border-left-width:3px}
+.msg.me{margin-left:auto;background:var(--ink);color:#EDECF1;border-color:var(--ink)}
 
-/* zones */
-.zones{display:grid;gap:12px;margin-top:30px}
-@media(min-width:760px){.zones{grid-template-columns:repeat(3,1fr)}}
-.zone{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px}
-.zone b{display:block;font-family:"Literata";font-size:17px;margin-bottom:8px}
-.zone p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.5}
-.zone i{display:block;width:26px;height:3px;border-radius:2px;margin-bottom:14px}
+/* ---------- zones ---------- */
+.zones{display:grid;gap:10px}
+@media(min-width:700px){.zones{grid-template-columns:repeat(3,1fr)}}
+.zone{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.zone b{display:block;font-family:"Literata";font-size:15.5px;margin-bottom:6px}
+.zone p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.4}
+.zone i{display:block;width:22px;height:3px;border-radius:2px;margin-bottom:11px}
 .z1 i{background:#6E9478}.z2 i{background:var(--dawn)}.z3 i{background:var(--rose)}
 
-/* platform preview */
-.preview{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;margin-top:32px}
-.preview-top{display:flex;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.preview-num{font-family:"Literata";font-size:14px;color:var(--rose);border:1px solid var(--line);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;flex:0 0 auto}
-.preview-top b{display:block;font-family:"Literata";font-size:19px;font-weight:400}
-.preview-top span{font-size:13px;color:var(--ink-mute)}
-.player{display:flex;align-items:center;gap:12px;margin:18px 0}
-.player-btn{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;flex:0 0 auto;font-size:12px}
-.player-bar{flex:1;height:3px;background:var(--line);border-radius:2px;position:relative}
-.player-bar::after{content:"";position:absolute;left:0;top:0;height:3px;width:22%;background:var(--rose);border-radius:2px}
-.player time{font-size:13px;color:var(--ink-mute);font-variant-numeric:tabular-nums}
-.checks{list-style:none;margin:0;padding:0;font-size:15px;color:var(--ink-soft)}
-.checks li{padding:7px 0 7px 24px;position:relative}
-.checks li::before{content:"✓";position:absolute;left:0;color:var(--rose);font-size:13px}
-
-/* voices */
-.voices{display:grid;gap:14px;margin-top:34px}
-@media(min-width:860px){.voices{grid-template-columns:repeat(3,1fr)}}
-.voice{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column}
-.voice p{font-family:"Literata";font-size:16.5px;line-height:1.5;flex:1}
-.voice footer{font-size:13.5px;color:var(--ink-mute);margin-top:14px}
-
-/* program */
-.block{margin-top:44px}
-.block-head{display:flex;align-items:baseline;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
-.block-head span{font-family:"Literata";font-size:13px;color:var(--rose)}
-.block-head h3{font-size:24px}
-.block-desc{font-size:15px;color:var(--ink-mute);margin:14px 0 0}
+/* ---------- program ---------- */
+.blocks{display:grid;gap:24px}
+@media(min-width:760px){.blocks{grid-template-columns:1fr 1fr;gap:26px 40px}}
+.block-head{display:flex;align-items:baseline;gap:11px;padding-bottom:9px;border-bottom:1px solid var(--ink)}
+.block-head span{font-family:"Literata";font-size:12px;color:var(--rose)}
+.block-head h3{font-size:19px}
 .step{border-bottom:1px solid var(--line)}
-.step summary{
-  cursor:pointer;list-style:none;display:flex;gap:16px;align-items:baseline;
-  padding:16px 30px 16px 0;position:relative;font-size:17px;
-}
+.step summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:baseline;padding:11px 26px 11px 0;position:relative;font-size:15px}
 .step summary::-webkit-details-marker{display:none}
-.step summary em{font-family:"Literata";font-style:normal;font-size:13px;color:var(--ink-mute);flex:0 0 26px;font-variant-numeric:tabular-nums}
-.step summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:20px;color:var(--rose);font-weight:300;transition:transform .2s ease}
+.step summary em{font-family:"Literata";font-style:normal;font-size:12px;color:var(--ink-mute);flex:0 0 20px;font-variant-numeric:tabular-nums}
+.step summary::after{content:"+";position:absolute;right:2px;top:9px;font-size:18px;color:var(--rose);font-weight:300;transition:transform .2s}
 .step[open] summary::after{transform:rotate(45deg)}
-.step-body{padding:0 0 20px 42px}
-.step-goal{font-size:15.5px;color:var(--ink-soft);margin:0 0 14px}
+.step-body{padding:0 0 14px 32px}
+.step-goal{font-size:14px;color:var(--ink-soft);margin:0 0 9px}
 .step-out{list-style:none;margin:0;padding:0}
-.step-out li{padding:6px 0 6px 20px;position:relative;font-size:15px;color:var(--ink-soft)}
-.step-out li::before{content:"→";position:absolute;left:0;color:var(--rose);font-size:13px}
+.step-out li{padding:4px 0 4px 17px;position:relative;font-size:13.5px;color:var(--ink-soft)}
+.step-out li::before{content:"→";position:absolute;left:0;color:var(--rose);font-size:12px}
 
-/* authors */
-.author{display:grid;gap:22px;margin-top:36px}
-@media(min-width:760px){.author{grid-template-columns:200px 1fr;gap:32px;align-items:start}}
-.author img{border-radius:var(--r);width:100%;max-width:220px}
-.author h3{margin-bottom:4px}
-.author .role{font-size:14px;color:var(--rose);margin-bottom:16px}
+/* ---------- authors ---------- */
+.authors{display:grid;gap:26px}
+@media(min-width:760px){.authors{grid-template-columns:1fr 1fr;gap:36px}}
+.author img{border-radius:var(--r);width:100%;max-width:150px;margin-bottom:14px}
+.author h3{margin-bottom:3px}
+.author .role{font-size:13px;color:var(--rose);margin-bottom:11px}
 .author ul{list-style:none;margin:0;padding:0}
-.author li{padding:9px 0 9px 20px;position:relative;font-size:15.5px;color:var(--ink-soft);border-bottom:1px solid var(--line);line-height:1.5}
+.author li{padding:7px 0 7px 17px;position:relative;font-size:14px;color:var(--ink-soft);border-bottom:1px solid var(--line);line-height:1.4}
 .author li:last-child{border-bottom:0}
-.author li::before{content:"";position:absolute;left:0;top:18px;width:9px;height:1.5px;background:var(--line)}
-.reach{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:36px}
-@media(min-width:760px){.reach{grid-template-columns:repeat(4,1fr)}}
-.reach div{background:var(--shell);padding:20px;text-align:center}
-.reach b{display:block;font-family:"Literata";font-size:26px;font-weight:400}
-.reach span{font-size:12.5px;color:var(--ink-mute)}
+.author li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:1.5px;background:var(--line)}
+.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:22px}
+.reach div{background:var(--shell);padding:14px 8px;text-align:center}
+.reach b{display:block;font-family:"Literata";font-size:20px;font-weight:400}
+.reach span{font-size:11.5px;color:var(--ink-mute)}
 
-/* pricing */
+/* ---------- pricing ---------- */
 .pricing{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.plan{border:1px solid var(--ink);border-radius:var(--r);padding:30px 28px;background:var(--ink);color:#EDECF1;margin-top:34px}
-.plan-name{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A3}
-.price{font-family:"Literata";font-size:46px;line-height:1;margin:14px 0 4px;color:#fff}
-.price small{font-family:"Onest";font-size:15px;color:#8A90A3}
-.plan-sub{font-size:14px;color:#8A90A3;margin-bottom:24px}
-.plan-list{list-style:none;margin:24px 0 0;padding:0;font-size:15px}
-.plan-list li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#B9BDCB}
+.pay{display:grid;gap:16px}
+@media(min-width:760px){.pay{grid-template-columns:1fr 1fr;gap:24px;align-items:start}}
+.plan{border-radius:var(--r);padding:24px;background:var(--ink);color:#EDECF1}
+.plan-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A3}
+.price{font-family:"Literata";font-size:40px;line-height:1;margin:10px 0 3px;color:#fff}
+.price small{font-family:"Onest";font-size:14px;color:#8A90A3}
+.plan-sub{font-size:13px;color:#8A90A3;margin-bottom:18px}
+.plan-list{list-style:none;margin:18px 0 0;padding:0;font-size:14px}
+.plan-list li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#B9BDCB}
 .plan-list li:last-child{border-bottom:0}
-.after{margin-top:22px;border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--shell)}
-.after h3{font-size:18px;margin-bottom:10px}
-.after p{margin:0;font-size:15px;color:var(--ink-soft)}
+.after{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--shell)}
+.after h3{font-size:16px;margin-bottom:7px}
+.after p{margin:0;font-size:14px;color:var(--ink-soft)}
 
-/* faq */
-.faq{margin-top:32px;border-top:1px solid var(--line)}
+/* ---------- faq ---------- */
+.faq{display:grid;gap:0 40px}
+@media(min-width:760px){.faq{grid-template-columns:1fr 1fr}}
 .faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;font-family:"Literata";font-size:18px;line-height:1.35}
+.faq summary{cursor:pointer;list-style:none;padding:14px 30px 14px 0;position:relative;font-family:"Literata";font-size:16px;line-height:1.3}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:6px;top:19px;font-family:"Onest";font-size:22px;color:var(--rose);font-weight:300;transition:transform .2s ease}
+.faq summary::after{content:"+";position:absolute;right:4px;top:13px;font-family:"Onest";font-size:19px;color:var(--rose);font-weight:300;transition:transform .2s}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{padding:0 0 22px;margin:0;font-size:15.5px;color:var(--ink-soft);max-width:56ch}
+.faq details p{padding:0 0 15px;margin:0;font-size:14px;color:var(--ink-soft)}
 
-/* final */
+/* ---------- final ---------- */
 .final{background:var(--ink);color:#EDECF1;text-align:center}
-.final h2{color:#fff;margin-bottom:18px}
-.final p{color:#B9BDCB;max-width:44ch;margin-left:auto;margin-right:auto}
-.final-safety{margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.13);font-size:14px;color:#8A90A3;line-height:1.6;text-align:left}
-footer.site{padding:30px 0;text-align:center;font-size:13.5px;color:var(--ink-mute)}
-footer.site a{color:var(--ink-soft)}
+.final h2{color:#fff;margin-bottom:12px}
+.final p{color:#B9BDCB;max-width:42ch;margin-left:auto;margin-right:auto}
+.final-safety{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.13);font-size:13px;color:#8A90A3;line-height:1.5;text-align:left}
+footer.site{padding:22px 0;text-align:center;font-size:13px;color:var(--ink-mute)}
 
-.sticky{
-  position:fixed;left:0;right:0;bottom:0;z-index:40;
-  background:rgba(233,232,238,.94);backdrop-filter:blur(10px);
-  border-top:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:12px;
-}
-.sticky .s-price{font-size:13px;color:var(--ink-mute);line-height:1.25;flex:0 0 auto}
-.sticky .s-price b{display:block;font-family:"Literata";font-size:17px;color:var(--ink)}
-.sticky .btn{flex:1;padding:14px 18px;font-size:15px}
-@media(min-width:860px){.sticky{display:none}}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(233,232,238,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:10px}
+.sticky .s-price{font-size:12px;color:var(--ink-mute);line-height:1.2;flex:0 0 auto}
+.sticky .s-price b{display:block;font-family:"Literata";font-size:16px;color:var(--ink)}
+.sticky .btn{flex:1;padding:13px 16px;font-size:14.5px}
+@media(min-width:900px){.sticky{display:none}}
 </style>
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
+<!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="col">
-    <p class="eyebrow">Підписка · Breakup Rehab</p>
-    <h1>Життя після <em>«нас»</em></h1>
-    <p class="lede">12 кроків виходу з емоційної залежності після розставання — для тих, кого залишили, а не для тих, хто пішов сам.</p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a>
-      <a class="btn btn-ghost" href="#stab">Спершу спробувати вправу</a>
-    </div>
-    <p class="cta-note">Уся програма вже на платформі. Скасування в один клік.</p>
-
-    <div class="authors-hero">
-      <img src="../img/authors-hero.png" alt="Дмитро Карпачов та Ірина Макаренко">
-      <div>
-        <b>Дмитро Карпачов та Ірина Макаренко</b>
-        Автори програми
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Підписка · Breakup Rehab</p>
+      <h1>Життя після <em>«нас»</em></h1>
+      <p class="lede">12 кроків виходу з емоційної залежності після розставання — для тих, кого залишили, а не для тих, хто пішов сам.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a>
+        <a class="btn btn-ghost" href="#stab">Спробувати вправу</a>
       </div>
+      <div class="hero-meta">
+        <span>Уся програма вже на платформі</span>
+        <span>Скасування в один клік</span>
+      </div>
+      <div class="authors-hero">
+        <img src="../img/authors-hero.png" alt="Дмитро Карпачов та Ірина Макаренко">
+        <div><b>Дмитро Карпачов та Ірина Макаренко</b>Автори програми</div>
+      </div>
+    </div>
+
+    <!-- ⚠️ Мокап екрана платформи. Замінити реальним скріншотом, коли буде. -->
+    <div>
+      <div class="phone">
+        <div class="phone-bar"><span>9:41</span><span>Крок 1 з 12</span></div>
+        <div class="scr-head">
+          <span class="scr-num">01</span>
+          <div><b>Зафіксувати реальність</b><span>Блок 1 · Усвідомлення</span></div>
+        </div>
+        <div class="scr-player">
+          <span class="pbtn">▶</span><span class="pbar"></span><time>16:15</time>
+        </div>
+        <ul class="scr-list">
+          <li class="done">Практика 1 — Фіксація факту</li>
+          <li class="done">Практика 2 — Чого я боюся</li>
+          <li>Практика 3 — За що я тримаюся</li>
+          <li>Завдання в чат</li>
+          <li>Чек-поінти кроку</li>
+        </ul>
+      </div>
+      <p class="cap" style="text-align:center">Так виглядає крок усередині</p>
     </div>
   </div>
 </header>
 
-<!-- ============ SIGNATURE: FREE STABILISATION ============ -->
+<!-- ===== STABILISATION ===== -->
 <section class="stab" id="stab">
-  <div class="col">
-    <p class="eyebrow">Якщо накрило прямо зараз</p>
-    <h2>Спробуй до того, як платити</h2>
-    <p class="lede" style="color:#B9BDCB;margin-top:18px">
-      У програмі чотири вправи екстреної стабілізації. Одна з них — тут, безкоштовно, просто зараз.
-      Дихання 4–7–8, п'ять циклів. Нічого не треба вводити.
-    </p>
-
+  <div class="wrap stab-grid">
+    <div>
+      <p class="eyebrow">Якщо накрило прямо зараз</p>
+      <h2>Спробуй до того, як платити</h2>
+      <p class="lede" style="margin-top:12px">Дихання 4–7–8 — одна з чотирьох вправ екстреної стабілізації. Працює прямо тут, нічого вводити не треба.</p>
+      <ul class="locked">
+        <li><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><b>Повернення в теперішній момент</b> — коли думки закручуються</span></li>
+        <li><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><b>Заземлення через тіло</b> — при паніці й втраті контролю</span></li>
+        <li><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><b>Пауза перед імпульсом</b> — коли захотілося написати</span></li>
+      </ul>
+    </div>
     <div class="breath">
       <div class="breath-stage">
         <div class="breath-ring" aria-hidden="true"></div>
@@ -278,568 +313,306 @@ footer.site a{color:var(--ink-soft)}
         <div class="breath-cue" id="cue" role="status" aria-live="polite">Вдих 4 · Затримка 7 · Видих 8</div>
       </div>
       <p class="breath-count" id="count">5 циклів · близько 90 секунд</p>
-      <button class="btn btn-primary breath-btn" id="breathBtn" type="button">Почати вправу</button>
-    </div>
-
-    <p class="fine" style="color:#8A90A3;margin-top:26px">
-      Повільний видих вмикає ту частину нервової системи, яка відповідає за відновлення. Завдання —
-      не прибрати почуття, а трохи знизити напруження й повернути тілу відчуття опори.
-    </p>
-
-    <div class="stab-locked">
-      <p class="fine" style="color:#8A90A3;margin-bottom:14px">Ще три вправи відкриваються одразу після оплати:</p>
-      <ul>
-        <li>
-          <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span><strong style="color:#EDECF1">Повернення в теперішній момент</strong> — коли думки закручуються і винести їх неможливо.</span>
-        </li>
-        <li>
-          <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span><strong style="color:#EDECF1">Швидке заземлення через тіло</strong> — при паніці, внутрішньому хаосі й відчутті втрати контролю.</span>
-        </li>
-        <li>
-          <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-          <span><strong style="color:#EDECF1">Пауза перед імпульсом</strong> — коли раптово захотілося написати, зателефонувати або зайти в переписку.</span>
-        </li>
-      </ul>
+      <button class="btn btn-primary" id="breathBtn" type="button" style="margin-top:16px">Почати вправу</button>
     </div>
   </div>
 </section>
 
-<!-- ============ SAFETY ============ -->
-<section style="padding-top:44px;padding-bottom:0">
-  <div class="col">
-    <div class="safety">
-      <span class="dot" aria-hidden="true"></span>
-      <p>
-        Це освітня практична програма самодопомоги, а не психотерапія. Якщо стан не просто важкий,
-        а погіршується — зверніться по очну консультацію до лікаря-психіатра чи психотерапевта.
-        Програму можна проходити паралельно, але вона не замінює медичну допомогу.
+<!-- ===== RECOGNITION ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Впізнаєш себе?</p>
+      <h2>Іноді важко визнати це навіть собі</h2>
+      <div class="safety" style="margin-top:18px">
+        <span class="dot"></span>
+        <p>Це освітня програма самодопомоги, а не психотерапія. Якщо стан погіршується — зверніться до лікаря-психіатра чи психотерапевта.</p>
+      </div>
+    </div>
+    <div>
+      <ul class="recog">
+        <li>Тебе залишили — і просто сказали «відпускай».</li>
+        <li>Прокидаєшся — і перша думка знову про той зв'язок.</li>
+        <li>Перечитуєш переписку, чекаєш повідомлення, якого може й не бути.</li>
+        <li>Соромишся, що досі «не в порядку».</li>
+        <li>Перевіряєш його сторінку, хоча знаєш, що краще б не робила.</li>
+        <li>Порівнюєш себе з тією, хто зайняла твоє місце.</li>
+        <li>Усі кажуть «дай собі час» — а легше не стає.</li>
+        <li>Час іде, а стан просто консервується.</li>
+      </ul>
+      <p style="margin-top:18px;font-size:15.5px;color:var(--ink-soft)">
+        Проблема не в тобі. Нервова система ще довго живе так, ніби зв'язок не завершився — навіть коли на словах усе закінчено. Тому «просто відпусти» не працює, а час сам по собі не лікує.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============ RECOGNITION ============ -->
+<hr class="rule">
+
+<!-- ===== WHAT'S INSIDE ===== -->
 <section>
-  <div class="col">
-    <p class="eyebrow">Впізнаєш себе?</p>
-    <h2>Іноді важко визнати це навіть собі</h2>
-    <ul class="recog">
-      <li>Тебе залишили — і просто сказали «відпускай», ніби це вимикач.</li>
-      <li>Прокидаєшся — і перша думка знову про той зв'язок.</li>
-      <li>Перечитуєш переписку, чекаєш повідомлення, якого може й не бути.</li>
-      <li>Соромишся, що досі «не в порядку» — хоча минуло вже багато часу.</li>
-      <li>Перевіряєш його сторінку в соцмережах, хоча знаєш, що краще б цього не робити.</li>
-      <li>Ловиш себе на тому, що порівнюєш себе з тією, хто зайняла твоє місце.</li>
-      <li>Усі навколо кажуть «дай собі час» — а легше не стає.</li>
-    </ul>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Що це за підписка</p>
+      <h2>Конкретно, без води</h2>
+      <p class="fine" style="margin-top:12px">Уся програма вже на платформі. Проходиш у своєму темпі, без розкладу й дедлайнів.</p>
+      <a class="btn btn-primary" href="#reg" style="margin-top:16px">Почати за 899 грн/міс</a>
+    </div>
+    <div>
+      <div class="cards">
+        <div class="card"><h3>12 кроків, 4 блоки</h3><p>40 практичних вправ і 120 чек-поінтів. Аудіо, практика, перевірка себе.</p></div>
+        <div class="card"><h3>4 вправи стабілізації</h3><p>На 5–10 хвилин, для паніки й відкатів. Доступні з першої хвилини.</p></div>
+        <div class="card"><h3>Щоденна практика</h3><p>2–5 хвилин на день, щоб нервова система відчувала більше безпеки.</p></div>
+        <div class="card"><h3>Якщо є діти</h3><p>Окремий блок від Карпачова: як не робити дитину посередником.</p></div>
+        <div class="card"><h3>Закритий чат</h3><p>Спільнота жінок, які проходять те саме. Можна під нікнеймом.</p></div>
+        <div class="card"><h3>2 ефіри на місяць</h3><p>Живі розбори з Іриною Макаренко. Не встигла — залишається запис.</p></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>12</b><span>кроків, 4 блоки</span></div>
+        <div class="stat"><b>40</b><span>практичних вправ</span></div>
+        <div class="stat"><b>120</b><span>чек-поінтів</span></div>
+        <div class="stat"><b>2</b><span>ефіри на місяць</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <hr class="rule">
 
-<!-- ============ WHY IT DOESN'T PASS ============ -->
+<!-- ===== CHAT SHOWCASE ===== -->
+<!-- ⚠️ Мокап чату. Ідеально — замінити реальним скріншотом із дозволу учасниць. -->
 <section>
-  <div class="col">
-    <blockquote class="quote">
-      «Просто відпусти» — порада, яка не працює, коли зв'язок ще не завершився в тілі,
-      навіть якщо завершився на словах.
-      <div class="quote-src">Ірина Макаренко, авторка програми</div>
-    </blockquote>
-
-    <p style="margin-top:38px;font-size:19px">Проблема не в тобі. Проблема в тому, що:</p>
-    <ul class="recog" style="margin-top:18px">
-      <li>Нервова система ще довго живе так, ніби зв'язок не завершився — і прості поради тут не працюють.</li>
-      <li>Час сам по собі не лікує: без структурованої роботи стан просто консервується.</li>
-      <li>У тебе досі немає конкретних кроків — тільки загальні поради на кшталт «тримайся».</li>
-    </ul>
-
-    <p style="margin-top:34px"><a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a></p>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============ WHAT'S INSIDE ============ -->
-<section>
-  <div class="col">
-    <p class="eyebrow">Що це за підписка</p>
-    <h2>Конкретно, без води</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>12 кроків, 4 блоки</h3>
-        <p>Усі кроки вже на платформі — чекати наступного модуля не треба. 40 практичних вправ і 120 чек-поінтів. Проходиш у своєму темпі, без розкладу й дедлайнів.</p>
-      </div>
-      <div class="card">
-        <h3>4 вправи екстреної стабілізації</h3>
-        <p>На 5–10 хвилин, для моментів паніки, відкатів і бажання терміново вийти на контакт. Доступні з першої хвилини підписки — не треба спершу проходити програму.</p>
-      </div>
-      <div class="card">
-        <h3>Щоденна практика на 2–5 хвилин</h3>
-        <p>Коротка щоденна опора, щоб нервова система поступово відчувала більше безпеки. Не «мотивація», а конкретні слова й дії для себе.</p>
-      </div>
-      <div class="card">
-        <h3>Окремий блок, якщо є діти</h3>
-        <p>Від Дмитра Карпачова: як не продовжувати стосунки через дитину, не робити її посередником і не втягувати в конфлікт дорослих. Повне припинення контакту тут працює інакше.</p>
-      </div>
-      <div class="card">
-        <h3>Закритий Telegram-чат</h3>
-        <p>Спільнота жінок, які проходять те саме. Без осуду й без порад «просто відволічися». Можна писати під нікнеймом.</p>
-      </div>
-      <div class="card">
-        <h3>2 ефіри на місяць</h3>
-        <p>Живі зустрічі з психологом Іриною Макаренко: розбори ситуацій і відповіді на запитання. Є запис, якщо не встигла.</p>
-      </div>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><b>12</b><span>кроків, 4 блоки програми</span></div>
-      <div class="stat"><b>40</b><span>вправ і 120 чек-поінтів</span></div>
-      <div class="stat"><b>4</b><span>вправи, коли накрило</span></div>
-      <div class="stat"><b>2</b><span>ефіри на місяць з психологом</span></div>
-    </div>
-
-    <div class="preview">
-      <div class="preview-top">
-        <span class="preview-num">01</span>
-        <div>
-          <b>Зафіксувати реальність</b>
-          <span>Мета: побачити факти й вийти з ілюзій та припущень</span>
-        </div>
-      </div>
-      <div class="player">
-        <span class="player-btn" aria-hidden="true">▶</span>
-        <span class="player-bar" aria-hidden="true"></span>
-        <time>16:15</time>
-      </div>
-      <ul class="checks">
-        <li>5 практик до кроку</li>
-        <li>Завдання в чат спільноти</li>
-        <li>Чек-поінти прогресу</li>
-        <li>Окремий сценарій, якщо ти поки не готова рухатися далі</li>
+  <div class="wrap showcase">
+    <div>
+      <p class="eyebrow">Закрита спільнота</p>
+      <h2>Місце, де не треба пояснювати</h2>
+      <p class="lede" style="margin-top:12px;max-width:32em">
+        Друзі втомилися, батькам не розкажеш, на роботі краще виглядати нормально. У чаті — жінки,
+        які проходять те саме, і психолог, який модерує.
+      </p>
+      <ul class="recog" style="grid-template-columns:1fr;margin-top:16px;max-width:34em">
+        <li>Вхід лише за підпискою, номера телефону ніхто не бачить</li>
+        <li>Можна писати під нікнеймом або просто читати</li>
+        <li>Що відбувається в чаті — залишається в чаті</li>
+        <li>Завдання після кожного кроку — щоб не залишатися наодинці з практикою</li>
       </ul>
     </div>
-    <p class="fine" style="margin-top:12px">Так виглядає крок усередині платформи — не просто аудіо, а структура з практикою й перевіркою себе.</p>
+    <div>
+      <div class="chat">
+        <div class="chat-top">
+          <span class="chat-av">ЖН</span>
+          <div><b>Життя після «нас»</b><span>закрита спільнота</span></div>
+        </div>
+        <div class="msg pin"><span class="who">📌 Закріплено</span>Правила: тут не оцінюють, скільки часу минуло, і не радять «просто відволіктися».</div>
+        <div class="msg"><span class="who">Ірина, психолог</span>Завдання до кроку 1: випишіть три факти про те, що сталося — без інтерпретацій і припущень.</div>
+        <div class="msg me">Зробила. Виявилось, що фактів три, а решта — мої здогадки.</div>
+        <div class="msg"><span class="who">учасниця</span>У мене так само. Найважче було не дописати четвертий пункт від себе.</div>
+      </div>
+      <p class="cap" style="text-align:center">Приклад інтерфейсу спільноти</p>
+    </div>
   </div>
 </section>
 
 <hr class="rule">
 
-<!-- ============ SCREENING / HONEST GATE ============ -->
+<!-- ===== SCREENING ===== -->
 <section>
-  <div class="col">
-    <p class="eyebrow">Перед стартом</p>
-    <h2>Ця програма підходить не в будь-якому стані</h2>
-    <p class="lede" style="margin-top:18px">
-      Програма починається не з першого кроку, а з короткої оцінки стану. Вона відповідає на одне
-      практичне запитання: чи достатньо тобі зараз цієї програми, чи стан уже потребує допомоги лікаря.
-      Це не діагноз і не тест на «сильна чи слабка».
-    </p>
-
-    <div class="zones">
-      <div class="zone z1">
-        <i aria-hidden="true"></i>
-        <b>Зелена зона</b>
-        <p>Дуже боляче, але ти справляєшся з побутом, роботою й собою. Саме для цього стану створена програма — можна починати.</p>
-      </div>
-      <div class="zone z2">
-        <i aria-hidden="true"></i>
-        <b>Жовта зона</b>
-        <p>Розставання вже помітно б'є по сну, апетиту й працездатності. Програма буде корисною, але покладатися лише на неї не варто.</p>
-      </div>
-      <div class="zone z3">
-        <i aria-hidden="true"></i>
-        <b>Червона зона</b>
-        <p>Стан суттєво впливає на повсякденне життя. Спершу потрібна професійна оцінка лікаря — і вже він скаже, чи проходити програму паралельно.</p>
-      </div>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Перед стартом</p>
+      <h2>Підходить не в будь-якому стані</h2>
+      <p class="fine" style="margin-top:12px">Програма починається не з першого кроку, а з короткої оцінки стану.</p>
     </div>
-
-    <p class="fine" style="margin-top:20px">
-      Якщо оцінка покаже червону зону, ми прямо про це скажемо, а підписку можна вимкнути в один клік.
-      Продавати програму людині, якій зараз потрібен лікар, — не те, чим ми займаємось.
-    </p>
+    <div>
+      <div class="zones">
+        <div class="zone z1"><i></i><b>Зелена зона</b><p>Дуже боляче, але ти справляєшся з побутом і роботою. Саме для цього створена програма.</p></div>
+        <div class="zone z2"><i></i><b>Жовта зона</b><p>Розставання вже б'є по сну й працездатності. Програма корисна, але покладатися лише на неї не варто.</p></div>
+        <div class="zone z3"><i></i><b>Червона зона</b><p>Стан суттєво впливає на повсякденне життя. Спершу потрібна оцінка лікаря.</p></div>
+      </div>
+      <p class="fine" style="margin-top:14px">Якщо оцінка покаже червону зону — ми прямо про це скажемо, а підписку можна вимкнути в один клік. Продавати програму людині, якій зараз потрібен лікар, — не те, чим ми займаємось.</p>
+    </div>
   </div>
 </section>
 
 <hr class="rule">
 
-<!-- ============ VOICES ============ -->
-<!--
-  ⚠️ ЗАПОВНИТИ РЕАЛЬНИМИ ВІДГУКАМИ.
-  Нижче — риба-структура (довжина, тон, формат підпису), а не справжні відгуки.
-  Формат: нікнейм + скільки часу в програмі + один конкретний зсув
-  («перестала перевіряти сторінку», «вперше проспала ніч»), без обіцянок результату.
-  Ідеально — скриншоти із закритого чату з дозволу учасниць.
--->
+<!-- ===== PROGRAM ===== -->
 <section>
-  <div class="col">
-    <p class="eyebrow">Голоси учасниць</p>
-    <h2>Як це виглядає зсередини</h2>
-    <div class="voices">
-      <div class="voice">
-        <p>[Відгук 1 — 2–3 речення про стан «до» і один конкретний зсув за перші тижні.]</p>
-        <footer>Ім'я / нікнейм · у програмі N тижнів</footer>
-      </div>
-      <div class="voice">
-        <p>[Відгук 2 — про чат і відчуття, що ти не одна.]</p>
-        <footer>Ім'я / нікнейм · у програмі N тижнів</footer>
-      </div>
-      <div class="voice">
-        <p>[Відгук 3 — про вправи стабілізації в конкретний важкий момент.]</p>
-        <footer>Ім'я / нікнейм · у програмі N тижнів</footer>
-      </div>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Структура</p>
+      <h2>12 кроків, 4 блоки</h2>
+      <p class="fine" style="margin-top:12px">Відкрий будь-який крок, щоб побачити, що саме зміниться після нього.</p>
+      <a class="btn btn-primary" href="#reg" style="margin-top:16px">Почати за 899 грн/міс</a>
     </div>
-    <p class="fine" style="margin-top:16px">Публікуємо лише з дозволу учасниць. Імена можна змінити на нікнейми.</p>
-  </div>
-</section>
+    <div class="blocks">
 
-<hr class="rule">
-
-<!-- ============ FOR WHOM ============ -->
-<section>
-  <div class="col">
-    <p class="eyebrow">Для кого це</p>
-    <h2>Не потрібно бути готовою</h2>
-    <ul class="recog">
-      <li><strong>Не потрібен</strong> досвід психотерапії — усе пояснюється простою мовою.</li>
-      <li><strong>Не потрібно</strong> розказувати про це друзям чи родині — чат закритий, можна під нікнеймом.</li>
-      <li><strong>Не потрібно</strong> чекати «слушного моменту» — вправи стабілізації працюють навіть у найважчу мить.</li>
-    </ul>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============ PROGRAM ============ -->
-<section>
-  <div class="col">
-    <p class="eyebrow">Структура програми</p>
-    <h2>12 кроків, 4 блоки</h2>
-    <p class="fine" style="margin-top:16px">Відкрий будь-який крок, щоб побачити, що саме зміниться після нього.</p>
-
-    <div class="block">
-      <div class="block-head"><span>Блок 01</span><h3>Усвідомлення</h3></div>
-      <p class="block-desc">Зіткнення з реальністю та визнання того, що відбувається.</p>
-
-      <details class="step">
-        <summary><em>01</em>Зафіксувати реальність</summary>
-        <div class="step-body">
-          <p class="step-goal">Побачити факти того, що відбувається, і вийти з ілюзій, припущень та імпульсивних реакцій.</p>
-          <ul class="step-out">
-            <li>розрізняти факти, страхи та надії</li>
-            <li>менше провалюватися у внутрішні діалоги</li>
-            <li>м'якше ставитися до своїх емоційних реакцій</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>02</em>Прийняти вибір іншої людини</summary>
-        <div class="step-body">
-          <p class="step-goal">Визнати, що рішення іншої людини не перебуває під твоїм контролем.</p>
-          <ul class="step-out">
-            <li>помічати, де застрягаєш у спробах вплинути на ситуацію</li>
-            <li>перестати нескінченно прокручувати одні й ті самі сценарії</li>
-            <li>розрізняти, що залежить від тебе, а що — ні</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>03</em>Визнати зміни</summary>
-        <div class="step-body">
-          <p class="step-goal">Побачити, що стосунки й життя вже змінилися і більше не залишаються такими, як раніше.</p>
-          <ul class="step-out">
-            <li>бачити масштаб змін, а не лише сам факт розставання</li>
-            <li>зрозуміти, чому тобі так важко</li>
-            <li>зменшити внутрішнє відчуття «підвішеності»</li>
-          </ul>
-          <p class="fine" style="margin-top:14px">Сюди входить окремий блок для тих, у кого є діти.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="block">
-      <div class="block-head"><span>Блок 02</span><h3>Сепарація</h3></div>
-      <p class="block-desc">Вихід із залежності та відновлення внутрішніх кордонів.</p>
-
-      <details class="step">
-        <summary><em>04</em>Повернути управління собі</summary>
-        <div class="step-body">
-          <p class="step-goal">Перевести фокус з іншої людини на свої дії, власні кордони та своє життя.</p>
-          <ul class="step-out">
-            <li>помічати свої автоматичні реакції</li>
-            <li>створювати паузу між імпульсом і дією</li>
-            <li>повертати увагу та енергію до себе</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>05</em>Припинити контакт</summary>
-        <div class="step-body">
-          <p class="step-goal">Зупинити будь-яку взаємодію, яка підтримує емоційну залежність.</p>
-          <ul class="step-out">
-            <li>бачити, через що зв'язок продовжує підтримуватися</li>
-            <li>робити паузу перед бажанням написати або перевірити</li>
-            <li>зрозуміти сенс DETOX як періоду відновлення</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>06</em>Побачити реальність стосунків</summary>
-        <div class="step-body">
-          <p class="step-goal">Подивитися на стосунки цілісно, без ідеалізації та викривлень.</p>
-          <ul class="step-out">
-            <li>менше ідеалізувати стосунки та колишнього</li>
-            <li>бачити не лише цінність стосунків, а й їхню ціну</li>
-            <li>менше сумніватися в причинах розставання</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-
-    <div class="block">
-      <div class="block-head"><span>Блок 03</span><h3>Опрацювання</h3></div>
-      <p class="block-desc">Глибока внутрішня робота з прив'язаністю та досвідом стосунків.</p>
-
-      <details class="step">
-        <summary><em>07</em>Усвідомити залежність</summary>
-        <div class="step-body">
-          <p class="step-goal">Зрозуміти механізми, які утримують емоційну прив'язаність.</p>
-          <ul class="step-out">
-            <li>розуміти, чому тягне назад навіть після болю й розчарувань</li>
-            <li>бачити, як очікування та емоційні гойдалки впливали на стан</li>
-            <li>розуміти, що сильні почуття не означають безпечну близькість</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>08</em>Розібрати механізми прив'язаності</summary>
-        <div class="step-body">
-          <p class="step-goal">Визначити, які внутрішні процеси та стани підтримують цей зв'язок.</p>
-          <ul class="step-out">
-            <li>розуміти, чому саме ця людина так сильно зачепила</li>
-            <li>помічати свої проєкції</li>
-            <li>бачити зв'язок між минулим досвідом і теперішньою прив'язаністю</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>09</em>Завершити стосунки</summary>
-        <div class="step-body">
-          <p class="step-goal">Внутрішньо завершити цю історію та повернути собі вкладену в неї енергію.</p>
-          <ul class="step-out">
-            <li>помічати, де все ще утримуєш внутрішню надію</li>
-            <li>менше жити всередині сценаріїв «а якщо»</li>
-            <li>побачити, де твоє життя залишалося «на паузі»</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-
-    <div class="block">
-      <div class="block-head"><span>Блок 04</span><h3>Трансформація</h3></div>
-      <p class="block-desc">Повернення до себе та формування нового способу будувати стосунки.</p>
-
-      <details class="step">
-        <summary><em>10</em>Відновити свою ідентичність</summary>
-        <div class="step-body">
-          <p class="step-goal">Перестати визначати себе через стосунки та відновити контакт із власним життям.</p>
-          <ul class="step-out">
-            <li>бачити, які частини життя були витіснені цим зв'язком</li>
-            <li>менше відчувати внутрішню порожнечу поза стосунками</li>
-            <li>помічати, що ти — це не лише роль партнерки</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>11</em>Не впадати в крайнощі</summary>
-        <div class="step-body">
-          <p class="step-goal">Не кидатися в нові стосунки одразу й не закриватися від близькості через пережитий біль.</p>
-          <ul class="step-out">
-            <li>розрізняти, де потрібна людина, а де — спроба знеболити</li>
-            <li>краще витримувати порожнечу після стосунків</li>
-            <li>бути із собою, не тікаючи ані в злиття, ані в уникнення</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="step">
-        <summary><em>12</em>Інтегрувати новий досвід</summary>
-        <div class="step-body">
-          <p class="step-goal">Усвідомити внутрішню трансформацію та почати будувати більш зрілу близькість із собою й іншими.</p>
-          <ul class="step-out">
-            <li>бачити, який шлях уже пройдено</li>
-            <li>усвідомити, що цей досвід став не лише болем</li>
-            <li>краще розуміти, які стосунки тобі справді підходять</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-
-    <p style="margin-top:38px"><a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a></p>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ============ AUTHORS ============ -->
-<section>
-  <div class="col">
-    <p class="eyebrow">Хто веде</p>
-    <h2>Разом з тобою на цьому шляху</h2>
-
-    <div class="author">
-      <img src="../img/iryna.jpg" alt="Ірина Макаренко">
       <div>
+        <div class="block-head"><span>Блок 01</span><h3>Усвідомлення</h3></div>
+        <details class="step"><summary><em>01</em>Зафіксувати реальність</summary><div class="step-body">
+          <p class="step-goal">Побачити факти й вийти з ілюзій та припущень.</p>
+          <ul class="step-out"><li>розрізняти факти, страхи та надії</li><li>менше провалюватися у внутрішні діалоги</li><li>м'якше ставитися до своїх реакцій</li></ul></div></details>
+        <details class="step"><summary><em>02</em>Прийняти вибір іншої людини</summary><div class="step-body">
+          <p class="step-goal">Визнати, що рішення іншої людини не під твоїм контролем.</p>
+          <ul class="step-out"><li>помічати спроби вплинути на ситуацію</li><li>перестати прокручувати ті самі сценарії</li><li>розрізняти, що залежить від тебе</li></ul></div></details>
+        <details class="step"><summary><em>03</em>Визнати зміни</summary><div class="step-body">
+          <p class="step-goal">Побачити, що стосунки й життя вже змінилися.</p>
+          <ul class="step-out"><li>бачити масштаб змін, а не лише факт розставання</li><li>зрозуміти, чому тобі так важко</li><li>зменшити відчуття «підвішеності»</li></ul>
+          <p class="fine" style="margin-top:8px">Сюди входить окремий блок, якщо є діти.</p></div></details>
+      </div>
+
+      <div>
+        <div class="block-head"><span>Блок 02</span><h3>Сепарація</h3></div>
+        <details class="step"><summary><em>04</em>Повернути управління собі</summary><div class="step-body">
+          <p class="step-goal">Перевести фокус з іншої людини на своє життя й кордони.</p>
+          <ul class="step-out"><li>помічати автоматичні реакції</li><li>створювати паузу між імпульсом і дією</li><li>повертати енергію до себе</li></ul></div></details>
+        <details class="step"><summary><em>05</em>Припинити контакт</summary><div class="step-body">
+          <p class="step-goal">Зупинити взаємодію, яка підтримує емоційну залежність.</p>
+          <ul class="step-out"><li>бачити, через що зв'язок підтримується</li><li>робити паузу перед бажанням написати</li><li>зрозуміти сенс DETOX як періоду відновлення</li></ul></div></details>
+        <details class="step"><summary><em>06</em>Побачити реальність стосунків</summary><div class="step-body">
+          <p class="step-goal">Подивитися на стосунки цілісно, без ідеалізації.</p>
+          <ul class="step-out"><li>менше ідеалізувати колишнього</li><li>бачити не лише цінність стосунків, а й їхню ціну</li><li>менше сумніватися в причинах розставання</li></ul></div></details>
+      </div>
+
+      <div>
+        <div class="block-head"><span>Блок 03</span><h3>Опрацювання</h3></div>
+        <details class="step"><summary><em>07</em>Усвідомити залежність</summary><div class="step-body">
+          <p class="step-goal">Зрозуміти механізми, які утримують прив'язаність.</p>
+          <ul class="step-out"><li>розуміти, чому тягне назад навіть після болю</li><li>бачити вплив емоційних гойдалок</li><li>розуміти, що сильні почуття ≠ безпечна близькість</li></ul></div></details>
+        <details class="step"><summary><em>08</em>Розібрати механізми прив'язаності</summary><div class="step-body">
+          <p class="step-goal">Визначити, які внутрішні процеси підтримують цей зв'язок.</p>
+          <ul class="step-out"><li>розуміти, чому саме ця людина так зачепила</li><li>помічати свої проєкції</li><li>бачити зв'язок із минулим досвідом</li></ul></div></details>
+        <details class="step"><summary><em>09</em>Завершити стосунки</summary><div class="step-body">
+          <p class="step-goal">Внутрішньо завершити історію та повернути собі енергію.</p>
+          <ul class="step-out"><li>помічати, де утримуєш внутрішню надію</li><li>менше жити всередині сценаріїв «а якщо»</li><li>побачити, де життя залишалося «на паузі»</li></ul></div></details>
+      </div>
+
+      <div>
+        <div class="block-head"><span>Блок 04</span><h3>Трансформація</h3></div>
+        <details class="step"><summary><em>10</em>Відновити свою ідентичність</summary><div class="step-body">
+          <p class="step-goal">Перестати визначати себе через стосунки.</p>
+          <ul class="step-out"><li>бачити, що було витіснене цим зв'язком</li><li>менше відчувати порожнечу поза стосунками</li><li>помічати, що ти — не лише роль партнерки</li></ul></div></details>
+        <details class="step"><summary><em>11</em>Не впадати в крайнощі</summary><div class="step-body">
+          <p class="step-goal">Не кидатися в нові стосунки й не закриватися від близькості.</p>
+          <ul class="step-out"><li>розрізняти потребу в людині й спробу знеболити</li><li>краще витримувати порожнечу</li><li>бути із собою без злиття й уникнення</li></ul></div></details>
+        <details class="step"><summary><em>12</em>Інтегрувати новий досвід</summary><div class="step-body">
+          <p class="step-goal">Почати будувати зрілу близькість із собою й іншими.</p>
+          <ul class="step-out"><li>бачити, який шлях уже пройдено</li><li>усвідомити, що досвід став не лише болем</li><li>розуміти, які стосунки тобі підходять</li></ul></div></details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+
+
+<!-- ===== AUTHORS ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Хто веде</p>
+      <h2>Разом з тобою</h2>
+      <div class="reach">
+        <div><b>1M+</b><span>Instagram</span></div>
+        <div><b>955K</b><span>Facebook</span></div>
+        <div><b>615K</b><span>YouTube</span></div>
+        <div><b>60+</b><span>програм</span></div>
+      </div>
+    </div>
+    <div class="authors">
+      <div class="author">
+        <img src="../img/iryna.jpg" alt="Ірина Макаренко">
         <h3>Ірина Макаренко</h3>
-        <p class="role">Авторка програми, практикуючий психолог</p>
+        <p class="role">Авторка програми, психолог</p>
         <ul>
-          <li>Магістр психології, Київський національний університет ім. Тараса Шевченка</li>
+          <li>Магістр психології, КНУ ім. Тараса Шевченка</li>
           <li>Психоаналітичний коуч (ПАК)</li>
-          <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li>
-          <li>Веде ефіри й розбори для учасниць двічі на місяць</li>
+          <li>2000+ годин консультацій у темі розставань</li>
+          <li>Веде ефіри для учасниць двічі на місяць</li>
         </ul>
       </div>
-    </div>
-
-    <div class="author" style="margin-top:44px">
-      <img src="../img/dmytro-speaker.jpg" alt="Дмитро Карпачов">
-      <div>
+      <div class="author">
+        <img src="../img/dmytro-speaker.jpg" alt="Дмитро Карпачов">
         <h3>Дмитро Карпачов</h3>
         <p class="role">Психоаналітичний коуч</p>
         <ul>
           <li>Автор методу «Психоаналітичний коучинг»</li>
-          <li>Понад 20 років практики психологічних консультацій</li>
-          <li>Автор більш ніж 60 освітніх програм з особистого розвитку та виховання дітей</li>
-          <li>Автор блоку програми для тих, у кого після розставання залишилися спільні діти</li>
-          <li>Ведучий 6 соціально-психологічних програм на національному телебаченні</li>
+          <li>20+ років практики консультацій</li>
+          <li>Автор блоку для тих, у кого залишилися спільні діти</li>
+          <li>Ведучий 6 програм на національному ТБ</li>
         </ul>
       </div>
     </div>
-
-    <div class="reach">
-      <div><b>1 млн+</b><span>в Instagram</span></div>
-      <div><b>955K+</b><span>у Facebook</span></div>
-      <div><b>615K+</b><span>на YouTube</span></div>
-      <div><b>тисячі</b><span>випускників курсів</span></div>
-    </div>
   </div>
 </section>
 
-<!-- ============ PRICING ============ -->
+<!-- ===== PRICING ===== -->
 <section class="pricing" id="reg">
-  <div class="col">
-    <p class="eyebrow">Умови</p>
-    <h2>Скільки це коштує</h2>
-    <p class="lede" style="margin-top:16px">
-      Одна індивідуальна сесія з психологом коштує від 1500 грн. Тут за меншу суму — місяць
-      структурованої програми, спільнота та два ефіри.
-    </p>
-
-    <div class="plan">
-      <p class="plan-name">Підписка</p>
-      <p class="price">899 <small>грн/міс</small></p>
-      <p class="plan-sub">Списання раз на місяць. Нагадування приходить заздалегідь.</p>
-      <div id="MoYFcW8I" class="ss-landing" data-target="MoYFcW8I" data-domain="karpachof"></div>
-      <ul class="plan-list">
-        <li>Усі 12 кроків одразу — програма вже на платформі</li>
-        <li>4 вправи екстреної стабілізації з першої хвилини</li>
-        <li>Щоденна практика та 120 чек-поінтів</li>
-        <li>Закритий чат і 2 ефіри щомісяця</li>
-        <li>Скасування в один клік, без дзвінків менеджера</li>
-      </ul>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Умови</p>
+      <h2>Скільки це коштує</h2>
+      <p class="fine" style="margin-top:12px">Одна індивідуальна сесія з психологом коштує від 1500 грн.</p>
     </div>
-
-    <div class="after">
-      <h3>Що буде на другий і третій місяць</h3>
-      <p>
-        Дванадцять кроків — це основа, і більшість проходить їх за 6–10 тижнів. Далі підписка живе
-        за рахунок того, що змінюється щомісяця: два нові ефіри з розборами й щоденна робота в чаті.
-        Якщо в якийсь момент відчуєш, що більше не потрібно — вимикаєш підписку в один клік, а коли
-        накриє знову, повертаєшся до тих самих матеріалів.
-      </p>
+    <div class="pay">
+      <div class="plan">
+        <p class="plan-name">Підписка</p>
+        <p class="price">899 <small>грн/міс</small></p>
+        <p class="plan-sub">Нагадування приходить заздалегідь</p>
+        <div id="MoYFcW8I" class="ss-landing" data-target="MoYFcW8I" data-domain="karpachof"></div>
+        <ul class="plan-list">
+          <li>Усі 12 кроків одразу</li>
+          <li>4 вправи стабілізації з першої хвилини</li>
+          <li>Щоденна практика та 120 чек-поінтів</li>
+          <li>Закритий чат і 2 ефіри щомісяця</li>
+          <li>Скасування в один клік</li>
+        </ul>
+      </div>
+      <div class="after">
+        <h3>Що буде на другий місяць</h3>
+        <p>12 кроків більшість проходить за 6–10 тижнів. Далі підписка живе за рахунок того, що змінюється щомісяця: два нові ефіри з розборами й щоденна робота в чаті. Відчуєш, що більше не потрібно — вимикаєш в один клік, а коли накриє знову, повертаєшся до тих самих матеріалів.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- ===== FAQ ===== -->
 <section>
-  <div class="col">
-    <p class="eyebrow">Питання</p>
-    <h2>Що зазвичай питають</h2>
-
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Питання</p>
+      <h2>Що зазвичай питають</h2>
+    </div>
     <div class="faq">
-      <details open>
-        <summary>Чи можна скасувати?</summary>
-        <p>Так, у будь-який момент, в один клік — без дзвінків менеджера. Немає оплати — доступ закривається; з'явилась оплата знову — доступ відновлюється. За кілька днів до наступного списання надходить нагадування.</p>
-      </details>
-      <details>
-        <summary>Уся програма вже доступна?</summary>
-        <p>Так. Усі 12 кроків, вправи та практики вже на платформі — чекати виходу наступного модуля не треба. Проходиш у своєму темпі.</p>
-      </details>
-      <details>
-        <summary>Це терапія?</summary>
-        <p>Ні. Це освітня практична програма самодопомоги, побудована на структурованих кроках. Вона не замінює психотерапію чи медичну допомогу.</p>
-      </details>
-      <details>
-        <summary>Мене хтось побачить у чаті?</summary>
-        <p>Чат закритий, потрапити до нього можна лише за підпискою. Ніхто з учасниць не бачить твого номера телефону, а писати можна під нікнеймом. Що відбувається в чаті — залишається в чаті, це головне правило спільноти.</p>
-      </details>
-      <details>
-        <summary>Що буде видно у виписці по картці?</summary>
-        <p>У банківській виписці відображається назва платіжного сервісу, а не назва програми.</p>
-      </details>
-      <details>
-        <summary>У мене є спільна дитина з колишнім, повне припинення контакту неможливе</summary>
-        <p>Для цього в програмі є окремий блок від Дмитра Карпачова. Він про те, як перебудувати взаємодію: ви більше не пара, але залишаєтеся батьками — без дитини в ролі посередника, судді чи способу зберегти зв'язок.</p>
-      </details>
-      <details>
-        <summary>Скільки часу займає один крок?</summary>
-        <p>Кожен крок — це аудіо, кілька практик і чек-поінти. Можна пройти крок за 20 хвилин, а можна повертатися до нього кілька днів. Розкладу немає, а всередині кожного кроку є окремий сценарій на випадок, якщо ти поки не готова рухатися далі.</p>
-      </details>
-      <details>
-        <summary>Що робити, якщо накрило прямо зараз?</summary>
-        <p>Одну вправу можна зробити просто на цій сторінці, безкоштовно. Решта три відкриваються з першої хвилини підписки: повернення в теперішній момент, заземлення через тіло та пауза перед імпульсом.</p>
-      </details>
-      <details>
-        <summary>У мене гострий стан, чи достатньо підписки?</summary>
-        <p>Перед першим кроком ти проходиш коротку оцінку стану — вона й покаже. Якщо потрібна глибша особиста робота, окремо є формати з Іриною: разова сесія, «Гострий період» і «28 днів разом». Якщо потрібна допомога лікаря — ми прямо про це скажемо.</p>
-      </details>
+      <details open><summary>Чи можна скасувати?</summary><p>Так, в один клік, без дзвінків менеджера. Немає оплати — доступ закривається; з'явилась знову — відновлюється. За кілька днів до списання приходить нагадування.</p></details>
+      <details><summary>Уся програма вже доступна?</summary><p>Так. Усі 12 кроків, вправи та практики вже на платформі — чекати наступного модуля не треба.</p></details>
+      <details><summary>Це терапія?</summary><p>Ні. Це освітня практична програма самодопомоги. Вона не замінює психотерапію чи медичну допомогу.</p></details>
+      <details><summary>Мене хтось побачить у чаті?</summary><p>Чат закритий, вхід лише за підпискою. Номера телефону ніхто не бачить, писати можна під нікнеймом.</p></details>
+      <details><summary>Що видно у виписці по картці?</summary><p>Назва платіжного сервісу, а не назва програми.</p></details>
+      <details><summary>У нас спільна дитина, контакт припинити не можу</summary><p>Для цього є окремий блок від Дмитра Карпачова: як перебудувати взаємодію, коли ви більше не пара, але залишаєтеся батьками — без дитини в ролі посередника чи судді.</p></details>
+      <details><summary>Скільки часу займає крок?</summary><p>Можна пройти за 20 хвилин, можна повертатися кілька днів. Розкладу немає, а всередині кожного кроку є сценарій на випадок, якщо ти поки не готова рухатися далі.</p></details>
+      <details><summary>У мене гострий стан, чи достатньо підписки?</summary><p>Оцінка стану перед першим кроком це покаже. Якщо потрібна глибша особиста робота — в Ірини є окремі формати: разова сесія, «Гострий період», «28 днів разом».</p></details>
     </div>
   </div>
 </section>
 
-<!-- ============ FINAL ============ -->
+<!-- ===== FINAL ===== -->
 <section class="final">
-  <div class="col">
+  <div class="wrap">
     <h2>Час почати?</h2>
-    <p>Тобі не треба бути готовою, не треба нікому пояснювати і не треба чекати, поки стане легше. Достатньо першого кроку.</p>
-    <p><a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a></p>
-    <p class="fine" style="color:#8A90A3;margin-top:14px">Скасування в один клік</p>
-
+    <p>Не треба бути готовою, не треба нікому пояснювати і не треба чекати, поки стане легше. Достатньо першого кроку.</p>
+    <p style="margin-top:18px"><a class="btn btn-primary" href="#reg">Почати за 899 грн/міс</a></p>
+    <p class="fine" style="color:#8A90A3">Скасування в один клік</p>
     <div class="final-safety">
-      Ця програма створена для людей, які важко переживають розрив стосунків, але зберігають
-      здатність справлятися зі своїм станом і продовжувати повсякденне життя. Якщо після розставання
-      стан помітно погіршується — ти майже не спиш або не можеш нормально їсти, втрачаєш здатність
-      працювати й виконувати звичайні справи, тривога стає нестерпною — зверніться до лікаря-психіатра
-      або лікаря-психотерапевта для оцінки стану. Ця програма не замінює психіатричної чи іншої
-      медичної допомоги, коли вона необхідна.
+      Програма створена для тих, хто важко переживає розрив, але зберігає здатність справлятися зі своїм станом. Якщо після розставання стан помітно погіршується — майже не спиш або не можеш їсти, втрачаєш здатність працювати й виконувати звичайні справи, тривога стає нестерпною — зверніться до лікаря-психіатра або психотерапевта. Ця програма не замінює медичної допомоги, коли вона необхідна.
     </div>
   </div>
 </section>
 
 <footer class="site">
-  Breakup Rehab © 2026 ·
-  <a href="https://12.karpachoff.com/legal/oferta/">Публічна оферта</a> ·
-  <a href="https://12.karpachoff.com/legal/privacy/">Політика конфіденційності</a>
+  Breakup Rehab © 2026 · <a href="https://12.karpachoff.com/legal/oferta/">Оферта</a> · <a href="https://12.karpachoff.com/legal/privacy/">Конфіденційність</a>
 </footer>
 
 <div class="sticky">
@@ -849,62 +622,44 @@ footer.site a{color:var(--ink-soft)}
 
 <script>
 (function(){
-  var orb   = document.getElementById('orb');
-  var cue   = document.getElementById('cue');
-  var count = document.getElementById('count');
-  var btn   = document.getElementById('breathBtn');
-
-  var CYCLES = 5, IN = 4000, HOLD = 7000, OUT = 8000;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var running = false, timers = [], cycle = 0;
-
-  function clear(){ timers.forEach(clearTimeout); timers = []; }
-  function at(ms, fn){ timers.push(setTimeout(fn, ms)); }
-
+  var orb=document.getElementById('orb'),cue=document.getElementById('cue'),
+      count=document.getElementById('count'),btn=document.getElementById('breathBtn');
+  var CYCLES=5,IN=4000,HOLD=7000,OUT=8000;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var running=false,timers=[],cycle=0;
+  function clear(){timers.forEach(clearTimeout);timers=[];}
+  function at(ms,fn){timers.push(setTimeout(fn,ms));}
   function reset(){
-    running = false; clear(); cycle = 0;
-    orb.style.transition = reduce ? 'none' : '';
-    orb.style.transform = 'scale(.6)';
-    cue.textContent = 'Вдих 4 · Затримка 7 · Видих 8';
-    count.textContent = CYCLES + ' циклів · близько 90 секунд';
-    btn.textContent = 'Почати вправу';
+    running=false;clear();cycle=0;
+    orb.style.transition=reduce?'none':'';
+    orb.style.transform='scale(.6)';
+    cue.textContent='Вдих 4 · Затримка 7 · Видих 8';
+    count.textContent=CYCLES+' циклів · близько 90 секунд';
+    btn.textContent='Почати вправу';
   }
-
   function step(){
-    if(cycle >= CYCLES){
-      clear(); running = false;
-      orb.style.transitionDuration = '2s';
-      orb.style.transform = 'scale(.6)';
-      cue.textContent = 'Готово. Помітила різницю?';
-      count.textContent = 'Можна повторити будь-коли';
-      btn.textContent = 'Пройти ще раз';
-      return;
+    if(cycle>=CYCLES){
+      clear();running=false;
+      orb.style.transitionDuration='2s';orb.style.transform='scale(.6)';
+      cue.textContent='Готово. Помітила різницю?';
+      count.textContent='Можна повторити будь-коли';
+      btn.textContent='Пройти ще раз';return;
     }
     cycle++;
-    count.textContent = 'Цикл ' + cycle + ' з ' + CYCLES;
-
-    cue.textContent = 'Повільний вдих через ніс…';
-    orb.style.transitionDuration = (IN/1000) + 's';
-    orb.style.transform = 'scale(1.25)';
-
-    at(IN, function(){
-      cue.textContent = 'Затримай дихання…';
+    count.textContent='Цикл '+cycle+' з '+CYCLES;
+    cue.textContent='Повільний вдих через ніс…';
+    orb.style.transitionDuration=(IN/1000)+'s';orb.style.transform='scale(1.28)';
+    at(IN,function(){cue.textContent='Затримай дихання…';});
+    at(IN+HOLD,function(){
+      cue.textContent='Повільний видих через рот…';
+      orb.style.transitionDuration=(OUT/1000)+'s';orb.style.transform='scale(.6)';
     });
-    at(IN + HOLD, function(){
-      cue.textContent = 'Повільний видих через рот…';
-      orb.style.transitionDuration = (OUT/1000) + 's';
-      orb.style.transform = 'scale(.6)';
-    });
-    at(IN + HOLD + OUT, step);
+    at(IN+HOLD+OUT,step);
   }
-
-  btn.addEventListener('click', function(){
-    if(running){ reset(); return; }
-    running = true;
-    btn.textContent = 'Зупинити';
-    step();
+  btn.addEventListener('click',function(){
+    if(running){reset();return;}
+    running=true;btn.textContent='Зупинити';step();
   });
-
   reset();
 })();
 </script>
