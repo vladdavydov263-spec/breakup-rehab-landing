@@ -195,7 +195,9 @@ section{padding:46px 0}
 /* authors */
 .authors{display:grid;gap:20px}
 .author{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 22px 50px -30px rgba(28,33,48,.35)}
-@media(max-width:680px){.author{grid-template-columns:1fr}}
+.author:nth-child(even) .author-text{order:2}
+.author:nth-child(even) img{order:1}
+@media(max-width:680px){.author{grid-template-columns:1fr}.author:nth-child(even) .author-text{order:1}.author:nth-child(even) img{order:2}}
 .author-text{padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
 .author img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
 .author h3{margin-bottom:6px;font-family:"Onest",system-ui,sans-serif;font-weight:700;font-size:28px;color:var(--ink);letter-spacing:-.01em}
