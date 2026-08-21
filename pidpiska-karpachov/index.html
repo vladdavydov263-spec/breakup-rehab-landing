@@ -193,16 +193,17 @@ section{padding:46px 0}
 .z1 i{background:#6E9478}.z2 i{background:var(--dawn)}.z3 i{background:var(--rose)}
 
 /* authors */
-.authors{display:grid;gap:26px}
-@media(min-width:760px){.authors{grid-template-columns:1fr 1fr;gap:36px}}
-.author{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px}
-.author img{width:84px;height:84px;object-fit:cover;border-radius:50%;margin-bottom:16px}
-.author h3{margin-bottom:6px;font-family:"Onest",system-ui,sans-serif;font-weight:700;font-size:22px;color:var(--ink);letter-spacing:-.01em}
-.author .role{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--rose);margin-bottom:18px}
+.authors{display:grid;gap:20px}
+.author{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 22px 50px -30px rgba(28,33,48,.35)}
+@media(max-width:680px){.author{grid-template-columns:1fr}}
+.author-text{padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
+.author img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
+.author h3{margin-bottom:6px;font-family:"Onest",system-ui,sans-serif;font-weight:700;font-size:28px;color:var(--ink);letter-spacing:-.01em}
+.author .role{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--rose);margin-bottom:20px}
 .author ul{list-style:none;margin:0;padding:0}
-.author li{padding:0 0 16px 26px;position:relative;font-size:15px;color:var(--ink-soft);line-height:1.45}
+.author li{padding:0 0 14px 20px;position:relative;font-size:15px;color:var(--ink-soft);line-height:1.4}
 .author li:last-child{padding-bottom:0}
-.author li::before{content:"✓";position:absolute;left:0;top:0;color:var(--rose);font-weight:700;font-size:14px}
+.author li::before{content:"•";position:absolute;left:0;top:-3px;color:var(--rose);font-size:20px;line-height:1}
 .reach{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:20px}
 .reach div{background:var(--shell);padding:14px 8px;text-align:center}
 .reach b{display:block;font-family:"Literata";font-size:20px;font-weight:400}
@@ -737,30 +738,34 @@ footer.site{padding:22px 0;text-align:center;font-size:13px;color:var(--ink-mute
     </div>
     <div class="authors">
       <div class="author">
+        <div class="author-text">
+          <h3>Дмитро Карпачов</h3>
+          <p class="role">Психоаналітичний коуч</p>
+          <ul>
+            <li>Автор методу «Психоаналітичний Коучинг» — один з найефективніших сучасних підходів до особистісних трансформацій</li>
+            <li>Експерт з дитячої вікової психології, автор бестселера «Як дати все дитині без грошей і зв'язків»</li>
+            <li>Засновник найбільшої в Україні онлайн-школи для батьків (10+ років)</li>
+            <li>Автор понад 60 освітніх програм з виховання дітей і особистого розвитку</li>
+            <li>Понад 20 років досвіду психологічних консультацій</li>
+            <li>Телезірка — ведучий 6 соціально-психологічних реаліті-шоу на національному телебаченні</li>
+          </ul>
+        </div>
         <img src="../img/dmytro-speaker.jpg" alt="Дмитро Карпачов">
-        <h3>Дмитро Карпачов</h3>
-        <p class="role">Психоаналітичний коуч</p>
-        <ul>
-          <li>Автор методу «Психоаналітичний Коучинг» — один з найефективніших сучасних підходів до особистісних трансформацій</li>
-          <li>Експерт з дитячої вікової психології, автор бестселера «Як дати все дитині без грошей і зв'язків»</li>
-          <li>Засновник найбільшої в Україні онлайн-школи для батьків (10+ років)</li>
-          <li>Автор понад 60 освітніх програм з виховання дітей і особистого розвитку</li>
-          <li>Понад 20 років досвіду психологічних консультацій</li>
-          <li>Телезірка — ведучий 6 соціально-психологічних реаліті-шоу на національному телебаченні</li>
-        </ul>
       </div>
       <div class="author">
+        <div class="author-text">
+          <h3>Ірина Макаренко</h3>
+          <p class="role">Авторка програми Breakup Rehab</p>
+          <ul>
+            <li>Магістр психології (Ун-т ім. Тараса Шевченка), практикуючий психолог та психоаналітичний коуч (ПАК)</li>
+            <li>У практиці поєднує терапевтичний підхід і коучинг, використовує метафоричні асоціативні карти</li>
+            <li>Спеціалізація — стосунки: проживання розриву та вихід з емоційної залежності</li>
+            <li>Авторський формат глибинної щоденної підтримки «28 днів разом» у кризових ситуаціях</li>
+            <li>Бере участь в організації ретритів, виступає експертом на жіночих зустрічах і в закритих жіночих клубах</li>
+            <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li>
+          </ul>
+        </div>
         <img src="../img/iryna.jpg" alt="Ірина Макаренко">
-        <h3>Ірина Макаренко</h3>
-        <p class="role">Авторка програми Breakup Rehab</p>
-        <ul>
-          <li>Магістр психології (Ун-т ім. Тараса Шевченка), практикуючий психолог та психоаналітичний коуч (ПАК)</li>
-          <li>У практиці поєднує терапевтичний підхід і коучинг, використовує метафоричні асоціативні карти</li>
-          <li>Спеціалізація — стосунки: проживання розриву та вихід з емоційної залежності</li>
-          <li>Авторський формат глибинної щоденної підтримки «28 днів разом» у кризових ситуаціях</li>
-          <li>Бере участь в організації ретритів, виступає експертом на жіночих зустрічах і в закритих жіночих клубах</li>
-          <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li>
-        </ul>
       </div>
     </div>
   </div>
