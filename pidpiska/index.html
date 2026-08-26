@@ -814,14 +814,16 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
 <script>
 (function () {
   var params = new URLSearchParams(location.search);
+  var utm = {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_content: params.get("utm_content") || "",
+    utm_term: params.get("utm_term") || "",
+  };
   window.ssContext = {
-    scope: {
-      utm_source: params.get("utm_source") || "",
-      utm_medium: params.get("utm_medium") || "",
-      utm_campaign: params.get("utm_campaign") || "",
-      utm_content: params.get("utm_content") || "",
-      utm_term: params.get("utm_term") || "",
-    },
+    variables: utm,
+    scope: utm,
   };
 })();
 </script>
