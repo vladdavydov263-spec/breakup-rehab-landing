@@ -853,6 +853,20 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
   <a class="btn btn-primary" href="#reg">Приєднатися</a>
 </div>
 
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  window.ssContext = {
+    scope: {
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_content: params.get("utm_content") || "",
+      utm_term: params.get("utm_term") || "",
+    },
+  };
+})();
+</script>
 <script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
 </body>
 </html>
