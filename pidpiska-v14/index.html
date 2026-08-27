@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Життя після «нас» — 12 кроків психоемоційного відновлення</title>
+<meta name="description" content="12 кроків психоемоційного відновлення після руйнування стосунків. Дмитро Карпачов та Ірина Макаренко.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* тепла глиняна палітра — без кремового фону й теракоти */
+  --sand:#E4DAD1;
+  --card:#FAF6F2;
+  --ink:#2B2320;
+  --ink-soft:#5E524B;
+  --ink-mute:#8C7F76;
+  --line:#D6C8BD;
+  --plum:#7E3B4E;
+  --plum-deep:#682F3F;
+  --deep:#3A2C30;
+  --sage:#7C8A6D;
+  --wide:1120px;
+  --r:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--ink);
+  font-family:"Onest",system-ui,sans-serif;font-size:16.5px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;padding-bottom:80px}
+@media(min-width:900px){body{padding-bottom:0;padding-top:60px}}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+h1,h2,h3{font-family:"Commissioner",system-ui,sans-serif;font-weight:700;margin:0;
+  letter-spacing:-.025em;line-height:1.06}
+h1{font-size:clamp(36px,6.2vw,58px)}
+h2{font-size:clamp(26px,3.6vw,38px)}
+h3{font-size:19px;line-height:1.2;letter-spacing:-.015em}
+p{margin:0 0 .8em;color:var(--ink-soft)}
+p.lead{color:var(--ink);font-size:17.5px}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:var(--ink)}
+.measure{max-width:40em}
+
+.eyebrow{font-family:"Onest";font-size:11px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-mute);margin:0 0 14px}
+.fine{font-size:13px;color:var(--ink-mute);line-height:1.45}
+
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 20px}
+section{padding:52px 0}
+@media(min-width:900px){section{padding:76px 0}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:"Onest";font-size:15.5px;font-weight:500;text-decoration:none;
+  padding:17px 30px;border-radius:100px;border:0;cursor:pointer;
+  background:var(--plum);color:#fff;box-shadow:0 8px 22px -10px rgba(126,59,78,.9);
+  transition:transform .18s,background .18s}
+.btn:hover{background:var(--plum-deep);transform:translateY(-1px)}
+.btn-block{width:100%}
+:focus-visible{outline:2.5px solid var(--plum);outline-offset:3px;border-radius:6px}
+
+/* панелі */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:none;
+  background:rgba(228,218,209,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+@media(min-width:900px){.bar{display:block}}
+.bar .in{max-width:var(--wide);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:18px}
+.bar .nm{font-family:"Commissioner";font-weight:600;font-size:16px;flex:1}
+.bar .pr{font-size:13.5px;color:var(--ink-mute)}
+.bar .pr b{font-family:"Commissioner";font-size:17px;color:var(--ink)}
+.bar .btn{padding:11px 24px;font-size:14.5px}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(228,218,209,.96);
+  backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;
+  display:flex;align-items:center;gap:10px}
+.sticky .s-price{font-size:12px;color:var(--ink-mute);line-height:1.2;flex:0 0 auto}
+.sticky .s-price b{display:block;font-family:"Commissioner";font-size:17px;color:var(--ink)}
+.sticky .btn{flex:1;padding:14px 16px;font-size:15px}
+@media(min-width:900px){.sticky{display:none}}
+
+/* герой */
+.hero{padding-top:38px;padding-bottom:40px}
+.hero-grid{display:grid;gap:30px;align-items:start}
+@media(min-width:960px){.hero-grid{grid-template-columns:1fr 366px;gap:56px}}
+.hero h1{margin:0 0 18px}
+.hero .sub{font-family:"Commissioner";font-weight:500;font-size:clamp(17px,2.1vw,21px);
+  color:var(--ink-soft);margin:0 0 22px;max-width:18em;line-height:1.25}
+
+/* картка оферу */
+.offer{background:var(--card);border-radius:var(--r);padding:26px 24px;
+  box-shadow:0 26px 60px -34px rgba(43,35,32,.6)}
+.offer .lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin:0}
+.offer .price{font-family:"Commissioner";font-weight:700;font-size:46px;line-height:1;margin:10px 0 4px;color:var(--ink)}
+.offer .price small{font-family:"Onest";font-weight:400;font-size:14px;color:var(--ink-mute)}
+.offer .note{font-size:13.5px;color:var(--ink-mute);margin:0 0 20px}
+.offer ul{list-style:none;margin:20px 0 0;padding:0}
+.offer li{padding:11px 0 11px 26px;border-top:1px solid var(--line);font-size:14.5px;
+  color:var(--ink-soft);line-height:1.4;position:relative}
+.offer li::before{content:"";position:absolute;left:2px;top:18px;width:9px;height:9px;
+  border-radius:50%;background:var(--sage)}
+
+/* СИГНАТУРА: смуга присутності авторів */
+.who{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:100px;
+  padding:12px 26px 12px 12px;max-width:38em;box-shadow:0 14px 34px -26px rgba(43,35,32,.7)}
+.who img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.who .tx{font-size:14.5px;color:var(--ink-soft);line-height:1.4}
+.who .tx b{display:block;font-family:"Commissioner";font-weight:600;font-size:16px;color:var(--ink)}
+.who.pair img:nth-child(2){margin-left:-22px}
+
+/* картки */
+.panel{background:var(--card);border-radius:var(--r);padding:28px 26px}
+@media(min-width:760px){.panel{padding:34px 34px}}
+
+.lines{list-style:none;margin:0;padding:0;display:grid}
+@media(min-width:760px){.lines{grid-template-columns:1fr 1fr;column-gap:38px}}
+.lines.single{grid-template-columns:1fr}
+.lines li{padding:11px 0 11px 24px;border-bottom:1px solid var(--line);font-size:16px;
+  line-height:1.45;position:relative;color:var(--ink-soft)}
+.lines li::before{content:"";position:absolute;left:0;top:19px;width:12px;height:2px;
+  border-radius:2px;background:var(--plum)}
+.on-dark .lines li{border-color:rgba(255,255,255,.14);color:#DCD2CC}
+.on-dark .lines li::before{background:var(--sage)}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{background:var(--sand);border-radius:100px;padding:6px 15px;font-size:14.5px;color:var(--ink-soft)}
+.panel .chips li{background:var(--sand)}
+
+.qs{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+@media(min-width:760px){.qs{grid-template-columns:1fr 1fr;column-gap:14px}}
+.qs li{background:var(--sand);border-radius:12px;padding:11px 16px;font-size:15.5px;color:var(--ink-soft)}
+.panel .qs li{background:var(--sand)}
+
+.pull{font-family:"Commissioner";font-weight:600;font-size:clamp(21px,3.2vw,29px);
+  line-height:1.2;letter-spacing:-.02em;color:var(--ink);margin:24px 0 0;max-width:20em}
+
+/* темні смуги */
+.deep{background:var(--deep);color:#EFE7E2}
+.deep h2,.deep h3{color:#fff}
+.deep p{color:#CFC4BE}
+.deep p.lead{color:#fff}
+.deep .eyebrow{color:#A9968D}
+.deep .fine{color:#A9968D}
+.result-key{font-family:"Commissioner";font-weight:700;font-size:clamp(22px,3.2vw,30px);
+  line-height:1.18;letter-spacing:-.02em;color:#fff;margin:28px 0 0;max-width:20em}
+
+/* смуга CTA */
+.ctaband{background:var(--card)}
+.ctaband .in{max-width:var(--wide);margin:0 auto;padding:26px 20px;display:flex;flex-wrap:wrap;
+  align-items:center;justify-content:space-between;gap:16px}
+.ctaband .tx{font-family:"Commissioner";font-weight:600;font-size:clamp(18px,2.3vw,23px);
+  line-height:1.2;letter-spacing:-.02em;max-width:18em}
+.ctaband .rt{display:flex;align-items:center;gap:18px}
+.ctaband .pr{font-size:13.5px;color:var(--ink-mute);line-height:1.25}
+.ctaband .pr b{display:block;font-family:"Commissioner";font-weight:700;font-size:23px;color:var(--ink)}
+
+/* сітки */
+.split{display:grid;gap:24px}
+@media(min-width:900px){.split{grid-template-columns:290px 1fr;gap:52px;align-items:start}}
+.duo{display:grid;gap:20px}
+@media(min-width:900px){.duo{grid-template-columns:1fr 1fr;gap:24px}}
+.trio{display:grid;gap:20px}
+@media(min-width:860px){.trio{grid-template-columns:repeat(3,1fr);gap:22px}}
+
+/* кроки */
+.steps{display:grid;gap:0 44px}
+@media(min-width:860px){.steps{grid-template-columns:1fr 1fr}}
+.step{border-bottom:1px solid var(--line)}
+.step summary{cursor:pointer;list-style:none;display:flex;gap:14px;align-items:baseline;
+  padding:15px 30px 15px 0;position:relative;font-family:"Commissioner";font-weight:500;
+  font-size:16.5px;color:var(--ink)}
+.step summary::-webkit-details-marker{display:none}
+.step summary em{font-style:normal;font-size:12.5px;font-weight:600;color:var(--plum);
+  flex:0 0 22px;font-variant-numeric:tabular-nums}
+.step summary::after{content:"";position:absolute;right:6px;top:23px;width:11px;height:2px;
+  background:var(--plum);border-radius:2px}
+.step summary::before{content:"";position:absolute;right:10px;top:19px;width:2px;height:10px;
+  background:var(--plum);border-radius:2px;transition:transform .2s}
+.step[open] summary::before{transform:scaleY(0)}
+.step-body{padding:0 0 18px 36px}
+.step-body p{font-size:15.5px}
+
+/* Telegram */
+.tg{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 22px 50px -32px rgba(43,35,32,.7)}
+.tg-head{background:#F3ECE7;border-bottom:1px solid #E3D7CF;padding:11px 13px;display:flex;align-items:center;gap:10px}
+.tg-head .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,#7E3B4E,#5C4450);
+  color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;flex:0 0 auto}
+.tg-head b{font-size:14px;font-weight:600;display:block;color:var(--ink)}
+.tg-head span{font-size:11.5px;color:var(--ink-mute)}
+.tg-pin{background:#FBF6F2;border-bottom:1px solid #E9DED6;padding:8px 12px 9px 15px;position:relative;
+  font-size:12.5px;color:var(--ink-soft);line-height:1.35}
+.tg-pin::before{content:"";position:absolute;left:8px;top:9px;bottom:9px;width:2px;background:var(--plum);border-radius:2px}
+.tg-pin i{display:block;font-style:normal;font-size:11px;color:var(--plum);font-weight:500;margin-bottom:1px}
+.tg-body{padding:12px 10px;background:#FDFAF8}
+.tg-row{display:flex;gap:8px;margin-bottom:10px;align-items:flex-end}
+.tg-row .ava{width:26px;height:26px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  font-size:10px;color:#fff;font-weight:600}
+.a1{background:#7E6B8A}.a2{background:#6E8A6B}.a3{background:#B5854F}
+.bub{background:#fff;border:1px solid #EEE4DD;border-radius:14px 14px 14px 5px;padding:8px 11px 6px;
+  max-width:82%;font-size:13.5px;line-height:1.4;color:var(--ink)}
+.bub .nm{display:block;font-size:12px;font-weight:600;margin-bottom:2px}
+.n1{color:#7E6B8A}.n2{color:#6E8A6B}.n3{color:#B5854F}
+.bub .tm{float:right;font-size:10.5px;color:var(--ink-mute);margin:4px 0 0 8px}
+.tg-row.own{justify-content:flex-end}
+.tg-row.own .bub{background:#EFE7DF;border-color:#E2D5CA;border-radius:14px 14px 5px 14px}
+.reactions{display:inline-flex;gap:4px;margin-top:5px}
+.reactions span{background:#F4EDE8;border-radius:100px;padding:1px 8px;font-size:11px;color:var(--ink-soft)}
+.tg-input{border-top:1px solid #E9DED6;background:#F3ECE7;padding:9px 13px;font-size:12.5px;
+  color:var(--ink-mute);display:flex;justify-content:space-between}
+.cap{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);
+  margin-top:12px;text-align:center}
+
+/* автори */
+.authors{display:grid;gap:20px}
+@media(min-width:760px){.authors{grid-template-columns:1fr 1fr;gap:24px}}
+.author{background:var(--card);border-radius:var(--r);padding:26px}
+.author img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin-bottom:16px}
+.author h3{margin-bottom:12px;font-size:21px}
+.author ul{list-style:none;margin:0;padding:0}
+.author li{padding:8px 0 8px 18px;position:relative;font-size:15px;color:var(--ink-soft);
+  border-bottom:1px solid var(--line);line-height:1.4}
+.author li:last-child{border-bottom:0}
+.author li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:2px;
+  border-radius:2px;background:var(--line)}
+
+/* ціна */
+.plan{background:var(--deep);color:#EFE7E2;border-radius:var(--r);padding:28px 26px}
+.plan .lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#A9968D;margin:0}
+.plan .price{font-family:"Commissioner";font-weight:700;font-size:46px;line-height:1;margin:10px 0 4px;color:#fff}
+.plan .price small{font-family:"Onest";font-weight:400;font-size:14px;color:#A9968D}
+.plan .note{font-size:13.5px;color:#A9968D;margin:0 0 20px}
+.plan ul{list-style:none;margin:20px 0 0;padding:0}
+.plan li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14.5px;color:#CFC4BE}
+.plan li:last-child{border-bottom:0}
+
+.final{text-align:center}
+.final .measure{margin-left:auto;margin-right:auto}
+.final h2{max-width:15em;margin-left:auto;margin-right:auto}
+footer.site{padding:26px 0;text-align:center;font-size:13px;color:var(--ink-mute)}
+
+/* блок «що отримуєте одразу» */
+.gets{display:grid;gap:16px;margin-top:26px}
+@media(min-width:700px){.gets{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.gets{grid-template-columns:repeat(4,1fr)}}
+.get{background:var(--card);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column}
+.get .tag{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--plum);margin-bottom:14px}
+.get h3{font-size:18px;margin-bottom:10px;color:var(--ink)}
+.get p{font-size:14.5px;margin:0;flex:1;color:var(--ink-soft)}
+.get .mini{list-style:none;margin:12px 0 0;padding:0}
+.get .mini li{padding:7px 0 7px 20px;position:relative;font-size:14px;color:var(--ink-soft);
+  border-top:1px solid var(--line)}
+.get .mini li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;
+  border-radius:50%;background:var(--sage)}
+
+/* попап */
+.pop-bg{position:fixed;inset:0;background:rgba(43,35,32,.55);backdrop-filter:blur(4px);
+  z-index:90;display:none;align-items:center;justify-content:center;padding:20px}
+.pop-bg.on{display:flex}
+.pop{background:var(--card);border-radius:24px;max-width:440px;width:100%;padding:34px 30px 30px;
+  position:relative;box-shadow:0 40px 90px -40px rgba(43,35,32,.9)}
+.pop h3{font-size:25px;line-height:1.15;margin-bottom:12px}
+.pop p{font-size:15.5px}
+.pop .btn{margin-top:20px}
+.pop .x{position:absolute;top:14px;right:16px;background:none;border:0;cursor:pointer;
+  font-size:26px;line-height:1;color:var(--ink-mute);padding:4px 8px}
+.pop .x:hover{color:var(--ink)}
+.pop .alt{display:block;margin-top:14px;text-align:center;font-size:13.5px;color:var(--ink-mute);
+  background:none;border:0;cursor:pointer;width:100%;text-decoration:underline}
+
+/* світлі картки всередині темних секцій — повертаємо темний текст */
+.deep .card-on-dark,
+.deep .get,
+.deep .panel,
+.deep .who{color:var(--ink-soft)}
+.deep .get h2,.deep .get h3,
+.deep .panel h2,.deep .panel h3,
+.deep .who b{color:var(--ink)}
+.deep .get p,.deep .panel p,.deep .who .tx{color:var(--ink-soft)}
+.deep .get p.lead,.deep .panel p.lead{color:var(--ink)}
+
+/* 1. чек-лист «Ви впізнаєте себе» */
+.checks{list-style:none;margin:22px 0 0;padding:0;display:grid}
+@media(min-width:760px){.checks{grid-template-columns:1fr 1fr;column-gap:38px}}
+.checks li{border-bottom:1px solid var(--line)}
+.checks label{display:flex;gap:13px;align-items:flex-start;padding:13px 0;cursor:pointer;
+  font-size:16px;line-height:1.45;color:var(--ink-soft);transition:color .18s}
+.checks label:hover{color:var(--ink)}
+.checks input{position:absolute;opacity:0;width:0;height:0}
+.checks .bx{flex:0 0 auto;width:21px;height:21px;border-radius:7px;border:2px solid var(--line);
+  margin-top:1px;position:relative;transition:background .18s,border-color .18s}
+.checks .bx::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);
+  transition:transform .18s}
+.checks input:checked + .bx{background:var(--plum);border-color:var(--plum)}
+.checks input:checked + .bx::after{transform:rotate(45deg) scale(1)}
+.checks input:checked ~ .tx{color:var(--ink)}
+.checks input:focus-visible + .bx{outline:2.5px solid var(--plum);outline-offset:2px}
+.tally{margin-top:20px;background:var(--sand);border-radius:14px;padding:16px 20px;
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tally .n{font-family:"Commissioner";font-weight:700;font-size:30px;line-height:1;color:var(--plum);
+  flex:0 0 auto;min-width:52px}
+.tally .n small{font-family:"Onest";font-weight:400;font-size:14px;color:var(--ink-mute)}
+.tally p{margin:0;font-size:15px}
+
+/* 2. доріжка 12 кроків */
+.track{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+.tk{font-family:"Commissioner";font-weight:600;font-size:13px;font-variant-numeric:tabular-nums;
+  width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--card);
+  color:var(--ink-mute);cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.tk:hover{border-color:var(--plum);color:var(--plum)}
+.tk.on{background:var(--plum);border-color:var(--plum);color:#fff}
+@media(min-width:900px){.track{max-width:270px}}
+
+/* 3. калькулятор DETOX */
+.detox{background:var(--sand);border-radius:14px;padding:18px 18px 16px;margin-top:14px}
+.detox .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.detox label{font-size:13.5px;color:var(--ink-mute)}
+.detox input[type=date]{font-family:"Onest";font-size:15px;padding:9px 12px;border-radius:10px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.detox .out{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.detox .out b{font-family:"Commissioner";font-weight:600;font-size:14px;background:var(--card);
+  border-radius:100px;padding:8px 15px;color:var(--ink)}
+.detox .out b span{font-weight:400;color:var(--ink-mute)}
+.detox .hint{font-size:12.5px;color:var(--ink-mute);margin:12px 0 0}
+
+/* м'яка поява */
+.rise{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rise.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1579152340271385');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<div class="bar">
+  <div class="in">
+    <span class="nm">Життя після «нас»</span>
+    <span class="pr"><b>899 грн</b> на місяць</span>
+    <a class="btn" href="#reg">Приєднатися</a>
+  </div>
+</div>
+
+<!-- ===== ГЕРОЙ ===== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Життя після «нас»</h1>
+      <p class="sub">12 кроків психоемоційного відновлення після руйнування стосунків</p>
+      <p class="lead measure">
+        Для моменту, коли стосунки вже закінчилися зовні, але психологічний зв'язок продовжує
+        утримувати вас усередині них.
+      </p>
+      <p class="measure" style="margin-top:10px">
+        12 послідовних кроків — від емоційної фіксації на колишньому партнері до повернення
+        власного життя, кордонів і внутрішньої опори.
+      </p>
+
+      <div class="who pair" style="margin-top:30px">
+        <img src="../img/iryna.jpg" alt="Ірина Макаренко">
+        <img src="../img/dmytro-tv.jpg" alt="Дмитро Карпачов">
+        <span class="tx"><b>Ірина Макаренко, Дмитро Карпачов</b>Автори проєкту</span>
+      </div>
+    </div>
+
+    <div class="offer">
+      <p class="lbl">Вартість</p>
+      <p class="price">899 <small>грн/міс</small></p>
+      <p class="note">Старт — одразу після оплати</p>
+      <a class="btn btn-block" href="#reg">Приєднатися до програми</a>
+      <ul>
+        <li>Весь матеріал 12 кроків одразу в кабінеті</li>
+        <li>Практична робота та чек-пойнти до кожного кроку</li>
+        <li>Окремий блок екстреної стабілізації</li>
+        <li>Чат із окремою гілкою на кожен крок</li>
+        <li>Прямий ефір раз на 2 тижні</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ЩО ВИ ОТРИМУЄТЕ ОДРАЗУ ===== -->
+<section class="deep on-dark" style="padding-top:46px;padding-bottom:46px">
+  <div class="wrap">
+    <p class="eyebrow">Одразу після оформлення підписки</p>
+    <h2>Що ви отримуєте в перший же день</h2>
+    <p class="lead" style="margin-top:14px;max-width:36em">
+      Нічого не потрібно чекати. Доступ відкривається одразу після оплати.
+    </p>
+
+    <div class="gets">
+      <div class="get">
+        <p class="tag">Доступ</p>
+        <h3>Усі 12 кроків одразу</h3>
+        <p>Програма не видається частинами. Весь матеріал відкритий із першого дня, і ви проходите його у власному темпі — без розкладу й дедлайнів.</p>
+      </div>
+
+      <div class="get">
+        <p class="tag">Кожен крок</p>
+        <h3>Лекція, конспект, вправа, завдання</h3>
+        <p>Крок — це не одне відео.</p>
+        <ul class="mini">
+          <li>Лекція</li>
+          <li>Конспект до неї</li>
+          <li>Конкретна вправа</li>
+          <li>Завдання для самостійної роботи</li>
+        </ul>
+      </div>
+
+      <div class="get">
+        <p class="tag">Спільнота</p>
+        <h3>Чат із окремою гілкою на кожен крок</h3>
+        <p>Тут можна ділитися тим, що відбувається, і отримувати зворотний зв'язок — і від інших учасників, які проходять те саме, і від експерта.</p>
+      </div>
+
+      <div class="get">
+        <p class="tag">Ефіри</p>
+        <h3>Прямі ефіри раз на 2 тижні</h3>
+        <p>Розбираємо теми, які болять, відповідаємо на запитання. Питання можна залишити заздалегідь, а якщо не встигли наживо — залишається запис.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:26px"><a class="btn" href="#reg">Приєднатися · 899 грн/міс</a></p>
+  </div>
+</section>
+
+<!-- ===== ВИ ВПІЗНАЄТЕ СЕБЕ ===== -->
+<section>
+  <div class="wrap">
+    <div class="panel rise">
+      <p class="eyebrow">Можливо</p>
+      <h2>Ви впізнаєте себе</h2>
+      <p class="fine" style="margin-top:20px">Відмітьте те, що впізнаєте.</p>
+      <ul class="checks">
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Прокидаєтеся і майже одразу думаєте про колишнього партнера.</span></label></li>
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Перевіряєте, коли людина була онлайн.</span></label></li>
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Перечитуєте старі повідомлення.</span></label></li>
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Заходите на її сторінки, дивитеся, кого вона додала.</span></label></li>
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Холодна відповідь руйнує настрій на весь день.</span></label></li>
+        <li><label><input type="checkbox" class="ck"><span class="bx" aria-hidden="true"></span><span class="tx">Тепла — знову запускає фантазію, що все можна повернути.</span></label></li>
+      </ul>
+      <div class="tally">
+        <span class="n" id="tallyN">0<small>/6</small></span>
+        <p id="tallyTx">Кожен із цих пунктів — не риса характеру, а частина того самого циклу.</p>
+      </div>
+      <p class="lead" style="margin-top:22px;max-width:40em">
+        Ви розумієте, що цей зв'язок робить вам боляче, але все одно не можете перестати
+        до нього повертатися.
+      </p>
+      <p style="margin-top:16px">І шукаєте причину в собі. Думаєте, що треба було бути іншою людиною.</p>
+      <ul class="chips">
+        <li>Красивішою</li><li>Спокійнішою</li><li>Уважнішою</li>
+        <li>Менш вимогливою</li><li>Більш терплячою</li><li>Більш успішною</li>
+      </ul>
+      <p class="pull">«Якщо цих стосунків більше немає, я взагалі не розумію, хто я тепер».</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== РЕЗУЛЬТАТ ===== -->
+<section class="deep on-dark">
+  <div class="wrap">
+    <p class="eyebrow">Результат</p>
+    <h2>Що має змінитися після 12 кроків</h2>
+    <p class="lead" style="margin-top:18px;max-width:34em">
+      Уявіть, що одного ранку ви прокидаєтеся і не тягнетеся одразу до телефону.
+    </p>
+    <ul class="lines" style="margin-top:16px">
+      <li>Не потрібно перевіряти, чи була ця людина онлайн.</li>
+      <li>Ви не шукаєте прихованих смислів у її повідомленнях.</li>
+      <li>Її мовчання більше не руйнує ваш день.</li>
+      <li>Її повідомлення не викликає сплеску надії.</li>
+      <li>Ви більше не прокручуєте сотий варіант розмови, яка могла б усе змінити.</li>
+      <li>Не будуєте плани з поправкою: «а раптом ми ще будемо разом».</li>
+    </ul>
+    <p class="result-key">І найважливіше — вам поступово стає байдуже, повернеться ця людина чи ні.</p>
+    <p style="margin-top:18px;max-width:34em">
+      Не тому, що ви стерли минуле. Просто відповідь на це питання більше не визначає ваше
+      майбутнє. У вас знову з'являються власні плани і власні бажання.
+    </p>
+  </div>
+</section>
+
+<div class="ctaband">
+  <div class="in">
+    <div class="tx">Увесь матеріал доступний одразу. Проходити можна у власному темпі.</div>
+    <div class="rt">
+      <span class="pr"><b>899 грн</b>на місяць</span>
+      <a class="btn" href="#reg">Приєднатися</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ЧОМУ НЕ ВИХОДИТЬ ===== -->
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>Чому просто «відпустити» не виходить</h2>
+    </div>
+    <div>
+      <p class="lead measure">
+        Тому що разом із людиною зникає набагато більше. Звичний спосіб життя. Спільні плани.
+        Вечори. Відчуття близькості. Уявлення про майбутнє. Роль, яку ви займали поруч.
+      </p>
+      <p class="measure" style="margin-top:14px">
+        Навіть коли розум уже знає, що стосунки завершилися, значна частина внутрішнього життя
+        продовжує поводитися так, ніби все ще можна повернути. Людина починає жити між пам'яттю
+        про минуле та надією на його повернення — місяць, два, іноді кілька років.
+      </p>
+
+      <div class="panel rise" style="margin-top:22px;max-width:40em">
+        <p class="lead">
+          Якщо квітка на підвіконні зав'яла, можна ще довго поливати суху землю і переконувати
+          себе, що ось-ось з'явиться новий листок.
+        </p>
+        <p style="margin-top:10px">
+          Але підвіконня від цього не стане зеленішим. Щоб на ньому знову з'явилося життя,
+          доведеться прибрати старий горщик і посадити нову квітку.
+        </p>
+      </div>
+
+      <p class="measure" style="margin-top:18px">
+        Минуле можна пам'ятати, цінувати і навіть продовжувати любити. Але нове життя
+        починається лише тоді, коли в ньому звільняється місце для нового.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЩО ВІДБУВАЄТЬСЯ + 12 КРОКІВ (об'єднано, був дубль) ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="panel rise">
+      <h2>Що відбувається у програмі</h2>
+      <p class="lead" style="margin-top:16px;max-width:40em">
+        Вам не потрібно за один день «прийняти», «простити», «відпустити» і прокинутися новою людиною.
+        Вихід розбитий на 12 послідовних кроків.
+      </p>
+      <ul class="lines" style="margin-top:20px">
+        <li>Спочатку побачити реальність.</li>
+        <li>Потім перестати воювати з вибором іншої людини.</li>
+        <li>Визнати зміни у власному житті.</li>
+        <li>Повернути контроль над тим, що справді залежить від вас.</li>
+        <li>Припинити підживлювати залежність постійним контактом.</li>
+        <li>Зрозуміти, чому саме цей зв'язок став настільки сильним.</li>
+        <li>Побачити реальні стосунки замість ідеалізованого образу.</li>
+        <li>Розібрати власні сценарії прив'язаності.</li>
+        <li>Внутрішньо завершити історію.</li>
+        <li>Повернути себе.</li>
+        <li>І лише після цього будувати наступний етап життя.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap split">
+    <div>
+      <h2>12 кроків</h2>
+      <p class="fine" style="margin:14px 0 20px">Натисніть номер або відкрийте крок нижче.</p>
+      <div class="track" id="track">
+        <button class="tk" type="button" data-i="1" aria-label="Крок 1">01</button>
+        <button class="tk" type="button" data-i="2" aria-label="Крок 2">02</button>
+        <button class="tk" type="button" data-i="3" aria-label="Крок 3">03</button>
+        <button class="tk" type="button" data-i="4" aria-label="Крок 4">04</button>
+        <button class="tk" type="button" data-i="5" aria-label="Крок 5">05</button>
+        <button class="tk" type="button" data-i="6" aria-label="Крок 6">06</button>
+        <button class="tk" type="button" data-i="7" aria-label="Крок 7">07</button>
+        <button class="tk" type="button" data-i="8" aria-label="Крок 8">08</button>
+        <button class="tk" type="button" data-i="9" aria-label="Крок 9">09</button>
+        <button class="tk" type="button" data-i="10" aria-label="Крок 10">10</button>
+        <button class="tk" type="button" data-i="11" aria-label="Крок 11">11</button>
+        <button class="tk" type="button" data-i="12" aria-label="Крок 12">12</button>
+      </div>
+
+      <p style="margin-top:18px"><a class="btn" href="#reg">Приєднатися · 899 грн/міс</a></p>
+    </div>
+    <div class="steps">
+      <details class="step" open><summary><em>01</em>Зафіксувати реальність</summary><div class="step-body">
+        <p>Починається з простого питання: що насправді відбувається? Без припущень і спроб прочитати думки іншої людини.</p>
+        <p>Ви вчитеся відокремлювати факт від власної інтерпретації, страху й надії. Саме тут повертається ясність.</p>
+      </div></details>
+
+      <details class="step" open><summary><em>02</em>Прийняти вибір іншої людини</summary><div class="step-body">
+        <p>Можна говорити про свої почуття, пропонувати, домовлятися. Але неможливо прийняти рішення за іншу дорослу людину.</p>
+        <p>Робота з бажанням переконати, довести, дочекатися, знайти правильні слова, зробити ще одну спробу.</p>
+      </div></details>
+
+      <details class="step"><summary><em>03</em>Визнати зміни</summary><div class="step-body">
+        <p>Змінюється не одна частина життя, а майже все: дім, побут, плани, свята, фінанси, спілкування, взаємодія з дітьми, уявлення про майбутнє.</p>
+        <p>Тут ви поступово адаптуєтеся до життя, яке вже стало іншим.</p>
+      </div></details>
+
+      <details class="step"><summary><em>04</em>Повернути управління собі</summary><div class="step-body">
+        <p>Що вона робить? Чому мовчить? Чи повернеться? Цей нескінченний аналіз не дає управління ситуацією — він лише утримує іншу людину в центрі вашого життя.</p>
+        <p>Ви повертаєте увагу туди, де справді можете щось змінювати.</p>
+      </div></details>
+
+      <details class="step"><summary><em>05</em>Припинити контакт, який підтримує залежність</summary><div class="step-body">
+        <p>Контакт існує навіть тоді, коли ви нібито «не спілкуєтеся»: перегляд сторінки, перечитування листування, перевірка статусу, очікування повідомлення.</p>
+        <p>Ви створюєте власний <strong>DETOX-протокол</strong>. Мінімум 30 днів, у складніших випадках 60 або 90.</p>
+        <div class="detox">
+          <div class="row">
+            <label for="dxStart">Якщо почати</label>
+            <input type="date" id="dxStart">
+          </div>
+          <div class="out" id="dxOut"></div>
+          <p class="hint">Просто календар. Термін підбирається індивідуально всередині програми.</p>
+        </div>
+        <p>Якщо є спільні діти й контакт припинити неможливо — вчитеся змінювати його формат. Коротко, по суті, з чіткими межами.</p>
+      </div></details>
+
+      <details class="step"><summary><em>06</em>Усвідомити залежність</summary><div class="step-body">
+        <p>Чому тягне назад навіть після болю? Чому одне повідомлення різко покращує стан, а мовчання викликає майже фізичну тривогу?</p>
+        <p>Ви починаєте бачити механізми, які підтримують фіксацію — і відрізняти глибину переживань від реальної якості стосунків.</p>
+      </div></details>
+
+      <details class="step"><summary><em>07</em>Побачити реальність стосунків</summary><div class="step-body">
+        <p>Після втрати хороше стає яскравішим, а холодність, конфлікти й самотність відходять на периферію.</p>
+        <p>Тут ви повертаєте повну картину: що справді було цінним і яку ціну ви за це платили.</p>
+      </div></details>
+
+      <details class="step"><summary><em>08</em>Розібрати механізми прив'язаності</summary><div class="step-body">
+        <p>Чому саме ця людина? Що ви намагалися отримати — визнання, безпеку, відчуття власної цінності, підтвердження, що вас можна любити?</p>
+        <p>Робота з потребами, очікуваннями й повторюваними сценаріями. Щоб не опинитися в тих самих стосунках з іншою людиною.</p>
+      </div></details>
+
+      <details class="step"><summary><em>09</em>Завершити стосунки</summary><div class="step-body">
+        <p>Іноді люди роками продовжують стосунки з людиною, якої поруч давно немає. Говорять подумки, сперечаються, чекають вибачення.</p>
+        <p>Фізична відсутність партнера ще не завершує внутрішній діалог. Цьому і присвячений крок.</p>
+      </div></details>
+
+      <details class="step"><summary><em>10</em>Відновити свою ідентичність</summary><div class="step-body">
+        <p>«А що мені взагалі подобається без цієї людини?» Чого я хочу, як хочу проводити вечори, яке життя хочу будувати?</p>
+        <p>Після довгих стосунків себе доводиться збирати заново: інтереси, звички, межі, плани, власну окремість.</p>
+      </div></details>
+
+      <details class="step"><summary><em>11</em>Не впасти в наступну крайність</summary><div class="step-body">
+        <p>Терміново знайти когось нового — або ніколи більше нікого не підпускати близько. Обидві реакції можуть бути способом впоратися з болем.</p>
+        <p>Тут ви розбираєтеся, чи справді готові до нової близькості.</p>
+      </div></details>
+
+      <details class="step"><summary><em>12</em>Інтегрувати новий досвід</summary><div class="step-body">
+        <p>Що ви тепер знаєте про себе? Які сценарії почали бачити? Які межі більше не готові порушувати?</p>
+        <p>І які стосунки хочете будувати далі.</p>
+      </div></details>
+
+    </div>
+  </div>
+</section>
+
+<div class="ctaband">
+  <div class="in">
+    <div class="tx">12 кроків, практична робота і чек-пойнти після кожного етапу.</div>
+    <div class="rt">
+      <span class="pr"><b>899 грн</b>на місяць</span>
+      <a class="btn" href="#reg">Приєднатися</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ПРАКТИКА + ЧЕК-ПОЙНТИ ===== -->
+<section>
+  <div class="wrap duo">
+    <div class="panel rise">
+      <h2 style="font-size:clamp(23px,2.8vw,29px)">Практика, яка змінює ваше життя</h2>
+      <p style="margin-top:14px">Кожен із 12 кроків містить практичну роботу. Ви будете:</p>
+      <ul class="lines single" style="margin-top:12px">
+        <li>Фіксувати факти.</li>
+        <li>Досліджувати страхи й помічати надії.</li>
+        <li>Відстежувати тригери.</li>
+        <li>Розбирати внутрішні діалоги.</li>
+        <li>Працювати з соромом і провиною.</li>
+        <li>Визначати свої межі.</li>
+        <li>Аналізувати реальні стосунки й власні сценарії.</li>
+        <li>Повертати контакт із тілом, почуттями, потребами і власним життям.</li>
+      </ul>
+    </div>
+    <div class="panel rise">
+      <h2 style="font-size:clamp(23px,2.8vw,29px)">Чек-пойнти після кожного етапу</h2>
+      <p style="margin-top:14px">
+        Не потрібно вгадувати, чи «вже пора рухатися далі». Після кожного кроку є конкретні питання:
+      </p>
+      <ul class="qs" style="grid-template-columns:1fr">
+        <li>Чи можу я відрізнити факт від своєї надії?</li>
+        <li>Чи бачу, які контакти запускають відкат?</li>
+        <li>Чи можу побачити стосунки без ідеалізації?</li>
+        <li>Чи з'являється більше життя поза колишнім партнером?</li>
+      </ul>
+      <p style="margin-top:16px">
+        Вони показують реальні зміни замість очікування магічного ранку, коли «раптом усе мине».
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СТАБІЛІЗАЦІЯ ===== -->
+<section class="deep on-dark">
+  <div class="wrap split">
+    <div><h2>Окремий блок екстреної стабілізації</h2></div>
+    <div>
+      <p class="lead measure">
+        Іноді стає особливо важко: різко посилюється тривога, з'являється сильне бажання негайно
+        написати, починається черговий емоційний відкат.
+      </p>
+      <p class="measure" style="margin-top:14px">
+        Для таких моментів є окремий набір практик. Щоб спочатку зменшити інтенсивність стану,
+        повернути контакт із теперішнім моментом і зробити паузу між сильним почуттям та
+        імпульсивною дією. І лише потім вирішувати, що робити далі.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЧАТ ===== -->
+<!-- ⚠️ Мокап чату. Замінити реальним скріншотом, коли з'явиться. -->
+<section>
+  <div class="wrap duo" style="align-items:center">
+    <div>
+      <h2>Чат підтримки</h2>
+      <p class="lead" style="margin-top:16px;max-width:34em">Кожен крок має окрему гілку в чаті.</p>
+      <p style="margin-top:12px;max-width:34em">
+        Там можна описувати, що з вами відбувається, говорити про відкати, ставити запитання
+        і бачити інших людей, які проходять схожий шлях.
+      </p>
+      <p style="margin-top:10px;max-width:34em">
+        Одна з найважчих частин розставання — відчуття, що з вами відбувається щось унікальне
+        і незрозуміле. Коли досвід отримує слова й структуру, хаосу стає менше.
+      </p>
+    </div>
+    <div class="rise">
+      <div class="tg">
+        <div class="tg-head">
+          <span class="av">05</span>
+          <div><b>Крок 5 · DETOX</b><span>гілка · 218 учасників</span></div>
+        </div>
+        <div class="tg-pin">
+          <i>Закріплене повідомлення</i>
+          Мінімальний період DETOX — 30 днів. У складніших випадках 60 або 90.
+        </div>
+        <div class="tg-body">
+          <div class="tg-row">
+            <span class="ava a1">ІМ</span>
+            <div class="bub"><span class="nm n1">Ірина Макаренко</span>Випишіть усі канали, через які контакт іще існує. Перегляд сторінки теж рахується.<span class="tm">21:14</span>
+              <div class="reactions"><span>❤️ 34</span><span>🙏 12</span></div></div>
+          </div>
+          <div class="tg-row own">
+            <div class="bub">Виписала. Виявилось сім, хоча ми «не спілкуємося».<span class="tm">21:31 ✓✓</span></div>
+          </div>
+          <div class="tg-row">
+            <span class="ava a2">К</span>
+            <div class="bub"><span class="nm n2">Katya</span>У мене дев'ять 🙈 Найважче було визнати перевірку статусу.<span class="tm">21:36</span>
+              <div class="reactions"><span>💯 8</span></div></div>
+          </div>
+          <div class="tg-row">
+            <span class="ava a3">М</span>
+            <div class="bub"><span class="nm n3">Марго</span>Сьогодні 11-й день. Вперше не відкрила його сторінку зранку.<span class="tm">22:02</span>
+              <div class="reactions"><span>🔥 41</span><span>👏 19</span></div></div>
+          </div>
+        </div>
+        <div class="tg-input"><span>Написати повідомлення…</span><span>📎</span></div>
+      </div>
+      <p class="cap">Приклад гілки в чаті</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ТРИ КОРОТКІ БЛОКИ ===== -->
+<section style="padding-top:0">
+  <div class="wrap duo">
+    <div class="panel rise">
+      <h3>Не потрібно переставати кохати</h3>
+      <p style="margin-top:12px">
+        Не потрібно знецінювати минуле, переконувати себе, що людина була жахливою, ненавидіти її
+        чи видаляти всі спогади.
+      </p>
+      <p style="margin-top:10px">
+        Можна пам'ятати, сумувати і цінувати те хороше, що було. І водночас перестати віддавати
+        минулим стосункам своє теперішнє життя.
+      </p>
+    </div>
+    <div class="panel rise">
+      <h3>Якщо у вас є спільні діти</h3>
+      <p style="margin-top:12px">
+        Повне припинення контакту тут неможливе, тому формат спілкування розбирається окремо.
+      </p>
+      <p style="margin-top:10px">
+        Як відділити батьківство від колишніх партнерських стосунків, не робити дитину посередником
+        і не збирати через неї інформацію про особисте життя колишнього партнера.
+      </p>
+      <div class="who" style="margin-top:18px;padding:8px 18px 8px 8px">
+        <img src="../img/dmytro-tv.jpg" alt="Дмитро Карпачов" style="width:44px;height:44px">
+        <span class="tx" style="font-size:13.5px">Цей блок програми —<br>від <b style="display:inline;font-size:13.5px">Дмитра Карпачова</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== АВТОРИ ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Автори проєкту</p>
+    <h2 style="margin-bottom:24px">Хто веде програму</h2>
+    <div class="authors">
+      <div class="author rise">
+        <img src="../img/iryna.jpg" alt="Ірина Макаренко">
+        <h3>Ірина Макаренко</h3>
+        <ul>
+          <li>Магістр психології (Ун-т ім. Тараса Шевченка), психоаналітичний коуч (ПАК), практикуючий психолог</li>
+          <li>У практиці поєднує терапевтичний підхід і коучинг, використовує метафоричні асоціативні карти</li>
+          <li>Спеціалізація — стосунки: проживання розриву та вихід з емоційної залежності</li>
+          <li>Авторський формат глибинної щоденної підтримки «28 днів разом» у кризових ситуаціях</li>
+          <li>Бере участь в організації ретритів, виступає експертом на жіночих зустрічах і в закритих жіночих клубах</li>
+          <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li>
+        </ul>
+      </div>
+      <div class="author rise">
+        <img src="../img/dmytro-tv.jpg" alt="Дмитро Карпачов">
+        <h3>Дмитро Карпачов</h3>
+        <ul>
+          <li>Автор методу «Психоаналітичний Коучинг» — один з найефективніших сучасних підходів до особистісних трансформацій</li>
+          <li>Експерт з дитячої вікової психології, автор бестселера «Як дати все дитині без грошей і зв'язків»</li>
+          <li>Засновник найбільшої в Україні онлайн-школи для батьків (10+ років)</li>
+          <li>Автор понад 60 освітніх програм з виховання дітей і особистого розвитку</li>
+          <li>Понад 20 років досвіду психологічних консультацій</li>
+          <li>Телезірка — ведучий 6 соціально-психологічних реаліті-шоу на національному телебаченні</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЦІНА ===== -->
+<section id="reg" style="padding-top:0">
+  <div class="wrap duo" style="align-items:start">
+    <div class="plan">
+      <p class="lbl">Вартість</p>
+      <p class="price">899 <small>грн/міс</small></p>
+      <p class="note">Старт — одразу після оплати</p>
+      <div id="MoYFcW8I" class="ss-landing" data-target="MoYFcW8I" data-domain="karpachof"></div>
+      <ul>
+        <li>Весь матеріал 12 кроків одразу в кабінеті</li>
+        <li>Практична робота та чек-пойнти до кожного кроку</li>
+        <li>Окремий блок екстреної стабілізації</li>
+        <li>Чат із окремою гілкою на кожен крок</li>
+        <li>Прямий ефір раз на 2 тижні</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Відновлюйте себе у власному темпі</h3>
+      <p style="margin-top:14px">
+        Якщо ці 12 кроків займуть два місяці — добре. Якщо рік — теж добре. Час усе одно мине.
+        Питання лише в тому, на що ви його витратите: на очікування, терпіння і повторення того
+        самого болю чи на зміни, які поступово повертають вам ваше життя.
+      </p>
+      <p class="lead" style="margin-top:16px">
+        Важливо не те, з якою швидкістю ви рухаєтеся. Важливо те, у якому напрямку.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФІНАЛ ===== -->
+<section class="deep on-dark final">
+  <div class="wrap">
+    <h2>Скільки ще вашого життя повинні тривати стосунки, які вже закінчилися?</h2>
+    <p class="lead" style="margin-top:18px">Ще один вечір? Ще один місяць? Ще один рік?</p>
+    <p class="measure" style="margin-top:14px">
+      Можна чекати моменту, коли одного ранку все мине саме. А можна почати розбирати цей зв'язок
+      крок за кроком — і поступово побудувати життя, у якому минулі стосунки залишаться частиною
+      вашої історії, але перестануть визначати ваше сьогодення.
+    </p>
+    <p style="margin-top:28px"><a class="btn" href="#reg">Приєднатися · 899 грн/міс</a></p>
+    <p class="fine" style="margin-top:12px">Старт — одразу після оплати</p>
+  </div>
+</section>
+
+<footer class="site">
+  Життя після «нас» © 2026 · <a href="https://12.karpachoff.com/legal/oferta/">Оферта</a> · <a href="https://12.karpachoff.com/legal/privacy/">Конфіденційність</a>
+</footer>
+
+<!-- ===== ПОПАП: 2,5 хвилини на сторінці або спроба піти ===== -->
+<div class="pop-bg" id="popBg" role="dialog" aria-modal="true" aria-labelledby="popTtl">
+  <div class="pop">
+    <button class="x" id="popX" aria-label="Закрити">&times;</button>
+    <h3 id="popTtl">Залишилися запитання?</h3>
+    <p>
+      Напишіть менеджеру в Telegram — розкажемо, як влаштована програма, що входить у підписку
+      і чи підійде вона у вашій ситуації. Без дзвінків.
+    </p>
+    <a class="btn btn-block" href="https://t.me/karpachov_manager" target="_blank" rel="noopener" id="popTg">Написати в Telegram</a>
+    <button class="alt" id="popAlt">Дякую, я подивлюся сама</button>
+  </div>
+</div>
+
+<div class="sticky">
+  <div class="s-price"><b>899 грн</b>на місяць</div>
+  <a class="btn" href="#reg">Приєднатися</a>
+</div>
+
+<script>
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els=document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* Попап: один раз — через 2,5 хвилини АБО при спробі піти, що настане раніше */
+(function(){
+  var bg=document.getElementById('popBg'), shown=false, timer=null;
+
+  function show(){
+    if(shown) return;
+    shown=true;
+    clearTimeout(timer);
+    document.removeEventListener('mouseout',onOut);
+    bg.classList.add('on');
+    document.getElementById('popX').focus();
+  }
+  function hide(){ bg.classList.remove('on'); }
+
+  function onOut(e){
+    if(e.clientY<=0 && !e.relatedTarget) show();
+  }
+
+  timer=setTimeout(show,150000); /* 2,5 хвилини */
+  document.addEventListener('mouseout',onOut);
+
+  document.getElementById('popX').addEventListener('click',hide);
+  document.getElementById('popAlt').addEventListener('click',hide);
+  bg.addEventListener('click',function(e){ if(e.target===bg) hide(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+})();
+
+/* 1. Чек-лист «Ви впізнаєте себе» */
+(function(){
+  var boxes=document.querySelectorAll('.checks .ck'),
+      n=document.getElementById('tallyN'), tx=document.getElementById('tallyTx');
+  if(!boxes.length) return;
+  var msg={
+    0:'Кожен із цих пунктів — не риса характеру, а частина того самого циклу.',
+    1:'Навіть один пункт — це вже той самий цикл, а не ваша слабкість.',
+    2:'Це не про силу волі. Так поводиться нервова система, коли зв\'язок ще не завершився всередині.',
+    3:'Це не про силу волі. Так поводиться нервова система, коли зв\'язок ще не завершився всередині.',
+    4:'Саме з цього стану і починається програма — з першого кроку, а не з «просто відпусти».',
+    5:'Саме з цього стану і починається програма — з першого кроку, а не з «просто відпусти».',
+    6:'Саме з цього стану і починається програма — з першого кроку, а не з «просто відпусти».'
+  };
+  function upd(){
+    var c=0; boxes.forEach(function(b){ if(b.checked) c++; });
+    n.innerHTML=c+'<small>/6</small>';
+    tx.textContent=msg[c];
+  }
+  boxes.forEach(function(b){ b.addEventListener('change',upd); });
+  upd();
+})();
+
+/* 2. Доріжка 12 кроків */
+(function(){
+  var track=document.getElementById('track');
+  if(!track) return;
+  var pills=track.querySelectorAll('.tk'),
+      steps=document.querySelectorAll('.step');
+  function sync(){
+    pills.forEach(function(p,i){
+      p.classList.toggle('on', steps[i] && steps[i].open);
+    });
+  }
+  pills.forEach(function(p,i){
+    p.addEventListener('click',function(){
+      var st=steps[i]; if(!st) return;
+      st.open=true; sync();
+      st.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  });
+  steps.forEach(function(st){ st.addEventListener('toggle',sync); });
+  sync();
+})();
+
+/* 3. Календар DETOX */
+(function(){
+  var inp=document.getElementById('dxStart'), out=document.getElementById('dxOut');
+  if(!inp||!out) return;
+  function fmt(d){
+    return d.toLocaleDateString('uk-UA',{day:'numeric',month:'long'});
+  }
+  function calc(){
+    var base=inp.value?new Date(inp.value+'T00:00:00'):new Date();
+    if(isNaN(base)) return;
+    out.innerHTML=[30,60,90].map(function(days){
+      var d=new Date(base.getTime()+days*86400000);
+      return '<b>'+days+' днів <span>— до '+fmt(d)+'</span></b>';
+    }).join('');
+  }
+  var t=new Date();
+  inp.value=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+  inp.addEventListener('change',calc);
+  calc();
+})();
+</script>
+
+<script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
+</body>
+</html>
