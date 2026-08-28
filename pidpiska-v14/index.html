@@ -107,6 +107,11 @@ section{padding:52px 0}
 .who .tx{font-size:14.5px;color:var(--ink-soft);line-height:1.4}
 .who .tx b{display:block;font-family:"Commissioner";font-weight:600;font-size:16px;color:var(--ink)}
 .who.pair img:nth-child(2){margin-left:-22px}
+.who-hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+.who-hero img{width:320px;max-width:100%;border-radius:16px;box-shadow:0 22px 50px -30px rgba(43,35,32,.5)}
+.who-hero .tx{font-size:14.5px;color:var(--ink-soft);line-height:1.4}
+.who-hero .tx b{display:block;font-family:"Commissioner";font-weight:600;font-size:17px;color:var(--ink);margin-bottom:2px}
+@media(max-width:520px){.who-hero img{width:240px}}
 
 /* картки */
 .panel{background:var(--card);border-radius:var(--r);padding:28px 26px}
@@ -364,7 +369,6 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
 <div class="bar">
   <div class="in">
     <span class="nm">Життя після «нас»</span>
-    <span class="pr"><b>899 грн</b> на місяць</span>
     <a class="btn" href="#reg">Приєднатися</a>
   </div>
 </div>
@@ -384,9 +388,8 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         власного життя, кордонів і внутрішньої опори.
       </p>
 
-      <div class="who pair" style="margin-top:30px">
-        <img src="../img/iryna.jpg" alt="Ірина Макаренко">
-        <img src="../img/dmytro-tv.jpg" alt="Дмитро Карпачов">
+      <div class="who-hero" style="margin-top:30px">
+        <img src="../img/authors-hero.png" alt="Ірина Макаренко та Дмитро Карпачов">
         <span class="tx"><b>Ірина Макаренко, Дмитро Карпачов</b>Автори проєкту</span>
       </div>
     </div>
