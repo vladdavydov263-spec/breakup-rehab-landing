@@ -127,6 +127,14 @@ section{padding:52px 0}
 .on-dark .lines li{border-color:rgba(255,255,255,.14);color:#DCD2CC}
 .on-dark .lines li::before{background:var(--sage)}
 
+.lines.steps{counter-reset:stepnum}
+.lines.steps li{counter-increment:stepnum;padding-left:34px}
+.lines.steps li::before{content:counter(stepnum);width:auto;height:auto;background:none;
+  font-family:"Commissioner";font-weight:700;font-size:14px;color:var(--plum);top:10px}
+.lines.steps li:last-child{grid-column:1/-1;border-bottom:0;border-top:2px solid var(--plum);
+  margin-top:6px;padding-top:18px;font-weight:600;color:var(--ink)}
+.lines.steps li:last-child::before{content:"✓";font-size:16px;top:18px}
+
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
 .chips li{background:var(--sand);border-radius:100px;padding:6px 15px;font-size:14.5px;color:var(--ink-soft)}
 .panel .chips li{background:var(--sand)}
@@ -215,6 +223,16 @@ section{padding:52px 0}
 .cap{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);
   margin-top:12px;text-align:center}
 
+/* тизер реальних чек-пойнтів платформи */
+.teaser{background:var(--sand);border-radius:16px;padding:22px 24px;margin-top:22px}
+.teaser .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 16px}
+.teaser ul{list-style:none;margin:0;padding:0}
+.teaser li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);
+  font-size:14.5px;line-height:1.4;color:var(--ink)}
+.teaser li:last-child{border-bottom:0;padding-bottom:0}
+.teaser .bx{flex:0 0 auto;width:18px;height:18px;border-radius:6px;border:2px solid var(--line);margin-top:1px}
+.teaser .fog{filter:blur(5px);user-select:none}
+
 /* автори */
 .authors{display:grid;gap:20px}
 .author{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border-radius:26px;overflow:hidden;box-shadow:0 22px 50px -30px rgba(43,35,32,.45)}
@@ -294,7 +312,6 @@ footer.site{padding:26px 0;text-align:center;font-size:13px;color:var(--ink-mute
 
 /* 1. чек-лист «Ви впізнаєте себе» */
 .checks{list-style:none;margin:22px 0 0;padding:0;display:grid}
-@media(min-width:760px){.checks{grid-template-columns:1fr 1fr;column-gap:38px}}
 .checks li{border-bottom:1px solid var(--line)}
 .checks label{display:flex;gap:13px;align-items:flex-start;padding:13px 0;cursor:pointer;
   font-size:16px;line-height:1.45;color:var(--ink-soft);transition:color .18s}
@@ -567,7 +584,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         Вам не потрібно за один день «прийняти», «простити», «відпустити» і прокинутися новою людиною.
         Вихід розбитий на 12 послідовних кроків.
       </p>
-      <ul class="lines" style="margin-top:20px">
+      <ul class="lines steps" style="margin-top:20px">
         <li>Спочатку побачити реальність.</li>
         <li>Потім перестати воювати з вибором іншої людини.</li>
         <li>Визнати зміни у власному житті.</li>
@@ -718,6 +735,24 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <li>Чи можу побачити стосунки без ідеалізації?</li>
         <li>Чи з'являється більше життя поза колишнім партнером?</li>
       </ul>
+
+      <div class="teaser">
+        <p class="lbl">Чек-пойнти · 0 із 13</p>
+        <ul>
+          <li><span class="bx"></span><span>Я бачу<span class="fog">, що ситуація у стосунках змінилася.</span></span></li>
+          <li><span class="bx"></span><span>Я можу<span class="fog"> назвати основні факти того, що відбувається.</span></span></li>
+          <li><span class="bx"></span><span>Я починаю<span class="fog"> помічати різницю між фактами, страхами та надіями.</span></span></li>
+          <li><span class="bx"></span><span>Я починаю<span class="fog"> бачити, де страх пов'язаний із тим, що відбувається зараз, а де тривога пов'язана з майбутнім.</span></span></li>
+          <li><span class="bx"></span><span>Я помічаю<span class="fog">, які думки та внутрішні діалоги постійно повертаються.</span></span></li>
+          <li><span class="bx"></span><span>Я починаю<span class="fog"> бачити, за яку надію продовжую триматися.</span></span></li>
+          <li><span class="bx"></span><span>Я починаю<span class="fog"> краще розуміти, що саме мені складно відпустити.</span></span></li>
+          <li><span class="bx"></span><span>Я помічаю<span class="fog"> свої почуття поруч із тим, що відбувається.</span></span></li>
+          <li><span class="bx"></span><span>Я починаю<span class="fog"> менше засуджувати себе за свої реакції та емоції.</span></span></li>
+          <li><span class="bx"></span><span>Я розумію<span class="fog">, що сильні почуття після розставання — це нормально.</span></span></li>
+        </ul>
+      </div>
+      <p class="cap">Так виглядають чек-пойнти всередині кроку</p>
+
       <p style="margin-top:16px">
         Вони показують реальні зміни замість очікування магічного ранку, коли «раптом усе мине».
       </p>
@@ -820,7 +855,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         і не збирати через неї інформацію про особисте життя колишнього партнера.
       </p>
       <div class="who" style="margin-top:18px;padding:8px 18px 8px 8px">
-        <img src="../img/dmytro-tv.jpg" alt="Дмитро Карпачов" style="width:44px;height:44px">
+        <img src="../img/dmytro.jpg" alt="Дмитро Карпачов" style="width:44px;height:44px;object-fit:cover;object-position:50% 20%">
         <span class="tx" style="font-size:13.5px">Цей блок програми —<br>від <b style="display:inline;font-size:13.5px">Дмитра Карпачова</b></span>
       </div>
     </div>
