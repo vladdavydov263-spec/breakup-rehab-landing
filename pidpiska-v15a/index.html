@@ -161,26 +161,37 @@ section{padding:58px 0}
 .pull{margin-top:22px;font-size:19px;font-weight:600;line-height:1.4;color:var(--ink);
   border-left:2px solid var(--sig);padding-left:16px;letter-spacing:-.015em}
 
-/* ---- cabinet mock ---- */
-.cab{background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);
-  padding:18px;display:flex;flex-direction:column;gap:14px}
-.cab-top{display:flex;justify-content:space-between;align-items:center;
-  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--ink-3)}
-.pbar{height:6px;background:var(--panel-2);border-radius:4px;overflow:hidden}
-.pbar i{display:block;height:100%;width:25%;background:var(--sig);border-radius:4px}
-.sosbox{display:flex;gap:12px;align-items:flex-start;background:var(--sig-dim);
-  border:1px solid #4A3220;border-radius:11px;padding:13px 14px}
-.sosbox .ic{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--sig);
-  border:1px solid #6B4520;border-radius:6px;padding:4px 7px;flex:0 0 auto;letter-spacing:.08em}
-.sosbox b{display:block;font-size:14px;color:var(--ink);font-weight:700}
-.sosbox p{font-size:13px;color:#C0AB9B;margin-top:3px;line-height:1.4}
-.cgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
-@media(max-width:520px){.cgrid{grid-template-columns:repeat(4,1fr)}}
-.cell{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;
-  padding:11px 4px;text-align:center;font-family:"IBM Plex Mono",monospace;
-  font-size:12.5px;color:var(--ink-3)}
-.cell.done{background:var(--ok-dim);border-color:#2E4A38;color:var(--ok)}
-.cell.now{background:var(--sig-dim);border-color:#6B4520;color:var(--sig)}
+/* ---- cabinet screenshot (реальні кольори платформи) ---- */
+.cab{--c-cream:#FAF5EE;--c-ink:#2B2420;--c-soft:#766A5F;--c-faint:#A89C8F;
+  --c-border:#E8DDD0;--c-coral:#C85A3C;--c-tint:#FBEEE7;--c-tint-b:#F0D2C2;--c-sage:#5F7A5A;
+  border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden;background:#0A0C0E}
+.cab-chrome{display:flex;align-items:center;gap:7px;padding:10px 14px;background:#0A0C0E}
+.cab-chrome .dot{width:9px;height:9px;border-radius:50%;background:#2E343B}
+.cab-chrome .u{margin-left:8px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  color:var(--ink-3);letter-spacing:.06em}
+.cab-screen{background:var(--c-cream);padding:18px 16px 20px;color:var(--c-ink)}
+.cab-h{font-size:15px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.cab-prog{display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:14px;font-size:12px;color:var(--c-soft)}
+.pbar{height:5px;background:var(--c-border);border-radius:3px;overflow:hidden;margin-top:7px}
+.pbar i{display:block;height:100%;width:100%;background:var(--c-coral);border-radius:3px}
+.sosbox{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  background:var(--c-tint);border:1px solid var(--c-tint-b);border-radius:11px;
+  padding:12px 14px;margin-top:16px}
+.sosbox b{display:block;font-size:13px;color:var(--c-coral);font-weight:700;letter-spacing:.02em}
+.sosbox p{font-size:12px;color:var(--c-soft);margin-top:2px;line-height:1.4}
+.sosbox .go{font-size:16px;color:var(--c-coral);flex:0 0 auto}
+.cab-block{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--c-faint);margin-top:20px}
+.lrow{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  background:#fff;border:1px solid var(--c-border);border-left:4px solid var(--c-coral);
+  border-radius:11px;padding:12px 13px 12px 14px;margin-top:8px}
+.lrow.done{border-left-color:var(--c-sage)}
+.lrow .ln{display:block;font-size:11.5px;color:var(--c-faint);margin-bottom:2px}
+.lrow .lt{display:block;font-size:14.5px;color:var(--c-ink);line-height:1.3}
+.lrow .la{flex:0 0 auto;font-size:12.5px;font-weight:600;color:var(--c-coral)}
+.lrow.done .la{color:var(--c-sage)}
+.cab-more{text-align:center;font-size:12px;color:var(--c-faint);margin-top:14px}
 
 /* ---- steps accordion ---- */
 .track{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
@@ -454,23 +465,53 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
     <p class="eyebrow">Одразу після оплати</p>
     <h2 style="margin-top:12px;margin-bottom:20px">Ось що відкривається в кабінеті</h2>
     <div class="duo">
-      <div class="cab rise">
-        <div class="cab-top"><span>ВАШ КАБІНЕТ</span><span>3 / 12 КРОКІВ</span></div>
-        <div class="pbar"><i></i></div>
-        <div class="sosbox">
-          <span class="ic">SOS</span>
-          <div>
-            <b>Екстрена стабілізація</b>
-            <p>Коли зривається о другій ночі. Доступно завжди, з будь-якого кроку.</p>
+      <div class="rise">
+        <div class="cab">
+          <div class="cab-chrome">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="u">кабінет учасниці</span>
+          </div>
+          <div class="cab-screen">
+            <p class="cab-h">12 кроків психоемоційного відновлення</p>
+            <div class="cab-prog"><span>Ваш прогрес</span><span>12 з 12 кроків доступні</span></div>
+            <div class="pbar"><i></i></div>
+
+            <div class="sosbox">
+              <div>
+                <b>SOS · Екстрена стабілізація</b>
+                <p>Коли зривається о другій ночі. Доступно завжди.</p>
+              </div>
+              <span class="go">→</span>
+            </div>
+
+            <p class="cab-block">Усвідомлення</p>
+            <div class="lrow done">
+              <div><span class="ln">Крок 1</span><span class="lt">Зафіксувати реальність</span></div>
+              <span class="la">✓ Пройдено</span>
+            </div>
+            <div class="lrow">
+              <div><span class="ln">Крок 2</span><span class="lt">Прийняти вибір іншої людини</span></div>
+              <span class="la">Дивитись →</span>
+            </div>
+            <div class="lrow">
+              <div><span class="ln">Крок 3</span><span class="lt">Визнати зміни</span></div>
+              <span class="la">Дивитись →</span>
+            </div>
+
+            <p class="cab-block">Сепарація</p>
+            <div class="lrow">
+              <div><span class="ln">Крок 4</span><span class="lt">Повернути собі управління</span></div>
+              <span class="la">Дивитись →</span>
+            </div>
+            <div class="lrow">
+              <div><span class="ln">Крок 5</span><span class="lt">Припинити контакт</span></div>
+              <span class="la">Дивитись →</span>
+            </div>
+
+            <p class="cab-more">і ще 7 кроків у блоках «Пропрацювання» та «Трансформація»</p>
           </div>
         </div>
-        <div class="cgrid">
-          <div class="cell done">01</div><div class="cell done">02</div><div class="cell now">03</div>
-          <div class="cell">04</div><div class="cell">05</div><div class="cell">06</div>
-          <div class="cell">07</div><div class="cell">08</div><div class="cell">09</div>
-          <div class="cell">10</div><div class="cell">11</div><div class="cell">12</div>
-        </div>
-        <p class="fine">Так виглядає кабінет учасниці. Прогрес зберігається, кроки не згорають.</p>
+        <p class="fine" style="margin-top:12px">Так виглядає кабінет учасниці. Прогрес зберігається, кроки не згорають.</p>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -557,12 +598,12 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <p>Тут ви поступово адаптуєтеся до життя, яке вже стало іншим.</p>
       </div></details>
 
-      <details class="step"><summary><em>04</em>Повернути управління собі</summary><div class="step-body">
+      <details class="step"><summary><em>04</em>Повернути собі управління</summary><div class="step-body">
         <p>Що вона робить? Чому мовчить? Чи повернеться? Цей нескінченний аналіз не дає управління ситуацією — він лише утримує іншу людину в центрі вашого життя.</p>
         <p>Ви повертаєте увагу туди, де справді можете щось змінювати.</p>
       </div></details>
 
-      <details class="step"><summary><em>05</em>Припинити контакт, який підтримує залежність</summary><div class="step-body">
+      <details class="step"><summary><em>05</em>Припинити контакт</summary><div class="step-body">
         <p>Контакт існує навіть тоді, коли ви нібито «не спілкуєтеся»: перегляд сторінки, перечитування листування, перевірка статусу, очікування повідомлення.</p>
         <p>Ви створюєте власний <strong>DETOX-протокол</strong>. Мінімум 30 днів, у складніших випадках 60 або 90.</p>
         <div class="detox">
@@ -586,7 +627,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <p>Тут ви повертаєте повну картину: що справді було цінним і яку ціну ви за це платили.</p>
       </div></details>
 
-      <details class="step"><summary><em>08</em>Розібрати механізми прив'язаності</summary><div class="step-body">
+      <details class="step"><summary><em>08</em>Розібрати механізми прив’язаності</summary><div class="step-body">
         <p>Чому саме ця людина? Що ви намагалися отримати — визнання, безпеку, відчуття власної цінності, підтвердження, що вас можна любити?</p>
         <p>Робота з потребами, очікуваннями й повторюваними сценаріями. Щоб не опинитися в тих самих стосунках з іншою людиною.</p>
       </div></details>
@@ -601,12 +642,12 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <p>Після довгих стосунків себе доводиться збирати заново: інтереси, звички, межі, плани, власну окремість.</p>
       </div></details>
 
-      <details class="step"><summary><em>11</em>Не впасти в наступну крайність</summary><div class="step-body">
+      <details class="step"><summary><em>11</em>Не впасти в крайнощі</summary><div class="step-body">
         <p>Терміново знайти когось нового — або ніколи більше нікого не підпускати близько. Обидві реакції можуть бути способом впоратися з болем.</p>
         <p>Тут ви розбираєтеся, чи справді готові до нової близькості.</p>
       </div></details>
 
-      <details class="step"><summary><em>12</em>Інтегрувати новий досвід</summary><div class="step-body">
+      <details class="step"><summary><em>12</em>Інтегрувати свій новий досвід</summary><div class="step-body">
         <p>Що ви тепер знаєте про себе? Які сценарії почали бачити? Які межі більше не готові порушувати?</p>
         <p>І які стосунки хочете будувати далі.</p>
       </div></details>
