@@ -230,7 +230,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <a class="btn btn-primary" href="#reg">Приєднатися до програми</a>
     </div>
     <div class="authors-hero">
-      <img src="../img/authors-hero.png" alt="Дмитро Карпачов та Ірина Макаренко">
+      <img src="../img/authors-hero.webp" alt="Дмитро Карпачов та Ірина Макаренко">
       <div><b>Дмитро Карпачов, Ірина Макаренко</b>Автори проєкту</div>
     </div>
   </div>
@@ -853,6 +853,22 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
   <a class="btn btn-primary" href="#reg">Приєднатися</a>
 </div>
 
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var utm = {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_content: params.get("utm_content") || "",
+    utm_term: params.get("utm_term") || "",
+  };
+  window.ssContext = {
+    variables: utm,
+    scope: utm,
+  };
+})();
+</script>
 <script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
 </body>
 </html>
