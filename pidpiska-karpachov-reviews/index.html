@@ -112,9 +112,10 @@ section{padding:48px 0}
 /* відгуки: горизонтальна галерея */
 .reviews{display:flex;gap:14px;margin-top:6px;padding-bottom:6px;
   overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-.review{flex:0 0 auto;height:340px;border-radius:var(--r);overflow:hidden;
-  box-shadow:0 18px 40px -26px rgba(28,33,48,.5);scroll-snap-align:start}
-.review img{height:100%;width:auto;display:block}
+.review{flex:0 0 auto;width:280px;background:var(--paper);border:1px solid var(--line);
+  border-left:2px solid var(--rose);border-radius:var(--r);padding:20px 22px;
+  scroll-snap-align:start}
+.review p{font-size:14.5px;line-height:1.55;color:var(--ink-soft);margin:0}
 
 /* кроки */
 .steps-grid{display:grid;gap:0 44px}
@@ -136,34 +137,8 @@ section{padding:48px 0}
 /* Telegram-mockup */
 .showcase{display:grid;gap:28px;align-items:start}
 @media(min-width:900px){.showcase{grid-template-columns:1fr 340px;gap:52px}}
-.tg{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+.tg-shot{display:block;width:100%;max-width:340px;margin:0 auto;border-radius:14px;
   box-shadow:0 18px 44px -26px rgba(28,33,48,.55)}
-.tg-head{background:#F1F0F5;border-bottom:1px solid var(--line);padding:10px 12px;display:flex;align-items:center;gap:10px}
-.tg-head .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,#A8555F,#7E4A70);
-  color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;flex:0 0 auto}
-.tg-head b{font-size:14px;font-weight:600;display:block;color:var(--ink)}
-.tg-head span{font-size:11.5px;color:var(--ink-mute)}
-.tg-pin{background:#F7F6F9;border-bottom:1px solid var(--line);padding:7px 12px 8px 14px;
-  position:relative;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
-.tg-pin::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--rose);border-radius:2px}
-.tg-pin i{display:block;font-style:normal;font-size:11px;color:var(--rose);font-weight:500;margin-bottom:1px}
-.tg-body{padding:12px 10px;background:#FBFAFC}
-.tg-row{display:flex;gap:8px;margin-bottom:10px;align-items:flex-end}
-.tg-row .ava{width:26px;height:26px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
-  font-size:10px;color:#fff;font-weight:600}
-.a1{background:#7E6BA8}.a2{background:#5C8C7A}.a3{background:#C08A4A}
-.bub{background:#fff;border:1px solid #E4E2EA;border-radius:12px 12px 12px 4px;padding:7px 10px 5px;
-  max-width:82%;font-size:13.5px;line-height:1.4;color:var(--ink)}
-.bub .nm{display:block;font-size:12px;font-weight:600;margin-bottom:2px}
-.n1{color:#7E6BA8}.n2{color:#5C8C7A}.n3{color:#C08A4A}
-.bub .tm{float:right;font-size:10.5px;color:var(--ink-mute);margin:4px 0 0 8px}
-.tg-row.own{justify-content:flex-end}
-.tg-row.own .bub{background:#E8F0E4;border-color:#D6E3D0;border-radius:12px 12px 4px 12px}
-.tg-row.own .bub .tm{color:#6E8A63}
-.reactions{display:inline-flex;gap:4px;margin-top:5px}
-.reactions span{background:#F0EEF4;border-radius:100px;padding:1px 7px;font-size:11px;color:var(--ink-soft)}
-.tg-input{border-top:1px solid var(--line);background:#F1F0F5;padding:9px 12px;font-size:12.5px;color:var(--ink-mute);
-  display:flex;justify-content:space-between}
 
 /* результат */
 .result-key{font-family:"Literata";font-size:clamp(21px,3.2vw,28px);line-height:1.3;color:#fff;
@@ -585,7 +560,6 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
 </section>
 
 <!-- ===== ЧАТ ПІДТРИМКИ ===== -->
-<!-- ⚠️ Мокап чату. Замінити реальним скріншотом, коли з'явиться. -->
 <section>
   <div class="wrap showcase">
     <div>
@@ -602,41 +576,8 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       </p>
     </div>
     <div>
-      <div class="tg">
-        <div class="tg-head">
-          <span class="av">05</span>
-          <div><b>Крок 5 · DETOX</b><span>гілка · 218 учасників</span></div>
-        </div>
-        <div class="tg-pin">
-          <i>Закріплене повідомлення</i>
-          Мінімальний період DETOX — 30 днів. У складніших випадках 60 або 90.
-        </div>
-        <div class="tg-body">
-          <div class="tg-row">
-            <span class="ava a1">ІМ</span>
-            <div class="bub"><span class="nm n1">Ірина Макаренко</span>Випишіть усі канали, через які контакт іще існує. Перегляд сторінки теж рахується.<span class="tm">21:14</span>
-              <div class="reactions"><span>❤️ 34</span><span>🙏 12</span></div>
-            </div>
-          </div>
-          <div class="tg-row own">
-            <div class="bub">Виписала. Виявилось сім, хоча ми «не спілкуємося».<span class="tm">21:31 ✓✓</span></div>
-          </div>
-          <div class="tg-row">
-            <span class="ava a2">К</span>
-            <div class="bub"><span class="nm n2">Katya</span>У мене дев'ять 🙈 Найважче було визнати перевірку статусу.<span class="tm">21:36</span>
-              <div class="reactions"><span>💯 8</span></div>
-            </div>
-          </div>
-          <div class="tg-row">
-            <span class="ava a3">М</span>
-            <div class="bub"><span class="nm n3">Марго</span>Сьогодні 11-й день. Вперше не відкрила його сторінку зранку.<span class="tm">22:02</span>
-              <div class="reactions"><span>🔥 41</span><span>👏 19</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="tg-input"><span>Написати повідомлення…</span><span>📎</span></div>
-      </div>
-      <p class="cap">Приклад гілки в чаті</p>
+      <img src="../img/chat-screenshot.jpg" alt="Приклад переписки в чаті підтримки" class="tg-shot">
+      <p class="cap">Реальний фрагмент переписки в чаті (ім'я та фото приховані)</p>
     </div>
   </div>
 </section>
@@ -840,12 +781,12 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
     </div>
     <div>
       <div class="reviews">
-        <div class="review"><img src="../img/reviews/r7.webp" loading="lazy" alt="Відгук клієнтки — 28 днів роботи з Іриною"></div>
-        <div class="review"><img src="../img/reviews/r2.webp" loading="lazy" alt="Відгук клієнтки про проживання розставання"></div>
-        <div class="review"><img src="../img/reviews/r9.webp" loading="lazy" alt="Відгук клієнтки про проходження кризи"></div>
-        <div class="review"><img src="../img/reviews/r4.webp" loading="lazy" alt="Відгук клієнтки про інтенсивний підхід і підтримку 24/7"></div>
-        <div class="review"><img src="../img/reviews/r5.webp" loading="lazy" alt="Відгук клієнтки про 28 днів підтримки"></div>
-        <div class="review"><img src="../img/reviews/r6.webp" loading="lazy" alt="Продовження відгуку клієнтки"></div>
+        <div class="review"><p>«28 днів наших зустрічей пролетіли як мить. Залишилося відчуття фундаменту та підтримки — пропрацювали запит і отримала інструменти, які допомагають і після курсу. Щиро дякую, рекомендую.»</p></div>
+        <div class="review"><p>«Проживання розставання виявилося для мене складним завданням. Дякую за професійну підтримку і ресурси, які ми знайшли в процесі роботи. Я не здалася — я виросла, і мені є куди рухатися далі.»</p></div>
+        <div class="review"><p>«Цей підхід — інтенсивне занурення, аналіз, терапія, робота з найглибшими переживаннями — мені дуже імпонує. Це перший досвід, де я не відчуваю себе «клієнткою». Дуже цінна підтримка 24/7.»</p></div>
+        <div class="review"><p>«Дякую за підтримку, прийняття і слушні поради — це був непростий для мене час. Ти так делікатно скеровувала увагу туди, де треба було копати, що зʼявилося відчуття: все це я зробила сама.»</p></div>
+        <div class="review"><p>«Хочу подякувати за ідею курсу і за підтримку, яку ти даєш вчасно — саме тоді, коли здається, що от-от втонеш у сумнівах. Ти так тонко й делікатно, без тиску, підштовхнула мене вперед.»</p></div>
+        <div class="review"><p>«Проходження кризи разом з тобою дало більше, ніж я очікувала — комплексний підхід, увага до деталей, глибоке розуміння. Під час роботи було кілька усвідомлень, які змусили подивитися на ситуацію під іншим кутом.»</p></div>
       </div>
     </div>
   </div>
