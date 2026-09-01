@@ -112,10 +112,9 @@ section{padding:48px 0}
 /* відгуки: горизонтальна галерея */
 .reviews{display:flex;gap:14px;margin-top:6px;padding-bottom:6px;
   overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-.review{flex:0 0 auto;width:280px;background:var(--paper);border:1px solid var(--line);
-  border-left:2px solid var(--rose);border-radius:var(--r);padding:20px 22px;
-  scroll-snap-align:start}
-.review p{font-size:14.5px;line-height:1.55;color:var(--ink-soft);margin:0}
+.review{flex:0 0 auto;height:340px;border-radius:var(--r);overflow:hidden;
+  box-shadow:0 18px 40px -26px rgba(28,33,48,.5);scroll-snap-align:start}
+.review img{height:100%;width:auto;display:block}
 
 /* кроки */
 .steps-grid{display:grid;gap:0 44px}
@@ -781,12 +780,12 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
     </div>
     <div>
       <div class="reviews">
-        <div class="review"><p>«28 днів наших зустрічей пролетіли як мить. Залишилося відчуття фундаменту та підтримки — пропрацювали запит і отримала інструменти, які допомагають і після курсу. Щиро дякую, рекомендую.»</p></div>
-        <div class="review"><p>«Проживання розставання виявилося для мене складним завданням. Дякую за професійну підтримку і ресурси, які ми знайшли в процесі роботи. Я не здалася — я виросла, і мені є куди рухатися далі.»</p></div>
-        <div class="review"><p>«Цей підхід — інтенсивне занурення, аналіз, терапія, робота з найглибшими переживаннями — мені дуже імпонує. Це перший досвід, де я не відчуваю себе «клієнткою». Дуже цінна підтримка 24/7.»</p></div>
-        <div class="review"><p>«Дякую за підтримку, прийняття і слушні поради — це був непростий для мене час. Ти так делікатно скеровувала увагу туди, де треба було копати, що зʼявилося відчуття: все це я зробила сама.»</p></div>
-        <div class="review"><p>«Хочу подякувати за ідею курсу і за підтримку, яку ти даєш вчасно — саме тоді, коли здається, що от-от втонеш у сумнівах. Ти так тонко й делікатно, без тиску, підштовхнула мене вперед.»</p></div>
-        <div class="review"><p>«Проходження кризи разом з тобою дало більше, ніж я очікувала — комплексний підхід, увага до деталей, глибоке розуміння. Під час роботи було кілька усвідомлень, які змусили подивитися на ситуацію під іншим кутом.»</p></div>
+        <div class="review"><img src="../img/reviews/r7.webp" loading="lazy" alt="Відгук клієнтки — 28 днів роботи з Іриною"></div>
+        <div class="review"><img src="../img/reviews/r2.webp" loading="lazy" alt="Відгук клієнтки про проживання розставання"></div>
+        <div class="review"><img src="../img/reviews/r9.webp" loading="lazy" alt="Відгук клієнтки про проходження кризи"></div>
+        <div class="review"><img src="../img/reviews/r4.webp" loading="lazy" alt="Відгук клієнтки про інтенсивний підхід і підтримку 24/7"></div>
+        <div class="review"><img src="../img/reviews/r5.webp" loading="lazy" alt="Відгук клієнтки про 28 днів підтримки"></div>
+        <div class="review"><img src="../img/reviews/r6.webp" loading="lazy" alt="Продовження відгуку клієнтки"></div>
       </div>
     </div>
   </div>
