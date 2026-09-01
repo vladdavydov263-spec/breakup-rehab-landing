@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Життя після нас — 12 кроків психоемоційного відновлення</title>
+<meta name="description" content="12 кроків психоемоційного відновлення після руйнування стосунків. Автори проєкту — Дмитро Карпачов, Ірина Макаренко.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,600;1,7..72,300&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C2130; --ink-soft:#4A5266; --ink-mute:#79809A;
+  --shell:#E9E8EE; --paper:#F8F7FA; --line:#D3D1DC;
+  --rose:#A8555F; --rose-deep:#8E434C; --dawn:#E2C39F;
+  --wide:1180px; --r:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:"Onest",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:74px}
+@media(min-width:900px){body{padding-bottom:0}}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+h1,h2,h3{font-family:"Literata",Georgia,serif;font-weight:400;margin:0;letter-spacing:-.015em;line-height:1.1}
+h1{font-size:clamp(38px,7vw,62px)}
+h2{font-size:clamp(26px,3.8vw,38px)}
+h3{font-size:18px;line-height:1.25}
+
+/* ЄДИНИЙ розмір для основного тексту. Ієрархія — кольором і накресленням, не кеглем. */
+p{margin:0 0 .85em;font-size:16.5px;line-height:1.55;color:var(--ink-soft)}
+p.strong-p{color:var(--ink)}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:var(--ink)}
+.measure{max-width:44em}
+
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 12px}
+.fine{font-size:13px;color:var(--ink-mute);line-height:1.45}
+.cap{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-top:10px;text-align:center}
+
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+@media(min-width:900px){section{padding:70px 0}}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+.split{display:grid;gap:26px}
+@media(min-width:900px){
+  .split{grid-template-columns:300px 1fr;gap:56px;align-items:start}
+  .split-head{position:sticky;top:34px}
+}
+.split-head h2{margin-bottom:12px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:15.5px;font-weight:500;
+  text-decoration:none;padding:16px 28px;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s,background .18s}
+.btn-primary{background:var(--rose);color:#fff;box-shadow:0 5px 18px -7px rgba(168,85,95,.7)}
+.btn-primary:hover{background:var(--rose-deep);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-block{width:100%}
+:focus-visible{outline:2.5px solid var(--rose);outline-offset:3px;border-radius:4px}
+
+/* переліки */
+.lines{list-style:none;margin:0;padding:0;display:grid}
+@media(min-width:760px){.lines{grid-template-columns:1fr 1fr;column-gap:40px}}
+.lines.single{grid-template-columns:1fr}
+.lines li{padding:11px 0 11px 22px;border-bottom:1px solid var(--line);font-size:16.5px;
+  line-height:1.45;position:relative;color:var(--ink-soft)}
+.lines li::before{content:"";position:absolute;left:0;top:19px;width:11px;height:1.5px;background:var(--rose)}
+.lines.on-dark li{border-color:rgba(255,255,255,.12);color:#C6C9D4}
+.lines.on-dark li::before{background:var(--dawn)}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{background:var(--paper);border:1px solid var(--line);border-radius:100px;
+  padding:6px 14px;font-size:15px;color:var(--ink-soft)}
+
+.qs{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:7px}
+@media(min-width:760px){.qs{grid-template-columns:1fr 1fr;column-gap:14px}}
+.qs li{background:var(--paper);border:1px solid var(--line);border-left:2px solid var(--rose);
+  border-radius:6px;padding:10px 14px;font-size:15.5px;color:var(--ink-soft)}
+
+.pull{font-family:"Literata";font-style:italic;font-weight:300;font-size:clamp(22px,3.8vw,30px);
+  line-height:1.3;color:var(--ink);margin:24px 0 0;max-width:22em}
+
+/* hero */
+.hero{padding-top:44px;padding-bottom:20px}
+.hero h1{margin:0 0 16px}
+.hero .sub{font-family:"Literata";font-size:clamp(17px,2.2vw,21px);color:var(--ink-soft);margin:0;max-width:22em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.authors-hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.authors-hero img{width:340px;max-width:100%;border-radius:14px}
+@media(max-width:520px){.authors-hero img{width:220px}}
+.authors-hero div{font-size:14px;color:var(--ink-mute);line-height:1.4}
+.authors-hero b{display:block;color:var(--ink);font-weight:500;font-size:15px}
+
+/* dark */
+.dark{background:var(--ink);color:#EDECF1}
+.dark .eyebrow{color:var(--dawn)}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:#C6C9D4}
+.dark p.strong-p{color:#fff}
+.dark strong{color:#fff}
+.dark .fine{color:#8A90A3}
+.dark .pull{color:#fff}
+
+/* метафора */
+.meta-card{background:var(--paper);border:1px solid var(--line);border-left:2px solid var(--dawn);
+  border-radius:var(--r);padding:22px 24px;margin-top:20px}
+.meta-card p{font-family:"Literata";color:var(--ink-soft)}
+.meta-card p:last-child{color:var(--ink)}
+
+/* відгуки */
+.reviews{display:grid;gap:16px;margin-top:6px}
+@media(min-width:760px){.reviews{grid-template-columns:1fr 1fr}}
+.review{background:var(--paper);border:1px solid var(--line);border-left:2px solid var(--rose);
+  border-radius:var(--r);padding:22px 24px}
+.review p{font-size:15px;line-height:1.55;color:var(--ink-soft);margin:0}
+
+/* кроки */
+.steps-grid{display:grid;gap:0 44px}
+@media(min-width:860px){.steps-grid{grid-template-columns:1fr 1fr}}
+.step{border-bottom:1px solid var(--line)}
+.step summary{cursor:pointer;list-style:none;display:flex;gap:14px;align-items:baseline;
+  padding:14px 28px 14px 0;position:relative;font-size:16.5px;color:var(--ink)}
+.step summary::-webkit-details-marker{display:none}
+.step summary em{font-family:"Literata";font-style:normal;font-size:12.5px;color:var(--ink-mute);
+  flex:0 0 22px;font-variant-numeric:tabular-nums}
+.step summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:19px;color:var(--rose);
+  font-weight:300;transition:transform .2s}
+.step[open] summary::after{transform:rotate(45deg)}
+.step-body{padding:0 0 18px 36px}
+.step-body p{font-size:16px}
+.step-body .chips li{font-size:14px;padding:5px 12px}
+.step-body .qs li{font-size:15px}
+
+/* Telegram-mockup */
+.showcase{display:grid;gap:28px;align-items:start}
+@media(min-width:900px){.showcase{grid-template-columns:1fr 340px;gap:52px}}
+.tg{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 18px 44px -26px rgba(28,33,48,.55)}
+.tg-head{background:#F1F0F5;border-bottom:1px solid var(--line);padding:10px 12px;display:flex;align-items:center;gap:10px}
+.tg-head .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,#A8555F,#7E4A70);
+  color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600;flex:0 0 auto}
+.tg-head b{font-size:14px;font-weight:600;display:block;color:var(--ink)}
+.tg-head span{font-size:11.5px;color:var(--ink-mute)}
+.tg-pin{background:#F7F6F9;border-bottom:1px solid var(--line);padding:7px 12px 8px 14px;
+  position:relative;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
+.tg-pin::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--rose);border-radius:2px}
+.tg-pin i{display:block;font-style:normal;font-size:11px;color:var(--rose);font-weight:500;margin-bottom:1px}
+.tg-body{padding:12px 10px;background:#FBFAFC}
+.tg-row{display:flex;gap:8px;margin-bottom:10px;align-items:flex-end}
+.tg-row .ava{width:26px;height:26px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  font-size:10px;color:#fff;font-weight:600}
+.a1{background:#7E6BA8}.a2{background:#5C8C7A}.a3{background:#C08A4A}
+.bub{background:#fff;border:1px solid #E4E2EA;border-radius:12px 12px 12px 4px;padding:7px 10px 5px;
+  max-width:82%;font-size:13.5px;line-height:1.4;color:var(--ink)}
+.bub .nm{display:block;font-size:12px;font-weight:600;margin-bottom:2px}
+.n1{color:#7E6BA8}.n2{color:#5C8C7A}.n3{color:#C08A4A}
+.bub .tm{float:right;font-size:10.5px;color:var(--ink-mute);margin:4px 0 0 8px}
+.tg-row.own{justify-content:flex-end}
+.tg-row.own .bub{background:#E8F0E4;border-color:#D6E3D0;border-radius:12px 12px 4px 12px}
+.tg-row.own .bub .tm{color:#6E8A63}
+.reactions{display:inline-flex;gap:4px;margin-top:5px}
+.reactions span{background:#F0EEF4;border-radius:100px;padding:1px 7px;font-size:11px;color:var(--ink-soft)}
+.tg-input{border-top:1px solid var(--line);background:#F1F0F5;padding:9px 12px;font-size:12.5px;color:var(--ink-mute);
+  display:flex;justify-content:space-between}
+
+/* результат */
+.result-key{font-family:"Literata";font-size:clamp(21px,3.2vw,28px);line-height:1.3;color:#fff;
+  margin:28px 0 0;max-width:22em}
+
+/* автори */
+.authors{display:grid;gap:28px}
+@media(min-width:760px){.authors{grid-template-columns:1fr 1fr;gap:40px}}
+.author img{border-radius:var(--r);width:100%;max-width:160px;margin-bottom:14px}
+.author h3{margin-bottom:10px;font-size:21px}
+.author ul{list-style:none;margin:0;padding:0}
+.author li{padding:8px 0 8px 18px;position:relative;font-size:15.5px;color:var(--ink-soft);
+  border-bottom:1px solid var(--line);line-height:1.45}
+.author li:last-child{border-bottom:0}
+.author li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:1.5px;background:var(--line)}
+
+/* доступ / ціна */
+.pricing{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pay{display:grid;gap:18px}
+@media(min-width:760px){.pay{grid-template-columns:1fr 1fr;gap:26px;align-items:start}}
+.plan{border-radius:var(--r);padding:26px;background:var(--ink);color:#EDECF1}
+.plan-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A3}
+.price{font-family:"Literata";font-size:42px;line-height:1;margin:10px 0 4px;color:#fff}
+.price small{font-family:"Onest";font-size:14px;color:#8A90A3}
+.plan-sub{font-size:14px;color:#8A90A3;margin-bottom:20px}
+.plan-list{list-style:none;margin:20px 0 0;padding:0;font-size:15px}
+.plan-list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#B9BDCB}
+.plan-list li:last-child{border-bottom:0}
+.after{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--shell)}
+
+/* фінал */
+.final{text-align:center}
+.final .measure{margin-left:auto;margin-right:auto}
+.final h2{max-width:16em;margin-left:auto;margin-right:auto}
+footer.site{padding:24px 0;text-align:center;font-size:13px;color:var(--ink-mute)}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(233,232,238,.94);
+  backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:10px}
+.sticky .s-price{font-size:12px;color:var(--ink-mute);line-height:1.2;flex:0 0 auto}
+.sticky .s-price b{display:block;font-family:"Literata";font-size:16px;color:var(--ink)}
+.sticky .btn{flex:1;padding:13px 16px;font-size:14.5px}
+@media(min-width:900px){.sticky{display:none}}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1579152340271385');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Життя після «нас»</h1>
+    <p class="sub">12 кроків психоемоційного відновлення після руйнування стосунків.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#reg">Приєднатися до програми</a>
+    </div>
+    <div class="authors-hero">
+      <img src="../img/authors-hero.webp" alt="Дмитро Карпачов та Ірина Макаренко">
+      <div><b>Дмитро Карпачов, Ірина Макаренко</b>Автори проєкту</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== МОЖЛИВО, ВИ ВПІЗНАЄТЕ СЕБЕ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Можливо</p>
+      <h2>Ви впізнаєте себе</h2>
+    </div>
+    <div>
+      <ul class="lines">
+        <li>Ви прокидаєтеся і майже одразу думаєте про колишнього партнера.</li>
+        <li>Протягом дня подумки повертаєтеся до нього десятки разів.</li>
+        <li>Перевіряєте, коли людина була онлайн.</li>
+        <li>Перечитуєте старі повідомлення.</li>
+        <li>Заходите на її сторінки.</li>
+        <li>Дивитеся, кого вона додала.</li>
+        <li>Будь-яке повідомлення викликає різкий підйом надії.</li>
+        <li>Холодна відповідь руйнує настрій на весь день.</li>
+        <li>Тепла відповідь знову запускає фантазію, що все можна повернути.</li>
+      </ul>
+
+      <p class="strong-p" style="margin-top:24px;max-width:44em">
+        Ви розумієте, що цей зв'язок робить вам боляче, але все одно не можете перестати до нього повертатися.
+      </p>
+
+      <p style="margin-top:20px">Ви шукаєте причину в собі. Думаєте, що треба було бути іншою людиною.</p>
+      <ul class="chips">
+        <li>Красивішою</li><li>Спокійнішою</li><li>Уважнішою</li>
+        <li>Менш вимогливою</li><li>Більш сексуальною</li>
+        <li>Більш терплячою</li><li>Більш успішною</li>
+      </ul>
+
+      <p style="margin-top:20px;max-width:44em">
+        Іноді здається, що якщо зрозуміти свою головну помилку, можна буде повернутися назад і все виправити.
+        А іноді виникає зовсім інше:
+      </p>
+      <p class="pull">«Якщо цих стосунків більше немає, я взагалі не розумію, хто я тепер».</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ПРО ПРОГРАМУ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Програма</p>
+      <h2>Життя після «нас»</h2>
+    </div>
+    <div>
+      <p class="strong-p measure">
+        Створена для моменту, коли стосунки вже закінчилися зовні, але психологічний зв'язок продовжує
+        утримувати вас усередині них.
+      </p>
+      <p class="measure">
+        Це програма з 12 послідовних кроків, які допомагають пройти шлях від емоційної фіксації на колишньому
+        партнері до повернення власного життя, кордонів, внутрішньої опори і здатності рухатися далі.
+      </p>
+      <p style="margin-top:24px"><a class="btn btn-primary" href="#reg">Приєднатися до програми</a></p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ЧОМУ НЕ ВИХОДИТЬ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Чому просто «відпустити» не виходить</h2>
+    </div>
+    <div>
+      <p class="measure">
+        Тому що разом із людиною зникає набагато більше. Звичний спосіб життя. Спільні плани. Ритуали.
+        Вечори. Секс. Відчуття близькості. Уявлення про майбутнє. Роль, яку ви займали поруч із цією людиною.
+      </p>
+      <p class="measure">
+        І навіть якщо розум уже знає, що стосунки завершилися, значна частина внутрішнього життя продовжує
+        поводитися так, ніби все ще можна повернути.
+      </p>
+      <p class="measure">
+        Людина перестає жити тим, що відбувається зараз, і починає жити між пам'яттю про минуле та надією
+        на його повернення. Так може минути місяць, два, або навіть декілька років.
+      </p>
+      <p class="strong-p measure">І такий сценарій треба міняти.</p>
+
+      <div class="meta-card">
+        <p>Якщо квітка на підвіконні зав'яла, можна ще довго поливати суху землю, переставляти горщик ближче до сонця і переконувати себе, що ось-ось з'явиться новий листок.</p>
+        <p>Можна сумувати за тим, якою красивою вона була. Можна згадувати, як вона цвіла. Можна навіть сердитися на себе за те, що не вдалося її врятувати. Але підвіконня від цього не стане зеленішим.</p>
+        <p>Щоб на ньому знову з'явилося життя, доведеться в якийсь момент прибрати старий горщик і посадити нову квітку.</p>
+      </div>
+
+      <p class="measure" style="margin-top:16px">
+        Так само і після розставання. Минуле можна пам'ятати, цінувати і навіть продовжувати любити.
+        Але нове життя починається лише тоді, коли в ньому звільняється місце для нового.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СКІЛЬКИ ЩЕ (перенесено з фіналу) ===== -->
+<section class="dark final">
+  <div class="wrap">
+    <h2>Скільки ще вашого життя повинні тривати стосунки, які вже закінчилися?</h2>
+    <p class="strong-p" style="margin-top:18px">Ще один вечір? Ще один місяць? Ще один рік?</p>
+    <p class="measure" style="margin-top:14px">
+      Можна чекати моменту, коли одного ранку все мине саме. А можна почати розбирати цей зв'язок
+      крок за кроком.
+    </p>
+    <ul class="lines on-dark single" style="max-width:34em;margin:16px auto 0;text-align:left">
+      <li>Побачити реальність.</li>
+      <li>Припинити підживлювати залежний цикл.</li>
+      <li>Зрозуміти, що саме вас утримує.</li>
+      <li>Завершити те, що продовжує відбуватися всередині.</li>
+      <li>Повернути себе.</li>
+    </ul>
+    <p class="measure" style="margin-top:18px">
+      І поступово побудувати життя, у якому минулі стосунки залишаться частиною вашої історії,
+      але перестануть визначати ваше сьогодення.
+    </p>
+    <p style="margin-top:26px"><a class="btn btn-primary" href="#reg">Приєднатися до програми</a></p>
+  </div>
+</section>
+
+<!-- ===== ЩО ВІДБУВАЄТЬСЯ У ПРОГРАМІ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Що відбувається у програмі</h2>
+    </div>
+    <div>
+      <p class="measure">Вихід із важкого розставання розбитий на 12 послідовних кроків.</p>
+      <p class="strong-p measure">
+        Вам не потрібно за один день «прийняти», «простити», «відпустити» і прокинутися новою людиною.
+      </p>
+      <ul class="lines single" style="margin-top:18px;max-width:44em">
+        <li>Спочатку потрібно побачити реальність.</li>
+        <li>Потім перестати воювати з вибором іншої людини.</li>
+        <li>Визнати зміни у власному житті.</li>
+        <li>Повернути контроль над тим, що справді залежить від вас.</li>
+        <li>Припинити підживлювати залежність постійним контактом.</li>
+        <li>Зрозуміти, чому саме цей зв'язок став настільки сильним.</li>
+        <li>Побачити реальні стосунки замість їх ідеалізованого образу.</li>
+        <li>Розібрати власні сценарії прив'язаності.</li>
+        <li>Внутрішньо завершити історію.</li>
+        <li>Повернути себе.</li>
+        <li>І лише після цього починати будувати наступний етап життя.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== 12 КРОКІВ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>12 кроків виходу з емоційної залежності після розставання</h2>
+      <p class="fine" style="margin-top:12px">Відкрийте будь-який крок, щоб побачити, що в ньому.</p>
+      <p style="margin-top:16px"><a class="btn btn-primary" href="#reg">Приєднатися до програми</a></p>
+    </div>
+    <div class="steps-grid">
+
+      <details class="step"><summary><em>01</em>Зафіксувати реальність</summary><div class="step-body">
+        <p>Перший крок починається з дуже простого питання: <strong>що насправді відбувається?</strong></p>
+        <p>Без припущень. Без спроб прочитати думки іншої людини. Без «вона сказала одне, але насправді відчуває інше». Без «він пішов, але я знаю, що він мене любить».</p>
+        <p>Ви будете вчитися відокремлювати факт від власної інтерпретації, страху, надії та фантазії. Саме тут починає повертатися ясність.</p>
+      </div></details>
+
+      <details class="step"><summary><em>02</em>Прийняти вибір іншої людини</summary><div class="step-body">
+        <p>Можна впливати на власні рішення. Можна говорити про свої почуття. Можна пропонувати. Можна домовлятися. Але неможливо прийняти рішення за іншу дорослу людину.</p>
+        <p>На цьому кроці ви будете працювати з внутрішньою боротьбою: з бажанням переконати, довести, дочекатися, знайти правильні слова, зробити ще одну спробу, повернути контроль над тим, що вам уже не належить.</p>
+      </div></details>
+
+      <details class="step"><summary><em>03</em>Визнати зміни</summary><div class="step-body">
+        <p>Після розставання змінюється не одна частина життя. Іноді змінюється майже все.</p>
+        <ul class="chips"><li>Дім</li><li>Побут</li><li>Плани</li><li>Вихідні</li><li>Свята</li><li>Фінанси</li><li>Спілкування</li><li>Сексуальне життя</li><li>Відносини з родичами</li><li>Взаємодія з дітьми</li><li>Уявлення про майбутнє</li></ul>
+        <p style="margin-top:12px">На цьому кроці ви будете поступово адаптуватися до життя, яке вже стало іншим.</p>
+      </div></details>
+
+      <details class="step"><summary><em>04</em>Повернути управління собі</summary><div class="step-body">
+        <p>Після розставання увага часто повністю приклеюється до іншої людини.</p>
+        <ul class="qs" style="grid-template-columns:1fr">
+          <li>Що вона робить? З ким вона?</li>
+          <li>Чому мовчить? Що означала ця фотографія?</li>
+          <li>Чи сумує? Чи шкодує? Чи повернеться?</li>
+        </ul>
+        <p style="margin-top:12px">Проблема в тому, що весь цей нескінченний аналіз практично не дає вам управління ситуацією. Він лише продовжує утримувати іншу людину в центрі вашого життя.</p>
+        <p>На цьому кроці ви почнете повертати увагу туди, де справді можете щось змінювати. До своїх дій. Свого часу. Своїх рішень. Свого життя.</p>
+      </div></details>
+
+      <details class="step"><summary><em>05</em>Припинити контакт, який підтримує залежність</summary><div class="step-body">
+        <p>Один із найважливіших етапів програми. Бо контакт може існувати навіть тоді, коли ви нібито «не спілкуєтеся».</p>
+        <ul class="chips"><li>Перегляд сторінки</li><li>Перечитування листування</li><li>Перевірка статусу</li><li>Пошук інформації через друзів</li><li>Перегляд фотографій</li><li>«Випадкові» приводи зустрітися</li><li>Очікування повідомлення</li></ul>
+        <p style="margin-top:12px">У програмі ви створите власний <strong>DETOX-протокол</strong>. Мінімальний рекомендований період становить 30 днів. У складніших випадках він може тривати 60 або 90 днів. Його сенс дуже практичний: перестати щодня підживлювати той самий емоційний цикл.</p>
+        <p>Якщо у вас є спільні діти або інші обставини, через які контакт повністю припинити неможливо, ви будете вчитися змінювати його формат. Коротко. По суті. З чіткими межами. Без використання необхідного контакту як приводу продовжувати колишні стосунки.</p>
+      </div></details>
+
+      <details class="step"><summary><em>06</em>Усвідомити залежність</summary><div class="step-body">
+        <p>Чому вас тягне назад навіть після того, як вам було боляче? Чому одне повідомлення може різко покращити стан? Чому мовчання іншої людини викликає майже фізичну тривогу? Чому після чергового розчарування знову виникає надія?</p>
+        <p>На цьому етапі ви почнете бачити механізми, які підтримують емоційну фіксацію. І поступово відрізняти глибину переживань від реальної якості стосунків.</p>
+        <p>Бо дуже сильні почуття самі по собі ще нічого не говорять про те, наскільки ці стосунки були безпечними, взаємними і придатними для життя.</p>
+      </div></details>
+
+      <details class="step"><summary><em>07</em>Побачити реальність стосунків</summary><div class="step-body">
+        <p>Після втрати пам'ять часто робить дуже дивну річ. Хороше стає яскравішим. Погане поступово стирається.</p>
+        <p>Залишаються подорожі. Обійми. Секс. Сміх. Красиві слова. Найкращі вечори. А холодність, конфлікти, приниження, самотність, тривога, невизначеність і моменти, коли вам було по-справжньому погано, відходять кудись на периферію.</p>
+        <p>На цьому етапі ви повернете собі повну картину.</p>
+        <ul class="qs" style="grid-template-columns:1fr">
+          <li>Що в цих стосунках справді було цінним?</li>
+          <li>А яку ціну ви за це платили?</li>
+          <li>Що постійно доводилося терпіти?</li>
+          <li>На що ви заплющували очі? Що виправдовували?</li>
+          <li>Скільки сил витрачали на те, щоб утримати те, що вже руйнувалося?</li>
+        </ul>
+      </div></details>
+
+      <details class="step"><summary><em>08</em>Розібрати механізми прив'язаності</summary><div class="step-body">
+        <p>Чому саме ця людина? Чому саме ці стосунки стали настільки емоційно значущими? Що ви намагалися в них отримати?</p>
+        <ul class="chips"><li>Визнання</li><li>Безпеку</li><li>Відчуття власної цінності</li><li>Підтвердження, що вас можна любити</li><li>Порятунок від самотності</li></ul>
+        <p style="margin-top:12px">Або можливість нарешті «заслужити» любов людини, яка постійно віддаляється.</p>
+        <p>На цьому кроці ви будете досліджувати свої потреби, перенесення, очікування, минулий досвід і повторювані сценарії. Щоб одного дня не виявити себе в тих самих стосунках, тільки з іншою людиною.</p>
+      </div></details>
+
+      <details class="step"><summary><em>09</em>Завершити стосунки</summary><div class="step-body">
+        <p>Іноді люди роками продовжують стосунки з людиною, якої поруч уже давно немає. Говорять із нею подумки. Сперечаються. Доводять. Уявляють зустрічі. Чекають вибачення. Чекають повернення. Чекають моменту, коли інша людина нарешті зрозуміє, кого втратила.</p>
+        <p>Фізична відсутність партнера ще не завершує внутрішній діалог. Цьому і присвячений дев'ятий крок. Поступовому завершенню історії, яка досі займає занадто багато місця у вашому теперішньому.</p>
+      </div></details>
+
+      <details class="step"><summary><em>10</em>Відновити свою ідентичність</summary><div class="step-body">
+        <p>Особливо після довгих стосунків може виникнути дивне питання: <strong>«А що мені взагалі подобається без цієї людини?»</strong></p>
+        <p>Чого я хочу? Як хочу проводити вечори? Куди хочу їхати? З ким хочу бачитися? Яке життя хочу будувати?</p>
+        <p>Частина людей настільки сильно розчиняється у стосунках, що після їх завершення доводиться буквально збирати себе заново.</p>
+        <ul class="chips"><li>Свої інтереси</li><li>Бажання</li><li>Звички</li><li>Межі</li><li>Цілі</li><li>Відносини з друзями</li><li>Плани</li><li>Власну окремість</li></ul>
+      </div></details>
+
+      <details class="step"><summary><em>11</em>Не впасти в наступну крайність</summary><div class="step-body">
+        <p>Після болісного розставання є дві дуже привабливі дороги.</p>
+        <p>Перша: <strong>терміново знайти когось нового.</strong> Щоб знову відчути тепло. Щоб перестати думати. Щоб не залишатися самому. Щоб довести собі, що вас можна любити.</p>
+        <p>Друга: <strong>ніколи більше нікого не підпускати настільки близько.</strong></p>
+        <p>Обидві реакції можуть бути способом впоратися з пережитим болем. На цьому кроці ви будете розбиратися, чи справді готові до нової близькості і чого саме зараз шукаєте у стосунках.</p>
+      </div></details>
+
+      <details class="step"><summary><em>12</em>Інтегрувати новий досвід</summary><div class="step-body">
+        <p>Фінальний крок присвячений вам після всього пройденого.</p>
+        <ul class="qs" style="grid-template-columns:1fr">
+          <li>Що ви тепер знаєте про себе?</li>
+          <li>Які сценарії почали бачити?</li>
+          <li>Які межі більше не готові порушувати? На що більше не будете погоджуватися?</li>
+          <li>Що для вас означає близькість? Що означає любов?</li>
+          <li>Що означає залишатися собою поруч з іншою людиною?</li>
+          <li>І які стосунки ви хочете будувати далі?</li>
+        </ul>
+      </div></details>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ПРАКТИКА ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Практика, яка змінює ваше життя</h2>
+    </div>
+    <div>
+      <p class="measure">У програмі буде не лише пояснення того, що з вами відбувається і чому.</p>
+      <p class="strong-p measure">Кожен із 12 кроків містить практичну роботу.</p>
+      <p class="measure" style="margin-top:16px">Ви будете:</p>
+      <ul class="lines" style="margin-top:8px">
+        <li>Фіксувати факти.</li>
+        <li>Досліджувати страхи.</li>
+        <li>Помічати надії.</li>
+        <li>Відстежувати тригери.</li>
+        <li>Розбирати внутрішні діалоги.</li>
+        <li>Працювати з соромом і провиною.</li>
+        <li>Визначати свої межі.</li>
+        <li>Аналізувати реальні стосунки.</li>
+        <li>Досліджувати власні сценарії.</li>
+        <li>Повертати контакт із тілом, почуттями, потребами і власним життям.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ЧЕК-ПОЙНТИ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Чек-пойнти після кожного етапу</h2>
+    </div>
+    <div>
+      <p class="measure">
+        У програмі не потрібно вгадувати, чи «вже пора рухатися далі». Після кожного кроку є конкретні
+        чек-пойнти. Наприклад:
+      </p>
+      <ul class="qs">
+        <li>Чи можу я відрізнити факт від своєї надії?</li>
+        <li>Чи бачу, які контакти запускають відкат?</li>
+        <li>Чи розумію, що підтримує мою прив'язаність?</li>
+        <li>Чи можу побачити стосунки без ідеалізації?</li>
+        <li>Чи починаю повертати власні межі?</li>
+        <li>Чи з'являється більше життя поза колишнім партнером?</li>
+      </ul>
+      <p class="measure" style="margin-top:18px">
+        Вони допомагають відстежувати реальні зміни замість очікування одного магічного ранку,
+        коли «раптом усе мине».
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЕКСТРЕНА СТАБІЛІЗАЦІЯ ===== -->
+<section class="dark">
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Окремий блок екстреної стабілізації</h2>
+    </div>
+    <div>
+      <p class="measure">Іноді під час розставання стає особливо важко.</p>
+      <ul class="lines on-dark single" style="max-width:44em">
+        <li>Різко посилюється тривога.</li>
+        <li>Виникає паніка.</li>
+        <li>З'являється сильне бажання негайно написати.</li>
+        <li>Повертається відчуття, що все втрачено.</li>
+        <li>Починається черговий емоційний відкат.</li>
+      </ul>
+      <p class="measure" style="margin-top:20px">
+        Для таких моментів у програмі є окремий набір стабілізаційних практик. Щоб спочатку зменшити
+        інтенсивність стану. Повернути контакт із теперішнім моментом. Зробити паузу між сильним
+        почуттям та імпульсивною дією. І лише потім вирішувати, що робити далі.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЧАТ ПІДТРИМКИ ===== -->
+<!-- ⚠️ Мокап чату. Замінити реальним скріншотом, коли з'явиться. -->
+<section>
+  <div class="wrap showcase">
+    <div>
+      <h2>Чат підтримки</h2>
+      <p class="strong-p measure" style="margin-top:16px">Кожен крок має окрему гілку в чаті.</p>
+      <p class="measure">
+        Там можна описувати, що з вами відбувається. Говорити про відкати. Ставити запитання. Виконувати
+        завдання. Ділитися тим, що виявилося найскладнішим. І бачити інших людей, які проходять схожий шлях.
+      </p>
+      <p class="measure">
+        Бо одна з найнеприємніших частин важкого розставання полягає у відчутті, що з вами відбувається
+        щось унікальне і незрозуміле. Коли цей досвід отримує слова, структуру і зрозумілу послідовність
+        дій, хаосу поступово стає менше.
+      </p>
+    </div>
+    <div>
+      <div class="tg">
+        <div class="tg-head">
+          <span class="av">05</span>
+          <div><b>Крок 5 · DETOX</b><span>гілка · 218 учасників</span></div>
+        </div>
+        <div class="tg-pin">
+          <i>Закріплене повідомлення</i>
+          Мінімальний період DETOX — 30 днів. У складніших випадках 60 або 90.
+        </div>
+        <div class="tg-body">
+          <div class="tg-row">
+            <span class="ava a1">ІМ</span>
+            <div class="bub"><span class="nm n1">Ірина Макаренко</span>Випишіть усі канали, через які контакт іще існує. Перегляд сторінки теж рахується.<span class="tm">21:14</span>
+              <div class="reactions"><span>❤️ 34</span><span>🙏 12</span></div>
+            </div>
+          </div>
+          <div class="tg-row own">
+            <div class="bub">Виписала. Виявилось сім, хоча ми «не спілкуємося».<span class="tm">21:31 ✓✓</span></div>
+          </div>
+          <div class="tg-row">
+            <span class="ava a2">К</span>
+            <div class="bub"><span class="nm n2">Katya</span>У мене дев'ять 🙈 Найважче було визнати перевірку статусу.<span class="tm">21:36</span>
+              <div class="reactions"><span>💯 8</span></div>
+            </div>
+          </div>
+          <div class="tg-row">
+            <span class="ava a3">М</span>
+            <div class="bub"><span class="nm n3">Марго</span>Сьогодні 11-й день. Вперше не відкрила його сторінку зранку.<span class="tm">22:02</span>
+              <div class="reactions"><span>🔥 41</span><span>👏 19</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-input"><span>Написати повідомлення…</span><span>📎</span></div>
+      </div>
+      <p class="cap">Приклад гілки в чаті</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЩО МАЄ ЗМІНИТИСЯ ===== -->
+<section class="dark">
+  <div class="wrap">
+    <h2>Що має змінитися після проходження 12 кроків програми</h2>
+    <p class="strong-p" style="margin-top:18px;max-width:36em">
+      Уявіть, що одного ранку ви прокидаєтеся і не тягнетеся одразу до телефону.
+    </p>
+    <ul class="lines on-dark single" style="margin-top:14px;max-width:44em">
+      <li>Вам більше не потрібно перевіряти, чи була ця людина онлайн.</li>
+      <li>Ви не шукаєте прихованих смислів у її повідомленнях.</li>
+      <li>Не заходите на сторінку, щоб дізнатися, з ким вона, де вона і як їй живеться без вас.</li>
+      <li>Її мовчання більше не руйнує ваш день.</li>
+      <li>Її повідомлення не викликає миттєвого сплеску надії.</li>
+      <li>Ви можете випадково побачити фотографію, почути ім'я або опинитися в місці, пов'язаному з вашими стосунками, і після цього вам не потрібно кілька годин збирати себе докупи.</li>
+      <li>Ви більше не прокручуєте сотий варіант розмови, яка могла б усе змінити.</li>
+      <li>Не чекаєте моменту, коли людина нарешті зрозуміє, кого втратила.</li>
+      <li>Не будуєте плани з прихованою поправкою: «а раптом ми ще будемо разом».</li>
+    </ul>
+
+    <p class="result-key">
+      І найважливіше — вам поступово стає байдуже до питання, повернеться ця людина чи ні.
+    </p>
+
+    <p class="measure" style="margin-top:18px">
+      Не тому, що ви стерли минуле. Не тому, що все хороше раптом втратило значення. Просто відповідь
+      на це питання більше не визначає ваше майбутнє.
+    </p>
+    <p class="measure">
+      У вас знову з'являються власні плани. Власні бажання. Ви починаєте думати про наступний рік і бачити
+      там не порожнє місце після колишнього партнера, а своє насичене цікаве життя.
+    </p>
+    <p class="measure">
+      І якщо одного дня у ньому з'являться нові стосунки, ви входите в них уже з іншим досвідом. Краще
+      розумієте свої межі. Швидше помічаєте те, що раніше виправдовували. Розрізняєте близькість і
+      залежність. Не плутаєте постійне очікування, тривогу та боротьбу за увагу з великою любов'ю.
+    </p>
+    <p class="measure">
+      І вам більше не потрібно розчинятися в іншій людині, щоб відчувати себе потрібними.
+    </p>
+    <p class="strong-p measure">
+      А це можливо тільки тоді, коли людина, яка колись займала майже весь ваш внутрішній світ, нарешті
+      стає частиною минулого. А ваше сьогодення і майбутнє знову належать виключно вам.
+    </p>
+    <p style="margin-top:26px"><a class="btn btn-primary" href="#reg">Приєднатися до програми</a></p>
+  </div>
+</section>
+
+<!-- ===== НЕ ВИМАГАЄ ПЕРЕСТАТИ КОХАТИ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Проходження дванадцяти кроків не вимагає, щоб ви перестали кохати</h2>
+    </div>
+    <div>
+      <ul class="lines single" style="max-width:44em">
+        <li>Вам не потрібно знецінювати минуле.</li>
+        <li>Не потрібно переконувати себе, що людина була жахливою.</li>
+        <li>Не потрібно ненавидіти її.</li>
+        <li>Не потрібно видаляти всі спогади.</li>
+        <li>Не потрібно робити вигляд, що вам байдуже.</li>
+      </ul>
+      <p class="measure" style="margin-top:20px">
+        Можна пам'ятати. Можна сумувати. Можна цінувати те хороше, що було. І водночас перестати
+        віддавати минулим стосункам своє теперішнє життя.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ЯК ПРОХОДИТИ ПРОГРАМУ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Як проходити програму</h2>
+    </div>
+    <div>
+      <p class="strong-p measure">У власному темпі.</p>
+      <p class="measure">
+        Комусь на один крок знадобиться кілька днів. Комусь довше. До практик можна повертатися.
+        Попередні модулі можна переглядати повторно. Відкати не обнуляють пройдений шлях.
+      </p>
+      <p class="measure">
+        Головний критерій прогресу знаходиться не в календарі. Він у вашому житті.
+      </p>
+      <ul class="qs">
+        <li>Чи стало менше автоматичних реакцій?</li>
+        <li>Чи стало більше ясності?</li>
+        <li>Чи зменшилася залежність від контакту?</li>
+        <li>Чи повертається інтерес до себе?</li>
+        <li>Чи з'являється більше внутрішнього простору?</li>
+      </ul>
+      <p class="strong-p measure" style="margin-top:18px">Саме це має значення.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ЯКЩО Є СПІЛЬНІ ДІТИ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Якщо у вас є спільні діти</h2>
+    </div>
+    <div>
+      <p class="measure">
+        Повне припинення контакту в такій ситуації часто неможливе. Тому в програмі окремо розбирається
+        формат спілкування після розставання.
+      </p>
+      <ul class="lines single" style="margin-top:14px;max-width:44em">
+        <li>Як відділити батьківство від колишніх партнерських стосунків.</li>
+        <li>Як не робити дитину посередником.</li>
+        <li>Як не використовувати її для передачі повідомлень.</li>
+        <li>Як не збирати через неї інформацію про особисте життя колишнього партнера.</li>
+        <li>Як залишити контакт функціональним, конкретним і максимально зрозумілим.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== АВТОРИ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <p class="eyebrow">Автори проєкту</p>
+      <h2>Хто веде програму</h2>
+    </div>
+    <div class="authors">
+      <div class="author">
+        <img src="../img/iryna.webp" loading="lazy" alt="Ірина Макаренко">
+        <h3>Ірина Макаренко</h3>
+        <ul>
+          <li>Магістр психології (Ун-т ім. Тараса Шевченка), психоаналітичний коуч (ПАК), практикуючий психолог</li>
+          <li>У практиці поєднує терапевтичний підхід і коучинг, використовує метафоричні асоціативні карти</li>
+          <li>Спеціалізація — стосунки: проживання розриву та вихід з емоційної залежності</li>
+          <li>Авторський формат глибинної щоденної підтримки «28 днів разом» у кризових ситуаціях</li>
+          <li>Бере участь в організації ретритів, виступає експертом на жіночих зустрічах і в закритих жіночих клубах</li>
+          <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li>
+        </ul>
+      </div>
+      <div class="author">
+        <img src="../img/dmytro-tv.webp" loading="lazy" alt="Дмитро Карпачов">
+        <h3>Дмитро Карпачов</h3>
+        <ul>
+          <li>Автор методу «Психоаналітичний Коучинг» — один з найефективніших сучасних підходів до особистісних трансформацій</li>
+          <li>Експерт з дитячої вікової психології, автор бестселера «Як дати все дитині без грошей і зв'язків»</li>
+          <li>Засновник найбільшої в Україні онлайн-школи для батьків (10+ років)</li>
+          <li>Автор понад 60 освітніх програм з виховання дітей і особистого розвитку</li>
+          <li>Понад 20 років досвіду психологічних консультацій</li>
+          <li>Телезірка — ведучий 6 соціально-психологічних реаліті-шоу на національному телебаченні</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ===== ЧОМУ ПІДПИСКА ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Чому підписка, а не «купив і забув»</h2>
+    </div>
+    <div>
+      <p class="measure">
+        Тому що відновлення не має дати завершення. Ви не знаєте наперед, скільки вам знадобиться —
+        три тижні чи півроку. І ніхто не знає.
+      </p>
+      <p class="measure" style="margin-top:14px">
+        Разовий курс змушує заплатити за всі 12 кроків одразу — навіть якщо на четвертому вам стане
+        легше і далі ви підете самі. Підписка влаштована навпаки:
+      </p>
+      <ul class="lines single" style="max-width:44em;margin-top:18px">
+        <li>Ви залишаєтесь рівно стільки, скільки потрібно вам. Стало легше — виходите.</li>
+        <li>Скасування в один клік, у кабінеті. Без листів, дзвінків і «а чому ви йдете».</li>
+        <li>Ми нагадаємо за 3 дні до списання — щоб оплата ніколи не була несподіванкою.</li>
+        <li>Перші 7 днів — гарантія повернення. Не підійшло, повертаємо гроші повністю.</li>
+      </ul>
+      <p class="measure" style="margin-top:20px">
+        899 грн на місяць — це менше, ніж одна консультація психолога. А кроків у програмі дванадцять,
+        і чат із підтримкою — щодня.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ВІДГУКИ ===== -->
+<section>
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Відгуки</h2>
+      <p class="fine" style="margin-top:10px">
+        Зі скріншотів переписки з клієнтками Ірини Макаренко. Імена приховані.
+      </p>
+    </div>
+    <div>
+      <div class="reviews">
+        <div class="review">
+          <p>«28 днів наших зустрічей/сесій з Іриною пролетіли як мить. Залишилося відчуття фундаменту та підтримки. Пропрацювали питання запиту та сформували інструменти, які допомагають вирішувати ситуації після курсу. Щиро дякую. Рекомендую.»</p>
+        </div>
+        <div class="review">
+          <p>«Проживання розставання для мене виявилось складним завданням. Вдячна за професійну підтримку і ресурси, які ми знайшли в процесі. Я не здалась — я саме виросла, і мені потрібно розвиватися далі. Твій підхід і особиста енергія — це комбо, яке розпакувало мене і мій біль.»</p>
+        </div>
+        <div class="review">
+          <p>«Проживати розставання і сильну прив'язаність до чоловіка виявилось боляче. Але якщо правильно все аналізувати, в цьому багато ресурсу для подальшого розвитку і росту. Рада, що звернулась по допомогу в такий непростий момент життя.»</p>
+        </div>
+        <div class="review">
+          <p>«Цей інтенсивний підхід мені дуже імпонує — комплексне занурення, аналіз, терапія, опрацювання найглибших переживань. Це мій перший досвід, де я не відчуваю себе «клієнтом». Надважлива підтримка 24/7 — можу написати поза сесією і отримати розгорнуту відповідь.»</p>
+        </div>
+        <div class="review">
+          <p>«28 днів твоєї підтримки, твого прийняття і дельних настанов. Ти пройшла зі мною шлях від «нікчемної дівчинки» до «прекрасної дівчини»… Вчора сталася непроста ситуація, але я згадала всі настанови й техніки — і не звалилась у той стан. Це результат твоєї програми підтримки!»</p>
+        </div>
+        <div class="review">
+          <p>«Після нашої роботи мені стало легше, я стала краще розуміти себе. Стала простіше приймати рішення і не завищувати очікування. Дякую сердечно за роботу.»</p>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:14px">
+        Оригінали — у
+        <a href="https://www.instagram.com/p/DItX5C0NZED/" target="_blank" rel="noopener">Instagram Ірини Макаренко</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ДОСТУП І ЦІНА ===== -->
+<section class="pricing" id="reg">
+  <div class="wrap split">
+    <div class="split-head">
+      <h2>Доступ до програми</h2>
+    </div>
+    <div class="pay">
+      <div class="plan">
+        <p class="plan-name">Вартість</p>
+        <p class="price">899 <small>грн/міс</small></p>
+        <p class="plan-sub">Старт — одразу після оплати · скасувати в 1 клік будь-коли<br>Перші 7 днів — гарантія повернення</p>
+        <div id="MoYFcW8I" class="ss-landing" data-target="MoYFcW8I" data-domain="karpachof"></div>
+        <ul class="plan-list">
+          <li>Весь матеріал 12 кроків одразу в навчальному кабінеті</li>
+          <li>Практична робота та чек-пойнти до кожного кроку</li>
+          <li>Окремий блок екстреної стабілізації</li>
+          <li>Чат підтримки з окремою гілкою на кожен крок</li>
+          <li>Прямий ефір раз на 2 тижні</li>
+        </ul>
+      </div>
+      <div class="after">
+        <p>
+          Весь матеріал 12 кроків психоемоційного відновлення після руйнування стосунків вам доступний
+          відразу у навчальному кабінеті.
+        </p>
+        <p>
+          У вас є доступ до чату, де ви можете ставити запитання залежно від кроку, над яким зараз
+          працюєте, отримати підтримку і відповіді.
+        </p>
+        <p>
+          Раз на 2 тижні вас чекає прямий ефір на тему стосунків, аби ви краще розуміли, чому в них
+          виникають проблеми і що з ними робити.
+        </p>
+        <p class="strong-p" style="margin-top:16px">Відновлюйте себе у власному темпі.</p>
+        <p>
+          Якщо ці 12 кроків займуть два місяці, добре. Якщо рік, теж добре. Час усе одно мине. Питання
+          лише в тому, на що ви його витратите: на очікування, терпіння і повторення того самого болю
+          чи на зміни, які поступово повертають вам ваше життя.
+        </p>
+        <p>Важливо не те, з якою швидкістю ви рухаєтеся. Важливо те, у якому напрямку ви це робите.</p>
+        <p>
+          Час після розставання все одно доведеться прожити. Можна прожити його в очікуванні, терпінні,
+          перевірках і нескінченних розмовах із минулим. А можна використати цей самий час, щоб поступово
+          перебудувати своє життя.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  Життя після «нас» © 2026 · <a href="https://12.karpachoff.com/legal/oferta/">Оферта</a> · <a href="https://12.karpachoff.com/legal/privacy/">Конфіденційність</a>
+</footer>
+
+<div class="sticky">
+  <div class="s-price"><b>899 грн</b>на місяць</div>
+  <a class="btn btn-primary" href="#reg">Приєднатися</a>
+</div>
+
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  var utm = {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_content: params.get("utm_content") || "",
+    utm_term: params.get("utm_term") || "",
+  };
+  window.ssContext = {
+    variables: utm,
+    scope: utm,
+  };
+})();
+</script>
+<script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
+</body>
+</html>
