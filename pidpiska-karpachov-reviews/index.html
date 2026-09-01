@@ -109,11 +109,12 @@ section{padding:48px 0}
 .meta-card p{font-family:"Literata";color:var(--ink-soft)}
 .meta-card p:last-child{color:var(--ink)}
 
-/* відгуки */
-.reviews{display:grid;gap:16px;margin-top:6px}
-@media(min-width:760px){.reviews{grid-template-columns:1fr 1fr}}
-.review{border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px -26px rgba(28,33,48,.5)}
-.review img{width:100%;display:block}
+/* відгуки: горизонтальна галерея */
+.reviews{display:flex;gap:14px;margin-top:6px;padding-bottom:6px;
+  overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.review{flex:0 0 auto;height:340px;border-radius:var(--r);overflow:hidden;
+  box-shadow:0 18px 40px -26px rgba(28,33,48,.5);scroll-snap-align:start}
+.review img{height:100%;width:auto;display:block}
 
 /* кроки */
 .steps-grid{display:grid;gap:0 44px}
@@ -849,10 +850,6 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <div class="review"><img src="../img/reviews/r5.webp" loading="lazy" alt="Відгук клієнтки про 28 днів підтримки"></div>
         <div class="review"><img src="../img/reviews/r6.webp" loading="lazy" alt="Продовження відгуку клієнтки"></div>
       </div>
-      <p class="fine" style="margin-top:14px">
-        Оригінали — у
-        <a href="https://www.instagram.com/p/DItX5C0NZED/" target="_blank" rel="noopener">Instagram Ірини Макаренко</a>.
-      </p>
     </div>
   </div>
 </section>
