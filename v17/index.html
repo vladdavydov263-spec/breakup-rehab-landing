@@ -158,6 +158,11 @@ em,.it{font-style:italic}
   border-radius:2px;white-space:nowrap}
 .sticky a:hover{background:var(--brick-hi);color:#FFF6EC;text-decoration:none}
 
+.old{text-decoration:line-through;color:var(--mute);font-weight:400;margin-right:6px;text-decoration-thickness:1px;opacity:.85}
+.sticky .old{color:rgba(207,195,180,.7)}
+
+.nowrap,.old{white-space:nowrap}
+
 footer.site{padding:40px clamp(20px,5vw,64px) 96px;border-top:1px solid var(--line);background:var(--paper-2)}
 footer.site p{max-width:56em;margin:0 auto;font-size:13.5px;line-height:1.7;color:var(--mute)}
 </style>
@@ -192,7 +197,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
         <p class="hero-lead pretty">12 кроків психоемоційного відновлення після руйнування стосунків.</p>
         <p class="hero-hook pretty">Щоб перестати перевіряти, чи він онлайн.</p>
         <a class="btn" href="#price">Приєднатися до програми</a>
-        <p class="fine">899 грн/міс · доступ одразу після оплати · скасувати в 1 клік</p>
+        <p class="fine"><s class="old">1 990 грн/міс</s> <span class="nowrap">899 грн/міс</span> · доступ одразу після оплати · скасувати в 1 клік</p>
       </div>
       <div>
         <img class="hero-photo" src="../img/authors-hero.webp" alt="Дмитро Карпачов та Ірина Макаренко">
@@ -391,7 +396,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
 <!-- 12 Ціна і доступ -->
 <section class="pricing" id="price" style="padding-top:clamp(64px,8vw,130px)">
   <div class="w1000">
-    <h2 style="font-size:clamp(30px,4.4vw,54px);line-height:1.05;margin-bottom:clamp(32px,4vw,52px)">Доступ до програми — <span class="it" style="color:var(--brick)">899 грн/міс</span></h2>
+    <h2 style="font-size:clamp(30px,4.4vw,54px);line-height:1.05;margin-bottom:clamp(32px,4vw,52px)">Доступ до програми — <s class="old">1 990 грн</s> <span class="it nowrap" style="color:var(--brick)">899 грн/міс</span></h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,64px);align-items:start">
       <div>
         <ul class="plan-list">
@@ -428,7 +433,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
 </footer>
 
 <div class="sticky">
-  <span class="s-price">899 грн/міс</span>
+  <span class="s-price"><s class="old">1 990</s> 899 грн/міс</span>
   <a href="#price">Приєднатися</a>
 </div>
 
