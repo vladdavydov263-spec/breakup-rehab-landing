@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Життя після «нас» — 12 кроків психоемоційного відновлення</title>
 <meta name="description" content="12 кроків психоемоційного відновлення після руйнування стосунків. Щоб перестати перевіряти, чи ця людина онлайн. Автори — Дмитро Карпачов та Ірина Макаренко.">
-<link rel="canonical" href="https://12.karpachoff.com/v16/">
+<link rel="canonical" href="https://12.karpachoff.com/v16-chat/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Життя після «нас» — 12 кроків психоемоційного відновлення">
 <meta property="og:description" content="12 кроків психоемоційного відновлення після руйнування стосунків. 899 грн/міс, скасувати в 1 клік.">
 <meta property="og:image" content="https://12.karpachoff.com/img/og-cover.jpg">
-<meta property="og:url" content="https://12.karpachoff.com/v16/">
+<meta property="og:url" content="https://12.karpachoff.com/v16-chat/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -126,6 +126,17 @@ section{padding:clamp(80px,10vw,140px) 24px}
 .old.on-btn{color:rgba(242,238,231,.6)}
 
 .nowrap,.old{white-space:nowrap}
+
+/* стрічка скрінів із чату */
+.shots{display:flex;gap:18px;overflow-x:auto;padding:4px 0 14px;margin:0 0 40px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots::-webkit-scrollbar{height:6px}
+.shots::-webkit-scrollbar-thumb{background:#2A2E36;border-radius:3px}
+.shot{flex:0 0 auto;width:min(330px,84vw);scroll-snap-align:start}
+.shot img{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.shot figcaption{margin-top:12px;font-size:14px;line-height:1.5;color:var(--mute)}
+.shot-note{font-size:13px;color:var(--mute);margin:0 0 40px;line-height:1.6}
+@media(min-width:900px){.shots{gap:24px}.shot{width:390px}}
 
 footer.site{padding:56px 24px 96px;border-top:1px solid var(--line)}
 footer.site p{max-width:680px;margin:0 auto;font-size:14px;color:var(--mute);line-height:1.7}
@@ -278,6 +289,30 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <h2 style="margin-bottom:32px">Ви не самі — і це видно з першого дня</h2>
       <p class="pretty" style="margin-bottom:56px">Кожен крок має окрему гілку в чаті. Там пишуть про відкати, ставлять запитання, виконують завдання. Можна нічого не писати — просто читати. Більшість так і робить, і цього достатньо, щоб стало легше.</p>
     </div>
+    <p class="eyebrow" style="margin-bottom:24px">Як це виглядає всередині</p>
+    <div class="shots">
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat4.webp" loading="lazy" width="829" height="1155" alt="Гілка чату: учасниця описує найважчий тиждень, інша учасниця відповідає підтримкою">
+        <figcaption>Найважче пишуть не в перший день, а на другий-третій тиждень. Відповідають ті, хто вже це проходив.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat5.webp" loading="lazy" width="835" height="1155" alt="Учасник-чоловік розповідає, що вперше за два місяці сфокусувався на власних емоціях">
+        <figcaption>У програмі не тільки жінки. Це повідомлення учасника після першого дня — про те, як фокус повертається на себе.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat6.webp" loading="lazy" width="805" height="1165" alt="Учасники пишуть про відкати після повідомлення від колишнього партнера">
+        <figcaption>Типовий відкат: одне повідомлення «поверни річ» — і день зруйновано. У чаті це розбирають, а не соромлять.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat3.webp" loading="lazy" width="803" height="1160" alt="Учасники підтримують одне одного в гілці спілкування">
+        <figcaption>Більшу частину підтримки дають самі учасники — тому в чаті відповідають за хвилини, а не за добу.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat-support.webp" loading="lazy" width="618" height="762" alt="Психолог відповідає на повідомлення учасниці голосовим">
+        <figcaption>На довгі повідомлення психолог відповідає голосовим — розбирає конкретну ситуацію, а не відсилає до загальних правил.</figcaption>
+      </figure>
+    </div>
+    <p class="shot-note">Скріни публікуються анонімно, зі згоди учасників. Імена й фото приховані.</p>
     <p class="eyebrow" style="margin-bottom:24px">Голоси з чату</p>
     <div class="voices">
       <div class="voice"><p class="pretty">«У всіх нас різні ситуації, а біль однаковий. Наче неважливо, чим вдарили по голові — боляче однаково.»</p><p class="who">Учасниця, крок 3</p></div>
