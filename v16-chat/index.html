@@ -128,15 +128,15 @@ section{padding:clamp(80px,10vw,140px) 24px}
 .nowrap,.old{white-space:nowrap}
 
 /* стрічка скрінів із чату */
-.shots{display:flex;gap:18px;overflow-x:auto;padding:4px 0 14px;margin:0 0 40px;
+.shots{display:flex;align-items:flex-start;gap:18px;overflow-x:auto;padding:4px 0 14px;margin:0 0 40px;
   scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
 .shots::-webkit-scrollbar{height:6px}
 .shots::-webkit-scrollbar-thumb{background:#2A2E36;border-radius:3px}
-.shot{flex:0 0 auto;width:min(330px,84vw);scroll-snap-align:start}
+.shot{flex:0 0 auto;width:min(320px,82vw);scroll-snap-align:start}
 .shot img{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--card)}
 .shot figcaption{margin-top:12px;font-size:14px;line-height:1.5;color:var(--mute)}
 .shot-note{font-size:13px;color:var(--mute);margin:0 0 40px;line-height:1.6}
-@media(min-width:900px){.shots{gap:24px}.shot{width:390px}}
+@media(min-width:900px){.shots{gap:24px}.shot{width:360px}}
 
 footer.site{padding:56px 24px 96px;border-top:1px solid var(--line)}
 footer.site p{max-width:680px;margin:0 auto;font-size:14px;color:var(--mute);line-height:1.7}
@@ -292,28 +292,24 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
     <p class="eyebrow" style="margin-bottom:24px">Як це виглядає всередині</p>
     <div class="shots">
       <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-hardest.webp" loading="lazy" width="829" height="1155" alt="Учасниця описує найважчий тиждень, інша учасниця відповідає підтримкою">
-        <figcaption>Найважче пишуть не в перший день, а на другий-третій тиждень. Відповідають ті, хто це вже проходив.</figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-man.webp" loading="lazy" width="835" height="1155" alt="Учасник-чоловік пише, що вперше за два місяці сфокусувався на власних емоціях">
-        <figcaption>У програмі не тільки жінки. Це повідомлення учасника після першого дня — про те, як фокус повертається на себе.</figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-relapse.webp" loading="lazy" width="805" height="1165" alt="Учасники пишуть про відкат після повідомлення від колишнього партнера">
-        <figcaption>Типовий відкат: одне «поверни річ» — і день зруйновано. У чаті це розбирають, а не соромлять.</figcaption>
-      </figure>
-      <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-questions.webp" loading="lazy" width="793" height="1189" alt="Гілка «Питання до спікера» перед прямим ефіром">
+        <img src="../img/chat/chat-questions.webp" loading="lazy" width="454" height="580" alt="Гілка «Питання до спікера» перед прямим ефіром">
         <figcaption>Гілка «Питання до спікера» перед ефіром. Питання ставлять своїми словами, з подробицями своєї ситуації.</figcaption>
       </figure>
       <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-support2.webp" loading="lazy" width="803" height="1160" alt="Учасники підтримують одне одного в гілці спілкування">
+        <img src="../img/chat/chat-support.webp" loading="lazy" width="460" height="515" alt="Учасники підтримують одне одного в гілці спілкування">
         <figcaption>Більшу частину підтримки дають самі учасники — тому в чаті відповідають за хвилини, а не за добу.</figcaption>
       </figure>
       <figure class="shot" style="margin:0">
-        <img src="../img/chat/chat-voice.webp" loading="lazy" width="618" height="762" alt="Психолог відповідає на повідомлення учасниці голосовим">
-        <figcaption>На довгі повідомлення психолог відповідає голосовим — розбирає конкретну ситуацію, а не відсилає до загальних правил.</figcaption>
+        <img src="../img/chat/chat-hardest.webp" loading="lazy" width="472" height="505" alt="Учасниця описує найважчий тиждень, інша учасниця відповідає підтримкою">
+        <figcaption>Найважче пишуть не в перший день, а на третій-четвертий тиждень. Відповідають ті, хто це вже проходив.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat-relapse.webp" loading="lazy" width="460" height="472" alt="Учасники пишуть про відкат після повідомлення від колишнього партнера">
+        <figcaption>Типовий відкат: одне «поверни річ» — і день зруйновано. У чаті це розбирають, а не соромлять.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="../img/chat/chat-man.webp" loading="lazy" width="476" height="245" alt="Учасник-чоловік пише, що вперше за два місяці сфокусувався на власних емоціях">
+        <figcaption>У програмі не тільки жінки. Повідомлення учасника після першого дня.</figcaption>
       </figure>
     </div>
     <p class="shot-note">Скріни публікуються анонімно, зі згоди учасників. Імена й фото приховані.</p>
