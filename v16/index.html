@@ -138,6 +138,23 @@ section{padding:clamp(80px,10vw,140px) 24px}
 .review figcaption{margin-top:16px;font-size:13px;color:var(--mute)}
 @media(min-width:900px){.review{width:340px}}
 
+/* розгорнуті кроки */
+.step-body{margin:0 0 26px;padding-left:48px;max-width:640px}
+.step-body p{margin:0 0 12px;font-size:16.5px;line-height:1.65;color:var(--mute)}
+.step-body p:last-child{margin-bottom:0}
+.step-body strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:6px 14px;font-size:15px;color:var(--mute)}
+.qs{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:7px}
+.qs li{background:var(--card);border:1px solid var(--line);border-left:2px solid var(--gold);
+  border-radius:6px;padding:10px 14px;font-size:15.5px;color:var(--mute)}
+/* регалії авторів */
+.author ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.author li{font-size:15.5px;line-height:1.5;color:var(--mute);padding-left:18px;position:relative}
+.author li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:1.5px;background:var(--gold)}
+@media(max-width:600px){.step-body{padding-left:0}}
+
 footer.site{padding:56px 24px 96px;border-top:1px solid var(--line)}
 footer.site p{max-width:680px;margin:0 auto;font-size:14px;color:var(--mute);line-height:1.7}
 .bordered{border-top:1px solid var(--line)}
@@ -252,18 +269,111 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <p class="mute pretty">Кроки відкриваються всі одразу. Проходити можна у своєму темпі — повертатися назад дозволено, відкат не обнуляє шлях.</p>
     </div>
     <div class="steps">
-      <details class="step"><summary><span class="step-num">01</span><span class="step-title">Стоп-перевірки</span><span class="step-sign">+</span></summary><p class="step-body pretty">Що робити з телефоном у перші 24 години: домовленість про контакт із собою, приховані сторінки, правила на вхідні повідомлення. Перший крок дає найшвидший результат — добу без перевірок онлайну.</p></details>
-      <details class="step"><summary><span class="step-num">02</span><span class="step-title">Інвентаризація втрати</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви розділяєте на папері, що саме втратили: людину, спосіб життя, плани, роль, статус, побут. Далі з кожним пунктом працюємо окремо — бо «відпустити все одразу» неможливо.</p></details>
-      <details class="step"><summary><span class="step-num">03</span><span class="step-title">Цикл, який вас тримає</span><span class="step-sign">+</span></summary><p class="step-body pretty">Розбір непередбачуваного підкріплення на вашому конкретному прикладі: коли ця людина писала, що ви відчували, що робили потім. Побачити цикл — умова, щоб із нього вийти.</p></details>
-      <details class="step"><summary><span class="step-num">04</span><span class="step-title">Тіло раніше за голову</span><span class="step-sign">+</span></summary><p class="step-body pretty">Паніка, тремор, безсоння, відсутність апетиту. Практики, які знімають гострий стан за 5–10 хвилин, і режим дня, що повертає сон і їжу.</p></details>
-      <details class="step"><summary><span class="step-num">05</span><span class="step-title">Хроніка без ілюзій</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви відновлюєте реальну історію стосунків за фактами, а не за монтажем памʼяті, який зберігає лише найкраще. Це найважчий і найкорисніший крок.</p></details>
-      <details class="step"><summary><span class="step-num">06</span><span class="step-title">Ваша роль у сценарії</span><span class="step-sign">+</span></summary><p class="step-body pretty">Не про вину, а про повторювані дії: як ви терпіли, доводили, чекали, виправдовували. Тут видно, що саме потрібно змінити, щоб історія не повторилася з іншим.</p></details>
-      <details class="step"><summary><span class="step-num">07</span><span class="step-title">Провина і рішення</span><span class="step-sign">+</span></summary><p class="step-body pretty">Окремий блок для тих, хто вийшов зі стосунків сам: як витримати сумніви в рішенні, коли всі кажуть «подумай ще» — і як перестати платити провиною.</p></details>
-      <details class="step"><summary><span class="step-num">08</span><span class="step-title">Коли ця людина пише</span><span class="step-sign">+</span></summary><p class="step-body pretty">Готові межі й відповіді на всі типові приводи: повернути річ, нейтральне «як ти», раптове зникнення. Один сценарій, за яким ви більше не імпровізуєте на емоціях.</p></details>
-      <details class="step"><summary><span class="step-num">09</span><span class="step-title">Порожні місця в дні</span><span class="step-sign">+</span></summary><p class="step-body pretty">Вихідні, вечори, свята, спільні ритуали. Ви заповнюєте не «чимось», а тим, що дає вам енергію — за списком, зробленим на цьому кроці.</p></details>
-      <details class="step"><summary><span class="step-num">10</span><span class="step-title">Фокус повертається на себе</span><span class="step-sign">+</span></summary><p class="step-body pretty">Тіло, гроші, друзі, робота, бажання. Дрібні відновлені опори, з яких складається відчуття, що життя належить вам.</p></details>
-      <details class="step"><summary><span class="step-num">11</span><span class="step-title">Відкат — частина шляху</span><span class="step-sign">+</span></summary><p class="step-body pretty">Персональний план на день, коли накриває: що робити в перші 10 хвилин, першу годину, до вечора. Відкат не обнуляє шлях.</p></details>
-      <details class="step"><summary><span class="step-num">12</span><span class="step-title">Життя після «нас»</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви фіксуєте, що змінилося, і формулюєте власні критерії наступних стосунків: що приймаєте, а що більше — ніколи.</p></details>
+      <details class="step"><summary><span class="step-num">01</span><span class="step-title">Зафіксувати реальність</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Перший крок починається з дуже простого питання: <strong>що насправді відбувається?</strong></p>
+        <p>Без припущень. Без спроб прочитати думки іншої людини. Без «вона сказала одне, але насправді відчуває інше». Без «він пішов, але я знаю, що він мене любить».</p>
+        <p>Ви будете вчитися відокремлювати факт від власної інтерпретації, страху, надії та фантазії. Саме тут починає повертатися ясність.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">02</span><span class="step-title">Прийняти вибір іншої людини</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Можна впливати на власні рішення. Можна говорити про свої почуття. Можна пропонувати. Можна домовлятися. Але неможливо прийняти рішення за іншу дорослу людину.</p>
+        <p>На цьому кроці ви будете працювати з внутрішньою боротьбою: з бажанням переконати, довести, дочекатися, знайти правильні слова, зробити ще одну спробу, повернути контроль над тим, що вам уже не належить.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">03</span><span class="step-title">Визнати зміни</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Після розставання змінюється не одна частина життя. Іноді змінюється майже все.</p>
+        <ul class="chips"><li>Дім</li><li>Побут</li><li>Плани</li><li>Вихідні</li><li>Свята</li><li>Фінанси</li><li>Спілкування</li><li>Сексуальне життя</li><li>Відносини з родичами</li><li>Взаємодія з дітьми</li><li>Уявлення про майбутнє</li></ul>
+        <p style="margin-top:12px">На цьому кроці ви будете поступово адаптуватися до життя, яке вже стало іншим.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">04</span><span class="step-title">Повернути управління собі</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Після розставання увага часто повністю приклеюється до іншої людини.</p>
+        <ul class="qs">
+          <li>Що вона робить? З ким вона?</li>
+          <li>Чому мовчить? Що означала ця фотографія?</li>
+          <li>Чи сумує? Чи шкодує? Чи повернеться?</li>
+        </ul>
+        <p style="margin-top:12px">Проблема в тому, що весь цей нескінченний аналіз практично не дає вам управління ситуацією. Він лише продовжує утримувати іншу людину в центрі вашого життя.</p>
+        <p>На цьому кроці ви почнете повертати увагу туди, де справді можете щось змінювати. До своїх дій. Свого часу. Своїх рішень. Свого життя.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">05</span><span class="step-title">Припинити контакт, який підтримує залежність</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Один із найважливіших етапів програми. Бо контакт може існувати навіть тоді, коли ви нібито «не спілкуєтеся».</p>
+        <ul class="chips"><li>Перегляд сторінки</li><li>Перечитування листування</li><li>Перевірка статусу</li><li>Пошук інформації через друзів</li><li>Перегляд фотографій</li><li>«Випадкові» приводи зустрітися</li><li>Очікування повідомлення</li></ul>
+        <p style="margin-top:12px">У програмі ви створите власний <strong>DETOX-протокол</strong>. Мінімальний рекомендований період становить 30 днів. У складніших випадках він може тривати 60 або 90 днів. Його сенс дуже практичний: перестати щодня підживлювати той самий емоційний цикл.</p>
+        <p>Якщо у вас є спільні діти або інші обставини, через які контакт повністю припинити неможливо, ви будете вчитися змінювати його формат. Коротко. По суті. З чіткими межами. Без використання необхідного контакту як приводу продовжувати колишні стосунки.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">06</span><span class="step-title">Усвідомити залежність</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Чому вас тягне назад навіть після того, як вам було боляче? Чому одне повідомлення може різко покращити стан? Чому мовчання іншої людини викликає майже фізичну тривогу? Чому після чергового розчарування знову виникає надія?</p>
+        <p>На цьому етапі ви почнете бачити механізми, які підтримують емоційну фіксацію. І поступово відрізняти глибину переживань від реальної якості стосунків.</p>
+        <p>Бо дуже сильні почуття самі по собі ще нічого не говорять про те, наскільки ці стосунки були безпечними, взаємними і придатними для життя.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">07</span><span class="step-title">Побачити реальність стосунків</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Після втрати пам'ять часто робить дуже дивну річ. Хороше стає яскравішим. Погане поступово стирається.</p>
+        <p>Залишаються подорожі. Обійми. Секс. Сміх. Красиві слова. Найкращі вечори. А холодність, конфлікти, приниження, самотність, тривога, невизначеність і моменти, коли вам було по-справжньому погано, відходять кудись на периферію.</p>
+        <p>На цьому етапі ви повернете собі повну картину.</p>
+        <ul class="qs">
+          <li>Що в цих стосунках справді було цінним?</li>
+          <li>А яку ціну ви за це платили?</li>
+          <li>Що постійно доводилося терпіти?</li>
+          <li>На що ви заплющували очі? Що виправдовували?</li>
+          <li>Скільки сил витрачали на те, щоб утримати те, що вже руйнувалося?</li>
+        </ul>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">08</span><span class="step-title">Розібрати механізми прив'язаності</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Чому саме ця людина? Чому саме ці стосунки стали настільки емоційно значущими? Що ви намагалися в них отримати?</p>
+        <ul class="chips"><li>Визнання</li><li>Безпеку</li><li>Відчуття власної цінності</li><li>Підтвердження, що вас можна любити</li><li>Порятунок від самотності</li></ul>
+        <p style="margin-top:12px">Або можливість нарешті «заслужити» любов людини, яка постійно віддаляється.</p>
+        <p>На цьому кроці ви будете досліджувати свої потреби, перенесення, очікування, минулий досвід і повторювані сценарії. Щоб одного дня не виявити себе в тих самих стосунках, тільки з іншою людиною.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">09</span><span class="step-title">Завершити стосунки</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Іноді люди роками продовжують стосунки з людиною, якої поруч уже давно немає. Говорять із нею подумки. Сперечаються. Доводять. Уявляють зустрічі. Чекають вибачення. Чекають повернення. Чекають моменту, коли інша людина нарешті зрозуміє, кого втратила.</p>
+        <p>Фізична відсутність партнера ще не завершує внутрішній діалог. Цьому і присвячений дев'ятий крок. Поступовому завершенню історії, яка досі займає занадто багато місця у вашому теперішньому.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">10</span><span class="step-title">Відновити свою ідентичність</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Особливо після довгих стосунків може виникнути дивне питання: <strong>«А що мені взагалі подобається без цієї людини?»</strong></p>
+        <p>Чого я хочу? Як хочу проводити вечори? Куди хочу їхати? З ким хочу бачитися? Яке життя хочу будувати?</p>
+        <p>Частина людей настільки сильно розчиняється у стосунках, що після їх завершення доводиться буквально збирати себе заново.</p>
+        <ul class="chips"><li>Свої інтереси</li><li>Бажання</li><li>Звички</li><li>Межі</li><li>Цілі</li><li>Відносини з друзями</li><li>Плани</li><li>Власну окремість</li></ul>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">11</span><span class="step-title">Не впасти в наступну крайність</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Після болісного розставання є дві дуже привабливі дороги.</p>
+        <p>Перша: <strong>терміново знайти когось нового.</strong> Щоб знову відчути тепло. Щоб перестати думати. Щоб не залишатися самому. Щоб довести собі, що вас можна любити.</p>
+        <p>Друга: <strong>ніколи більше нікого не підпускати настільки близько.</strong></p>
+        <p>Обидві реакції можуть бути способом впоратися з пережитим болем. На цьому кроці ви будете розбиратися, чи справді готові до нової близькості і чого саме зараз шукаєте у стосунках.</p>
+        </div>
+      </details>
+      <details class="step"><summary><span class="step-num">12</span><span class="step-title">Інтегрувати новий досвід</span><span class="step-sign">+</span></summary>
+        <div class="step-body">
+          <p>Фінальний крок присвячений вам після всього пройденого.</p>
+        <ul class="qs">
+          <li>Що ви тепер знаєте про себе?</li>
+          <li>Які сценарії почали бачити?</li>
+          <li>Які межі більше не готові порушувати? На що більше не будете погоджуватися?</li>
+          <li>Що для вас означає близькість? Що означає любов?</li>
+          <li>Що означає залишатися собою поруч з іншою людиною?</li>
+          <li>І які стосунки ви хочете будувати далі?</li>
+        </ul>
+        </div>
+      </details>
+
 
     </div>
   </div>
@@ -344,12 +454,22 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <div class="author">
         <img src="../img/iryna.webp" loading="lazy" alt="Ірина Макаренко">
         <h3>Ірина Макаренко</h3>
-        <p class="pretty">Психолог. Працює з темою залежних стосунків і виходу з них. Авторка практик і завдань програми — тієї частини, яку ви робите щодня.</p>
+        <ul><li>Магістр психології (Ун-т ім. Тараса Шевченка), психоаналітичний коуч (ПАК), практикуючий психолог</li>
+          <li>У практиці поєднує терапевтичний підхід і коучинг, використовує метафоричні асоціативні карти</li>
+          <li>Спеціалізація — стосунки: проживання розриву та вихід з емоційної залежності</li>
+          <li>Авторський формат глибинної щоденної підтримки «28 днів разом» у кризових ситуаціях</li>
+          <li>Бере участь в організації ретритів, виступає експертом на жіночих зустрічах і в закритих жіночих клубах</li>
+          <li>2000+ годин консультацій у темі розставань та особистісних трансформацій</li></ul>
       </div>
       <div class="author">
         <img src="../img/dmytro-tv.webp" loading="lazy" alt="Дмитро Карпачов">
         <h3>Дмитро Карпачов</h3>
-        <p class="pretty">Психолог, теле- і радіоведучий. Автор методології 12 кроків і ведучий прямих ефірів програми.</p>
+        <ul><li>Автор методу «Психоаналітичний Коучинг» — один з найефективніших сучасних підходів до особистісних трансформацій</li>
+          <li>Експерт з дитячої вікової психології, автор бестселера «Як дати все дитині без грошей і зв'язків»</li>
+          <li>Засновник найбільшої в Україні онлайн-школи для батьків (10+ років)</li>
+          <li>Автор понад 60 освітніх програм з виховання дітей і особистого розвитку</li>
+          <li>Понад 20 років досвіду психологічних консультацій</li>
+          <li>Телезірка — ведучий 6 соціально-психологічних реаліті-шоу на національному телебаченні</li></ul>
       </div>
     </div>
   </div>
