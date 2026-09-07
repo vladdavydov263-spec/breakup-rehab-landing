@@ -127,6 +127,17 @@ section{padding:clamp(80px,10vw,140px) 24px}
 
 .nowrap,.old{white-space:nowrap}
 
+/* відгуки */
+.reviews{display:flex;align-items:flex-start;gap:18px;overflow-x:auto;padding:4px 0 14px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.reviews::-webkit-scrollbar{height:6px}
+.reviews::-webkit-scrollbar-thumb{background:#2A2E36;border-radius:3px}
+.review{flex:0 0 auto;width:min(300px,82vw);scroll-snap-align:start;margin:0;
+  background:var(--card);border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:24px 26px}
+.review p{font-size:16px;line-height:1.6}
+.review figcaption{margin-top:16px;font-size:13px;color:var(--mute)}
+@media(min-width:900px){.review{width:340px}}
+
 footer.site{padding:56px 24px 96px;border-top:1px solid var(--line)}
 footer.site p{max-width:680px;margin:0 auto;font-size:14px;color:var(--mute);line-height:1.7}
 .bordered{border-top:1px solid var(--line)}
@@ -241,18 +252,19 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <p class="mute pretty">Кроки відкриваються всі одразу. Проходити можна у своєму темпі — повертатися назад дозволено, відкат не обнуляє шлях.</p>
     </div>
     <div class="steps">
-      <details class="step"><summary><span class="step-num">01</span><span class="step-title">Стоп-кадр: де ви зараз</span><span class="step-sign">+</span></summary><p class="step-body pretty">Чесний зріз стану без самокритики: що саме ви робите щодня, скільком годинам це дорівнює, і що з цього ви вже не контролюєте.</p></details>
-      <details class="step"><summary><span class="step-num">02</span><span class="step-title">Заборонені дії</span><span class="step-sign">+</span></summary><p class="step-body pretty">Перевірка онлайну, перечитування, сторінки, знайомі, які «випадково» розкажуть. Список того, що підживлює цикл, і що робити замість кожної дії.</p></details>
-      <details class="step"><summary><span class="step-num">03</span><span class="step-title">Тіло раніше за голову</span><span class="step-sign">+</span></summary><p class="step-body pretty">Що робити з тремтінням, панікою, безсонням. Техніки, які працюють у момент нападу, а не «в теорії».</p></details>
-      <details class="step"><summary><span class="step-num">04</span><span class="step-title">Ваш день без цієї людини</span><span class="step-sign">+</span></summary><p class="step-body pretty">Порожні місця в добі, які раніше займали стосунки, і як заповнити їх так, щоб це витримало тиждень, а не вечір.</p></details>
-      <details class="step"><summary><span class="step-num">05</span><span class="step-title">Що саме ви втратили</span><span class="step-sign">+</span></summary><p class="step-body pretty">Розкладаємо втрату на частини: людина, плани, ритуали, роль, майбутнє. Далі працюємо з кожною окремо — разом вона нерозвʼязна.</p></details>
-      <details class="step"><summary><span class="step-num">06</span><span class="step-title">Непередбачуване підкріплення</span><span class="step-sign">+</span></summary><p class="step-body pretty">Головний крок: як ці раптові повідомлення тримають вас на гачку і як розірвати цей цикл технічно, а не силою волі.</p></details>
-      <details class="step"><summary><span class="step-num">07</span><span class="step-title">Розмова, якої не буде</span><span class="step-sign">+</span></summary><p class="step-body pretty">Робота з «чому» і «а раптом». Як закрити питання, на які він ніколи не відповість.</p></details>
-      <details class="step"><summary><span class="step-num">08</span><span class="step-title">Провина і рішення</span><span class="step-sign">+</span></summary><p class="step-body pretty">Окремий сценарій для тих, хто вийшов зі стосунків сам: сумніви, відповідальність, право на своє рішення.</p></details>
-      <details class="step"><summary><span class="step-num">09</span><span class="step-title">Повернути собі роль</span><span class="step-sign">+</span></summary><p class="step-body pretty">Хто ви поза цими стосунками. Не «нове життя з понеділка», а конкретні опори, які вже є.</p></details>
-      <details class="step"><summary><span class="step-num">10</span><span class="step-title">Люди навколо</span><span class="step-sign">+</span></summary><p class="step-body pretty">Що робити з «та хватить вже страдати». Як просити підтримки і кого не варто про неї просити.</p></details>
-      <details class="step"><summary><span class="step-num">11</span><span class="step-title">Якщо ця людина знову зʼявиться</span><span class="step-sign">+</span></summary><p class="step-body pretty">Готовий план на випадок контакту: що відповідати, чого не робити, як не втратити пройдений шлях за один вечір.</p></details>
-      <details class="step"><summary><span class="step-num">12</span><span class="step-title">Життя після «нас»</span><span class="step-sign">+</span></summary><p class="step-body pretty">Плани, у яких немає цієї людини. Як помітити, що вам стало байдуже, і не злякатися цього.</p></details>
+      <details class="step"><summary><span class="step-num">01</span><span class="step-title">Стоп-перевірки</span><span class="step-sign">+</span></summary><p class="step-body pretty">Що робити з телефоном у перші 24 години: домовленість про контакт із собою, приховані сторінки, правила на вхідні повідомлення. Перший крок дає найшвидший результат — добу без перевірок онлайну.</p></details>
+      <details class="step"><summary><span class="step-num">02</span><span class="step-title">Інвентаризація втрати</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви розділяєте на папері, що саме втратили: людину, спосіб життя, плани, роль, статус, побут. Далі з кожним пунктом працюємо окремо — бо «відпустити все одразу» неможливо.</p></details>
+      <details class="step"><summary><span class="step-num">03</span><span class="step-title">Цикл, який вас тримає</span><span class="step-sign">+</span></summary><p class="step-body pretty">Розбір непередбачуваного підкріплення на вашому конкретному прикладі: коли ця людина писала, що ви відчували, що робили потім. Побачити цикл — умова, щоб із нього вийти.</p></details>
+      <details class="step"><summary><span class="step-num">04</span><span class="step-title">Тіло раніше за голову</span><span class="step-sign">+</span></summary><p class="step-body pretty">Паніка, тремор, безсоння, відсутність апетиту. Практики, які знімають гострий стан за 5–10 хвилин, і режим дня, що повертає сон і їжу.</p></details>
+      <details class="step"><summary><span class="step-num">05</span><span class="step-title">Хроніка без ілюзій</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви відновлюєте реальну історію стосунків за фактами, а не за монтажем памʼяті, який зберігає лише найкраще. Це найважчий і найкорисніший крок.</p></details>
+      <details class="step"><summary><span class="step-num">06</span><span class="step-title">Ваша роль у сценарії</span><span class="step-sign">+</span></summary><p class="step-body pretty">Не про вину, а про повторювані дії: як ви терпіли, доводили, чекали, виправдовували. Тут видно, що саме потрібно змінити, щоб історія не повторилася з іншим.</p></details>
+      <details class="step"><summary><span class="step-num">07</span><span class="step-title">Провина і рішення</span><span class="step-sign">+</span></summary><p class="step-body pretty">Окремий блок для тих, хто вийшов зі стосунків сам: як витримати сумніви в рішенні, коли всі кажуть «подумай ще» — і як перестати платити провиною.</p></details>
+      <details class="step"><summary><span class="step-num">08</span><span class="step-title">Коли ця людина пише</span><span class="step-sign">+</span></summary><p class="step-body pretty">Готові межі й відповіді на всі типові приводи: повернути річ, нейтральне «як ти», раптове зникнення. Один сценарій, за яким ви більше не імпровізуєте на емоціях.</p></details>
+      <details class="step"><summary><span class="step-num">09</span><span class="step-title">Порожні місця в дні</span><span class="step-sign">+</span></summary><p class="step-body pretty">Вихідні, вечори, свята, спільні ритуали. Ви заповнюєте не «чимось», а тим, що дає вам енергію — за списком, зробленим на цьому кроці.</p></details>
+      <details class="step"><summary><span class="step-num">10</span><span class="step-title">Фокус повертається на себе</span><span class="step-sign">+</span></summary><p class="step-body pretty">Тіло, гроші, друзі, робота, бажання. Дрібні відновлені опори, з яких складається відчуття, що життя належить вам.</p></details>
+      <details class="step"><summary><span class="step-num">11</span><span class="step-title">Відкат — частина шляху</span><span class="step-sign">+</span></summary><p class="step-body pretty">Персональний план на день, коли накриває: що робити в перші 10 хвилин, першу годину, до вечора. Відкат не обнуляє шлях.</p></details>
+      <details class="step"><summary><span class="step-num">12</span><span class="step-title">Життя після «нас»</span><span class="step-sign">+</span></summary><p class="step-body pretty">Ви фіксуєте, що змінилося, і формулюєте власні критерії наступних стосунків: що приймаєте, а що більше — ніколи.</p></details>
+
     </div>
   </div>
 </section>
@@ -332,13 +344,30 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <div class="author">
         <img src="../img/iryna.webp" loading="lazy" alt="Ірина Макаренко">
         <h3>Ірина Макаренко</h3>
-        <p class="pretty">Психолог. Веде програму, супроводжує учасників у чаті й на прямих ефірах.</p>
+        <p class="pretty">Психолог. Працює з темою залежних стосунків і виходу з них. Авторка практик і завдань програми — тієї частини, яку ви робите щодня.</p>
       </div>
       <div class="author">
         <img src="../img/dmytro-tv.webp" loading="lazy" alt="Дмитро Карпачов">
         <h3>Дмитро Карпачов</h3>
-        <p class="pretty">Психолог. Автор методики 12 кроків психоемоційного відновлення.</p>
+        <p class="pretty">Психолог, теле- і радіоведучий. Автор методології 12 кроків і ведучий прямих ефірів програми.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Відгуки -->
+<section class="bordered">
+  <div class="w960">
+    <div class="w680" style="margin:0 0 40px">
+      <h2 style="margin-bottom:24px">Відгуки</h2>
+      <p class="mute pretty">Це відгуки учасниць, які проходили програму з Іриною. Публікуються анонімно, зі згоди авторів.</p>
+    </div>
+    <div class="reviews">
+        <figure class="review"><p class="pretty">«Наші зустрічі/сесії з Іриною в межах програми пролетіли як мить. Залишилося відчуття фундаменту та підтримки. Пропрацювали питання запиту, та сформували інструменти, які допомагають вирішувати ситуації після курсу. Щиро дякую 🙏 Рекомендую 👍»</p><figcaption>З відгуку учасниці програми</figcaption></figure>
+        <figure class="review"><p class="pretty">«Проживання розставання виявилося для мене складним завданням, я вдячна за професійну підтримку та ресурси, які ми знайшли в процесі роботи. У якийсь момент я зрозуміла, що завдяки стосункам отримала багато крутого досвіду — і зараз час рухатися далі. Я не здалася, а саме виросла.»</p><figcaption>З відгуку учасниці програми</figcaption></figure>
+        <figure class="review"><p class="pretty">«Багато разів переписувала текст вдячності, бо це не описати словами. Це комплексний підхід: занурення, аналіз, терапія, інтуїтивне пропрацювання найглибших переживань. Дуже комфортно відкриватись. Надважлива підтримка 24/7 — можу написати поза сесією й отримати розгорнуту відповідь.»</p><figcaption>З відгуку учасниці програми</figcaption></figure>
+        <figure class="review"><p class="pretty">«Ти пройшла зі мною шлях від «нікчемної дівчинки» до «прекрасної дівчини», так вміло й делікатно скеровуючи мою увагу туди, де треба було копати, що мені здавалося, ніби я сама в усьому розібралася. Вчора сталася непроста ситуація — і я змогла згадати всі техніки й не звалилась у той стан.»</p><figcaption>З відгуку учасниці програми</figcaption></figure>
+        <figure class="review"><p class="pretty">«Маю досвід роботи з психотерапевтом за цим запитом, тож є з чим порівняти. Зараз відкривається глибша складова опрацювання теми особистих стосунків. За відчуттями мене справді почули: під час роботи було кілька усвідомлень, які аж до мурашок змусили оцінити ситуацію під іншим кутом.»</p><figcaption>З відгуку учасниці програми</figcaption></figure>
     </div>
   </div>
 </section>
