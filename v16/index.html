@@ -546,6 +546,23 @@ document.querySelectorAll('.step').forEach(function (d) {
 <script>
 (function () {
   var params = new URLSearchParams(location.search);
+
+  // читання куки
+  function fbCookie(name) {
+    var m = document.cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
+    return m ? m[2] : "";
+  }
+
+  // fbclid із посилання зберігаємо у куку _fbc у форматі, який очікує Meta
+  var fbclid = params.get("fbclid");
+  if (fbclid && !fbCookie("_fbc")) {
+    document.cookie = "_fbc=fb.1." + Date.now() + "." + fbclid + ";path=/;max-age=7776000;SameSite=Lax";
+  }
+  // якщо піксель ще не встиг поставити _fbp — ставимо самі, піксель підхопить
+  if (!fbCookie("_fbp")) {
+    document.cookie = "_fbp=fb.1." + Date.now() + "." + Math.floor(Math.random() * 1e10) +
+      ";path=/;max-age=7776000;SameSite=Lax";
+  }
   var utm = {
     utm_source: params.get("utm_source") || "",
     utm_medium: params.get("utm_medium") || "",
@@ -553,7 +570,45 @@ document.querySelectorAll('.step').forEach(function (d) {
     utm_content: params.get("utm_content") || "",
     utm_term: params.get("utm_term") || "",
   };
+  utm.fbp = fbCookie("_fbp");
+  utm.fbc = fbCookie("_fbc");
   window.ssContext = { variables: utm, scope: utm };
+
+  // куки Meta ставляться асинхронно — оновлюємо контекст, коли піксель відпрацював
+  function refresh() {
+    utm.fbp = fbCookie("_fbp");
+    utm.fbc = fbCookie("_fbc");
+    window.ssContext = { variables: utm, scope: utm };
+  }
+  window.addEventListener("load", refresh);
+  setTimeout(refresh, 1500);
+})();
+
+// проміжні події для пікселя: перегляд блока з ціною і клік по кнопці
+(function () {
+  var checkoutFired = false;
+  document.querySelectorAll('a[href="#price"]').forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (checkoutFired || typeof fbq !== "function") return;
+      checkoutFired = true;
+      fbq("track", "InitiateCheckout", { currency: "UAH", value: 899 });
+    });
+  });
+
+  // блок з ціною вищий за екран, тому 0.5 ніколи б не спрацював — стежимо за самою формою
+  var target = document.querySelector(".price-form") ||
+               document.querySelector(".ss-landing") ||
+               document.getElementById("price");
+  if (!target || !("IntersectionObserver" in window)) return;
+  var viewFired = false;
+  new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting || viewFired || typeof fbq !== "function") return;
+      viewFired = true;
+      fbq("track", "ViewContent", { content_name: "price", currency: "UAH", value: 899 });
+      obs.disconnect();
+    });
+  }, { threshold: 0.25 }).observe(target);
 })();
 </script>
 <script src="https://customer.smartsender.eu/js/client/lp.min.js?v2.0.0"></script>
