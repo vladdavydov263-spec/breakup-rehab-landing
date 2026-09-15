@@ -62,7 +62,7 @@ section{padding:clamp(80px,10vw,140px) 24px}
 .hero-lead{font-size:clamp(19px,2.2vw,22px);margin:0 0 18px}
 .hero-hook{font-family:Literata,Georgia,serif;font-size:clamp(20px,2.4vw,24px);line-height:1.4;
   color:var(--gold);margin:0 0 40px}
-.hero-photo{width:100%;aspect-ratio:4/5;max-height:560px;object-fit:cover;border-radius:4px}
+.hero-photo{height:auto;width:100%;aspect-ratio:4/5;max-height:560px;object-fit:cover;border-radius:4px}
 
 /* світла секція */
 .paper{background:var(--paper);color:var(--paper-ink)}
@@ -204,7 +204,7 @@ src="https://www.facebook.com/tr?id=1579152340271385&ev=PageView&noscript=1"
       <p class="fine" style="margin-top:18px"><s class="old">1 990 грн/міс</s> <span class="nowrap">899 грн/міс</span> · доступ одразу після оплати · скасувати в 1 клік</p>
     </div>
     <div>
-      <img class="hero-photo" src="../img/authors-hero@1080.webp" alt="Дмитро Карпачов та Ірина Макаренко">
+      <img srcset="../img/authors-hero@720.webp 720w, ../img/authors-hero@1080.webp 1080w" sizes="(max-width: 760px) 100vw, 620px" decoding="async" fetchpriority="high" height="1080" width="1080" class="hero-photo" src="../img/authors-hero@1080.webp" alt="Дмитро Карпачов та Ірина Макаренко">
       <p class="fine" style="margin-top:14px">Дмитро Карпачов, Ірина Макаренко — автори проєкту.</p>
     </div>
   </div>
