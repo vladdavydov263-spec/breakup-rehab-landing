@@ -931,20 +931,27 @@ document.querySelectorAll('.step').forEach(function (d) {
   var params = new URLSearchParams(location.search);
 
   // читання куки
-  function fbCookie(name) {
+  function readCookie(name) {
     var m = document.cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
     return m ? m[2] : "";
   }
 
   // fbclid із посилання зберігаємо у куку _fbc у форматі, який очікує Meta
   var fbclid = params.get("fbclid");
-  if (fbclid && !fbCookie("_fbc")) {
+  if (fbclid && !readCookie("_fbc")) {
     document.cookie = "_fbc=fb.1." + Date.now() + "." + fbclid + ";path=/;max-age=7776000;SameSite=Lax";
   }
   // якщо піксель ще не встиг поставити _fbp — ставимо самі, піксель підхопить
-  if (!fbCookie("_fbp")) {
+  if (!readCookie("_fbp")) {
     document.cookie = "_fbp=fb.1." + Date.now() + "." + Math.floor(Math.random() * 1e10) +
       ";path=/;max-age=7776000;SameSite=Lax";
+  }
+
+  // ttclid приходить лише в першому переході з TikTok — кладемо в куку, щоб
+  // покупка через кілька днів усе ще матчилась на рекламу
+  var ttclid = params.get("ttclid");
+  if (ttclid && !readCookie("ttclid")) {
+    document.cookie = "ttclid=" + ttclid + ";path=/;max-age=7776000;SameSite=Lax";
   }
   var utm = {
     utm_source: params.get("utm_source") || "",
@@ -953,14 +960,18 @@ document.querySelectorAll('.step').forEach(function (d) {
     utm_content: params.get("utm_content") || "",
     utm_term: params.get("utm_term") || "",
   };
-  utm.fbp = fbCookie("_fbp");
-  utm.fbc = fbCookie("_fbc");
+  utm.fbp = readCookie("_fbp");
+  utm.fbc = readCookie("_fbc");
+  utm.ttclid = readCookie("ttclid");
+  utm.ttp = readCookie("_ttp");
   window.ssContext = { variables: utm, scope: utm };
 
-  // куки Meta ставляться асинхронно — оновлюємо контекст, коли піксель відпрацював
+  // куки Meta і TikTok ставляться асинхронно — оновлюємо контекст, коли пікселі відпрацювали
   function refresh() {
-    utm.fbp = fbCookie("_fbp");
-    utm.fbc = fbCookie("_fbc");
+    utm.fbp = readCookie("_fbp");
+    utm.fbc = readCookie("_fbc");
+    utm.ttclid = readCookie("ttclid");
+    utm.ttp = readCookie("_ttp");
     window.ssContext = { variables: utm, scope: utm };
   }
   window.addEventListener("load", refresh);
@@ -972,9 +983,14 @@ document.querySelectorAll('.step').forEach(function (d) {
   var checkoutFired = false;
   document.querySelectorAll('a[href="#price"]').forEach(function (a) {
     a.addEventListener("click", function () {
-      if (checkoutFired || typeof fbq !== "function") return;
+      if (checkoutFired) return;
       checkoutFired = true;
-      fbq("track", "InitiateCheckout", { currency: "UAH", value: 899 });
+      if (typeof fbq === "function") {
+        fbq("track", "InitiateCheckout", { currency: "UAH", value: 899 });
+      }
+      if (window.ttq) {
+        ttq.track("InitiateCheckout", { currency: "UAH", value: 899 });
+      }
     });
   });
 
@@ -986,9 +1002,14 @@ document.querySelectorAll('.step').forEach(function (d) {
   var viewFired = false;
   new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (e) {
-      if (!e.isIntersecting || viewFired || typeof fbq !== "function") return;
+      if (!e.isIntersecting || viewFired) return;
       viewFired = true;
-      fbq("track", "ViewContent", { content_name: "price", currency: "UAH", value: 899 });
+      if (typeof fbq === "function") {
+        fbq("track", "ViewContent", { content_name: "price", currency: "UAH", value: 899 });
+      }
+      if (window.ttq) {
+        ttq.track("ViewContent", { content_name: "price", currency: "UAH", value: 899 });
+      }
       obs.disconnect();
     });
   }, { threshold: 0.25 }).observe(target);
