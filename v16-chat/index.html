@@ -938,6 +938,16 @@ document.querySelectorAll('.step').forEach(function (d) {
 
 // проміжні події для пікселя: перегляд блока з ціною і клік по кнопці
 (function () {
+  // без content_id TikTok позначає подію як неповну; той самий ідентифікатор
+  // їде і з покупкою з платформи, щоб воронка збиралась в один товар
+  var ttContents = [{
+    content_id: "breakup-rehab-subscription",
+    content_type: "product",
+    content_name: "Підписка «Життя після нас»",
+    price: 899,
+    quantity: 1
+  }];
+
   var checkoutFired = false;
   document.querySelectorAll('a[href="#price"]').forEach(function (a) {
     a.addEventListener("click", function () {
@@ -947,7 +957,7 @@ document.querySelectorAll('.step').forEach(function (d) {
         fbq("track", "InitiateCheckout", { currency: "UAH", value: 899 });
       }
       if (window.ttq) {
-        ttq.track("InitiateCheckout", { currency: "UAH", value: 899 });
+        ttq.track("InitiateCheckout", { contents: ttContents, currency: "UAH", value: 899 });
       }
     });
   });
@@ -966,7 +976,7 @@ document.querySelectorAll('.step').forEach(function (d) {
         fbq("track", "ViewContent", { content_name: "price", currency: "UAH", value: 899 });
       }
       if (window.ttq) {
-        ttq.track("ViewContent", { content_name: "price", currency: "UAH", value: 899 });
+        ttq.track("ViewContent", { contents: ttContents, currency: "UAH", value: 899 });
       }
       obs.disconnect();
     });
