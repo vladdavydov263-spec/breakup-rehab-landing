@@ -879,6 +879,13 @@ document.querySelectorAll('.step').forEach(function (d) {
   if (ttclid && !readCookie("ttclid")) {
     document.cookie = "ttclid=" + ttclid + ";path=/;max-age=7776000;SameSite=Lax";
   }
+
+  // tgclid піксель Telegram кладе у свою куку сам, але лише на 30 днів —
+  // дублюємо на 90, щоб покупка через місяць ще матчилась на рекламу
+  var tgclid = params.get("tgclid");
+  if (tgclid && !readCookie("tg_clid")) {
+    document.cookie = "tg_clid=" + tgclid + ";path=/;max-age=7776000;SameSite=Lax";
+  }
   var utm = {
     utm_source: params.get("utm_source") || "",
     utm_medium: params.get("utm_medium") || "",
@@ -890,6 +897,7 @@ document.querySelectorAll('.step').forEach(function (d) {
   utm.fbc = readCookie("_fbc");
   utm.ttclid = readCookie("ttclid");
   utm.ttp = readCookie("_ttp");
+  utm.tgclid = readCookie("tg_clid") || readCookie("_tgclid");
   window.ssContext = { variables: utm, scope: utm };
 
   // куки Meta і TikTok ставляться асинхронно — оновлюємо контекст, коли пікселі відпрацювали
@@ -898,6 +906,7 @@ document.querySelectorAll('.step').forEach(function (d) {
     utm.fbc = readCookie("_fbc");
     utm.ttclid = readCookie("ttclid");
     utm.ttp = readCookie("_ttp");
+    utm.tgclid = readCookie("tg_clid") || readCookie("_tgclid");
     window.ssContext = { variables: utm, scope: utm };
   }
   window.addEventListener("load", refresh);
@@ -927,6 +936,9 @@ document.querySelectorAll('.step').forEach(function (d) {
       if (window.ttq) {
         ttq.track("InitiateCheckout", { contents: ttContents, currency: "UAH", value: 899 });
       }
+      if (window.tgp) {
+        tgp("event", "InitiateCheckout", { currency: "UAH", value: 899 });
+      }
     });
   });
 
@@ -945,6 +957,9 @@ document.querySelectorAll('.step').forEach(function (d) {
       }
       if (window.ttq) {
         ttq.track("ViewContent", { contents: ttContents, currency: "UAH", value: 899 });
+      }
+      if (window.tgp) {
+        tgp("event", "ViewContent", { currency: "UAH", value: 899 });
       }
       obs.disconnect();
     });
