@@ -1,6 +1,6 @@
 // Згода на регулярні списання перед формою оплати (вимога WayForPay до підписок).
-// Вставляє блок з умовами підписки та чекбоксом (не відмічений за замовчуванням)
-// перед віджетом Smartsender і не дає взаємодіяти з формою, доки згоду не дано.
+// Вставляє блок з умовами підписки та чекбоксом перед віджетом Smartsender.
+// Чекбокс за замовчуванням відмічений (рішення Влада 28.09.2026), форма не блокується.
 (function () {
   var PRICE = 899;
   var OFERTA = "https://12.karpachoff.com/legal/oferta/";
@@ -39,7 +39,7 @@
         '<li>Скасувати можна будь-коли в 1 клік — наступних списань не буде. Про списання нагадуємо за 3 дні. На перший місяць діє 7 днів на повернення коштів.</li>' +
       '</ul>' +
       '<label class="sub-consent__check">' +
-        '<input type="checkbox" id="recurringConsent" name="recurring_consent" value="yes">' +
+        '<input type="checkbox" id="recurringConsent" name="recurring_consent" value="yes" checked>' +
         '<span>Погоджуюсь на щомісячне автоматичне списання ' + PRICE + ' грн та збереження даних картки для наступних списань. ' +
         'З <a href="' + OFERTA + '" target="_blank" rel="noopener">Публічною офертою</a> (розділ 4, умови підписки) та ' +
         '<a href="' + PRIVACY + '" target="_blank" rel="noopener">Політикою конфіденційності</a> ознайомлена.</span>' +
@@ -58,11 +58,7 @@
       ".sub-consent__terms b{font-weight:600}" +
       ".sub-consent__check{display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding-top:14px;border-top:1px solid rgba(127,127,127,.3)}" +
       ".sub-consent__check input{flex:0 0 auto;width:20px;height:20px;margin:2px 0 0;cursor:pointer;accent-color:#E0A458}" +
-      ".sub-consent__check a{color:inherit;text-decoration:underline;text-underline-offset:2px}" +
-      ".sub-gate{position:relative}" +
-      ".sub-gate__lock{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;" +
-        "background:rgba(20,22,26,.55);color:#F2EEE7;font-size:15px;line-height:1.5;border-radius:12px;backdrop-filter:blur(2px);cursor:not-allowed}" +
-      ".sub-gate--open .sub-gate__lock{display:none}";
+      ".sub-consent__check a{color:inherit;text-decoration:underline;text-underline-offset:2px}";
     document.head.appendChild(css);
   }
 
@@ -75,27 +71,18 @@
     var consent = build();
     wrap.parentNode.insertBefore(consent, wrap);
 
-    wrap.classList.add("sub-gate");
-    var lock = document.createElement("div");
-    lock.className = "sub-gate__lock";
-    lock.textContent = "Щоб перейти до оплати, поставте позначку про згоду на щомісячне списання вище";
-    wrap.appendChild(lock);
-
-    lock.addEventListener("click", function () {
-      consent.scrollIntoView({ behavior: "smooth", block: "center" });
-      consent.classList.add("sub-consent--hint");
-    });
-
     var cb = consent.querySelector("#recurringConsent");
-    cb.checked = false;
-    cb.addEventListener("change", function () {
-      wrap.classList.toggle("sub-gate--open", cb.checked);
-      // фіксуємо факт згоди у змінних контакту Smartsender (оферта, п. 3.5)
+    // фіксуємо факт згоди у змінних контакту Smartsender (оферта, п. 3.5)
+    function record() {
       if (window.ssContext && window.ssContext.variables) {
         window.ssContext.variables.recurring_consent = cb.checked ? new Date().toISOString() : "";
         window.ssContext.variables.recurring_amount = cb.checked ? String(PRICE) : "";
       }
-    });
+    }
+    cb.checked = true;
+    record();
+    window.addEventListener("load", record);
+    cb.addEventListener("change", record);
   }
 
   if (document.readyState === "loading") {
